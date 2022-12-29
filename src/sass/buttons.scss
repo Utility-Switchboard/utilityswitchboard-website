@@ -1,0 +1,117 @@
+@import "./colours.scss";
+@import "./animations.scss";
+
+button:disabled {
+   cursor: not-allowed;
+}
+
+// ** TELEPHONE LINK ** //
+.telephone-link,
+.inner-phone-span,
+.btn-phone {
+   text-decoration: none;
+   font-weight: bold;
+   white-space: nowrap;
+
+   &:before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      margin: 0 4px 0 5px;
+      content: "\f3cd";
+      display: inline-block;
+   }
+   
+   &.black {
+      color: $black;
+
+      &:hover {
+         color: $pink;
+      }
+   }
+
+   &:hover {
+      text-decoration: underline;
+
+      &:before {
+         animation: shakePhone 0.5s forwards;
+      }
+   }
+}
+
+.inner-phone-span {
+   color: $pink
+}
+
+// ** STANDARD BUTTON ** //
+.standard-button,
+.curve-btn-main,
+.btn-phone {
+   display: inline-block;
+   text-decoration: none;
+   border: none;
+   padding: 15px 55px;
+   border-radius: 7.5px;
+   transition: box-shadow 1s;
+
+   &.green {
+      background-color: $green;
+      color: #FFF;
+
+      &:hover {
+         background-color: $dark-green;
+      }
+   }
+
+   &.purple,
+   &.btn-white,
+   &.btn-pink {
+      margin: 10px 0;
+      background-color: $purple;
+      color: #FFF;
+
+      &:hover {
+         background-color: $dark-purple;
+      }
+   }
+}
+
+// ** STANDARD TEXT LINK ** //
+.standard-text-link {
+   padding: 0;
+   background-color: transparent;
+   border: none;
+   text-decoration: underline;
+   color: inherit;
+
+   &:hover {
+      color: $pink;
+   }
+}
+
+// ** GO BACK BUTTON ** //
+.go-back-button {
+   background-color: transparent;
+   border: none;
+   padding: 0;
+   font-style: italic;
+
+   &:hover {
+      text-decoration: underline;
+   }
+
+   &:before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f30a";
+      margin-right: 5px;
+   }
+
+   // Colours
+   &.black {
+      color: $black;
+
+      &:hover {
+         color: $pink
+      }
+   }
+}

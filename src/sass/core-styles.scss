@@ -1,0 +1,132 @@
+@import "./colours.scss";
+
+// ** FONTS ** //
+@font-face {
+   font-family: Rubik;
+   src: url(../fonts/Rubik-Regular.ttf);
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: Rubik;
+   src: url(../fonts/Rubik-Bold.ttf);
+   font-weight: bold;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: Spartan;
+   src: url(../fonts/LeagueSpartan-Bold.ttf);
+   font-weight: bold;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: Spartan;
+   src: url(../fonts/LeagueSpartan-Regular.ttf);
+   font-weight: normal;
+   font-style: normal;
+}
+
+$font-stack: Rubik, Helvetica, sans-serif;
+
+body {
+   padding: 0;
+   margin: 0;
+   font-family: $font-stack;
+}
+
+img {
+   max-width: 100%;
+   max-height: 100%;
+}
+
+button, input, textarea, select {
+   font-family: $font-stack;
+   font-size: 16px
+}
+
+a, button {
+   cursor: pointer;
+}
+
+* {
+   transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.container-width {
+   width: 90%;
+   max-width: 1400px;
+}
+
+// ** HEADINGS / TEXT ** //
+h1 {
+   font-size: clamp(2rem,5vw,3rem);
+   margin: 0;
+   line-height: 1.1em;
+   font-weight: bold;
+   font-family: Spartan, Rubik, Helvetica, sans-serif;
+}
+
+h2 {
+   font-size: clamp(1.6rem,5vw, 2rem);
+   color: $pink;
+}
+
+h3 {
+   font-size: 1.4rem;
+   color: $purple;
+   margin: 40px 0 10px 0;
+}
+
+p {
+   color: $black;
+   line-height: 1.4em;
+
+   a:not([class]) {
+      color: $pink;
+   }
+}
+
+a:not([class]) {
+   color: $black;
+
+   &:hover {
+      color: $pink
+   }
+}
+
+blockquote {
+   border-left: solid 3px $pink;
+   padding: 20px;
+   line-height: 1.4em;
+   margin: 25px 40px;
+}
+
+// ** LISTS ** //
+
+ul:not([class]),
+ol:not([class]) {
+   line-height: 1.4em;
+
+   li {
+      &::marker {
+         color: $pink;
+      }
+   }
+}
+
+// ** CONTAINERS ** //
+.standard-container {
+   margin: 80px 0;
+   display: flex;
+   width: 100%;
+   justify-content: center;
+}
+
+// ** OTHER ** //
+.disclaimer {
+   font-size: 14px;
+   font-style: italic;
+}

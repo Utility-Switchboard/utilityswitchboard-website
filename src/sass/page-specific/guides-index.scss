@@ -1,0 +1,113 @@
+@import "../colours.scss";
+
+.guide-results-container {
+   display: grid;
+   grid-template-columns: 31% 31% 31%;
+   column-gap: 3%;
+   row-gap: 20px;
+}
+
+.guide-card-container {
+   width: 100%;
+   height: fit-content;
+   border-radius: 10px;
+   overflow: hidden;
+   box-shadow: 1px 1px 9px #dadada;
+   text-decoration: none;
+
+   &:hover {
+      transform: scale(1.03);
+   }
+}
+
+.guide-card-image-header {
+   height: 90px;
+   background-image: url(../../images/guide-card-background.jpg);
+   background-size: cover;
+   background-position: center;
+}
+
+.guide-card-content {
+   padding: 10px;
+   display: flex;
+   flex-direction: column;
+   row-gap: 30px;
+
+   p, span {
+      margin: 0
+   }
+}
+
+.guide-card-title {
+   font-weight: bold;
+   margin-bottom: 7px!important;
+}
+
+.guide-card-category {
+   padding: 3px 5px;
+   background-color: #e7e7e7;
+   color: $medium-gray;
+   border-radius: 2px;
+   text-transform: capitalize;
+}
+
+.guide-card-arrow {
+   width: 100%;
+   display: flex;
+   justify-content: flex-end;
+
+   &::after {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f30b";
+      margin-left: 5px;
+   }
+}
+
+// ** MEDIA QUERIES ** //
+@media only screen and (max-width: 1300px) {
+   .guide-results-container {
+      grid-template-columns: 47.5% 47.5%;
+      column-gap: 5%;
+      row-gap: 30px;
+   }
+
+   .guide-card-image-header {
+      height: 120px;
+   }
+}
+
+@media only screen and (max-width: 1100px) {
+   .guide-results-container {
+      grid-template-columns: 31.33% 31.33% 31.33%;
+      column-gap: 3%;
+   }
+
+   .guide-card-image-header {
+      height: 90px;
+   }
+}
+
+@media only screen and (max-width: 800px) {
+   .guide-results-container {
+      grid-template-columns: 47.5% 47.5%;
+      column-gap: 5%;
+      row-gap: 30px;
+   }
+
+   .guide-card-image-header {
+      height: 120px;
+   }
+}
+
+@media only screen and (max-width: 500px) {
+   .guide-card-image-header {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: $pink;
+   }
+
+   .guide-results-container {
+      grid-template-columns: 100%;
+   }
+}

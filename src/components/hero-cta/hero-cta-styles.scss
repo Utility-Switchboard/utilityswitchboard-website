@@ -1,0 +1,65 @@
+@import "../../sass/colours.scss";
+
+.modal-backdrop {
+   position: fixed;
+   display: none;
+   top: 0;
+   left: 0;
+   height: 100vh;
+   width: 100vw;
+   opacity: 0;
+   z-index: 10;
+   overflow: hidden;
+   justify-content: center;
+   align-items: center;
+
+   &.show {
+      display: flex;
+      opacity: 1;
+      backdrop-filter: blur(4px) brightness(0.7);
+   }
+}
+
+.modal-wrapper-container {
+   height: calc(100vh - 204px);
+   width: fit-content;
+   padding: 100px 20px;
+   display: flex;
+   align-items: flex-start;
+   overflow: scroll;
+   -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
+
+   &::-webkit-scrollbar {
+      display: none;
+   }
+}
+
+.modal-container {
+   height: auto;
+   width: 300px;
+   background-color: #FFF;
+   border-radius: 10px;
+   overflow: hidden;
+}
+
+.modal-header {
+   background-color: $pink;
+   padding: 20px 10px;
+   text-align: center;
+
+   h2 {
+      color: #FFF;
+      margin: 0;
+   }
+}
+
+.modal-content {
+   padding: 20px;
+   text-align: center;
+
+   p {
+      margin: 0;
+      color: $black!important;
+   }
+}

@@ -1,0 +1,83 @@
+@import "../colours.scss";
+@import "../animations.scss";
+
+// ** HERO SECTION ** //
+.guide-hero-outer-container {
+   width: 100%;
+   height: auto;
+   padding: 80px 0;
+   display: flex;
+   justify-content: center;
+   overflow: hidden;
+}
+
+.guide-hero-inner-container {
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+   h1 {
+      color: $pink;
+
+      span {
+         font-weight: normal;
+         color: $black;
+         font-size: clamp(1.8rem, 5vw, 2.5rem);
+      }
+   }
+
+   p {
+      color: $black;
+      max-width: 600px;
+   }
+}
+
+.az-provider-letter {
+   font-size: 30px;
+   width: fit-content;
+   padding: 10px 30px;
+   background-color: $pink-cream;
+   color: $black;
+   border-radius: 10px;
+}
+
+.az-provider-option {
+   width: calc(100% - 20px);
+   display: block;
+   padding: 20px 20px 20px 0;
+   border-bottom: solid 1px $medium-gray;
+   display: grid;
+   align-items: center;
+   grid-template-columns: 140px auto;
+   text-decoration: none;
+
+   &:hover {
+      background-color: $light-gray;
+
+      p:after {
+         animation: arrowShake forwards 0.6s;
+         color: $pink
+      }
+   }
+
+   img {
+      max-height: 40px!important;
+      max-width: 100px;
+      margin: 0!important;
+      justify-self: center;
+   }
+
+   p {
+      margin: 12px 0;
+      display: flex;
+      justify-content: space-between;
+
+      &:after {
+         font-family: "Font Awesome 5 Free";
+         font-weight: 900;
+         content: "\f30b"
+      }
+   }
+}

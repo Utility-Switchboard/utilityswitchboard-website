@@ -1,0 +1,65 @@
+@import "./colours.scss";
+
+.table-wrapper {
+   width: 100%;
+   display: block;
+   overflow-x: scroll;
+}
+
+table {
+   border-spacing: 0;
+   border-collapse: collapse;
+
+   td {
+      ul {
+         text-align: left;
+      }
+   }
+}
+
+// ** Standard table ** //
+table:not([class]),
+.product-review {
+   margin: 30px 0;
+   width: 100%;
+
+   th {
+      background-color: $pink;
+      padding: 15px 10px;
+      color: #FFF;
+   }
+
+   tr {
+      th:first-of-type {
+         border-radius: 7.5px 0 0 0;
+      }
+
+      th:last-of-type {
+         border-radius: 0 7.5px 0 0;
+      }
+   }
+
+   td {
+      text-align: center;
+      padding: 10px;
+   }
+
+   tr:nth-of-type(even) {
+      td {
+         background-color: #df01df0f;
+      }
+   }
+
+   tr:nth-of-type(odd) {
+      td {
+         background-color: #FFF;
+      }
+   }
+}
+
+.product-review {
+   i {
+      color: gold;
+      font-size: 24px;
+   }
+}

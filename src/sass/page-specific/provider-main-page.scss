@@ -1,0 +1,138 @@
+@import "../colours.scss";
+
+.provider-navigation-grid-container {
+   width: 100%;
+   height: auto;
+   min-height: 300px;
+   border: solid 1px $pink;
+   border-radius: 10px;
+   display: grid;
+   grid-template-columns: 30% 70%;
+   overflow: hidden;
+}
+
+.provider-navigation-category-options {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+
+   li {
+      text-transform: capitalize;
+      padding: 20px;
+      border-bottom: solid 1px $pink;
+      display: flex;
+      align-items: center;
+      column-gap: 5px;
+      cursor: pointer;
+      transition: box-shadow 0.4s ease-in-out!important;
+
+      &.active {
+         box-shadow: inset 300px 0 0 0 $pink;
+         color: #FFF;
+
+         i {
+            color: #FFF;
+         }
+      }
+
+      &:hover {
+         background-color: $light-gray;
+
+         i {
+            color: $pink;
+         }
+      }
+
+      i {
+         color: $medium-gray;
+         font-size: 20px;
+         width: 30px;
+         display: inline-flex;
+         justify-content: center;
+         align-items: center;
+      }
+   }
+}
+
+.provider-navigation-category-results-container {
+   background-color: $pink;
+
+   h3 {
+      margin: 0;
+      padding: 20px;
+      text-transform: capitalize;
+      color: #FFF;
+   }
+}
+
+.provider-navigation-category-results-list {
+   list-style: none;
+   margin: 0;
+   padding: 0 20px 20px 20px;
+
+   a {
+      display: block;
+      padding: 20px 0;
+      color: #FFF;
+      text-decoration: none;
+      border-bottom: dashed 1px #FFF;
+      overflow: hidden;
+
+      &:hover {
+         span {
+            left: 0
+         }
+      }
+
+      span {
+         position: relative;
+         left: -35px;
+
+         i {
+            margin-right: 20px;
+         }
+      }
+
+      &:last-of-type {
+         border-bottom: none;
+         padding-bottom: 0;
+      }
+
+      &:hover {
+         color: #FFF;
+      }
+   }
+}
+
+.sm-provider-navigation-grid-container {
+   display: none;
+}
+
+// ** MEDIA QUERIES ** //
+@media only screen and (max-width: 900px) {
+   .provider-navigation-grid-container {
+      display: none;
+   }
+
+   .sm-provider-navigation-grid-container {
+      display: block;
+
+      .provider-navigation-category-results-list {
+         padding: 0;
+
+         a {
+            padding: 15px 0px;
+            color: $dark-purple;
+            border-bottom-color: $dark-purple;
+
+            &:first-of-type {
+               padding-top: 0;
+            }
+
+            &:last-of-type {
+               padding-bottom: 0;
+            }
+         }
+      }
+   }
+}

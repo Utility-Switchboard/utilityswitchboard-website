@@ -1,0 +1,310 @@
+@import "../colours.scss";
+
+// ** HERO ** //
+.hero-outer-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: $pink;
+   height: auto;
+   padding: 100px 0;
+}
+
+.hero-inner-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+
+   h1 {
+      color: #FFF;
+      font-size: clamp(3.2rem,7vw,4rem);
+   }  
+}
+
+#trustpilot-box {
+   margin-top: 20px;
+   width: 150px;
+
+   p {
+      margin: 10px 0 0 0;
+      color: #000;
+   }
+}
+
+// ** SAVINGS SECTION ** //
+.savings-section-outer-container {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   background-color: $pink-cream;
+   padding: 70px 0;
+}
+
+.savings-section-inner-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+
+   h2 {
+      margin-top: 0;
+      color: #000;
+   }
+
+   p {
+      max-width: 600px;
+      margin: 5px 0 30px 0;
+      color: $black;
+   }
+
+   .direct-debit-logos-wrapper {
+      display: flex;
+      margin-top: 25px;
+      column-gap: 20px;
+
+      img {
+         max-width: 110px;
+         height: auto;
+      }
+   }
+}
+
+// ** COMMON QUERIES ** //
+.common-queries-outer-container {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 70px 0;
+}
+
+.common-queries-inner-container {
+   max-width: 850px;
+   width: 100%;
+   text-align: center;
+
+   h2 {
+      margin-top: 0;
+      color: #000;
+   }
+}
+
+.common-queries-app-container {
+   display: grid;
+   width: 100%;
+   grid-template-columns: 30% 70%;
+   margin-top: 40px;
+}
+
+.common-queries-app-sm {
+   display: none;
+}
+
+.common-queries-options {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+
+   li {
+      text-align: left;
+      padding: 15px 10px 15px 20px;
+      border-radius: 10px 0 0 10px;
+      cursor: pointer;
+
+      &.active {
+         background-color: $pink-cream;
+      }
+   }
+}
+
+.common-queries-content {
+   background-color: $pink-cream;
+   border-radius: 10px;
+   padding: 20px;
+   text-align: left;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   height: fit-content;
+
+   p {
+      margin: 0
+   }
+}
+
+.call-us-now-box {
+   background-color: #FFF;
+   color: $black;
+   text-decoration: none;
+   display: block;
+   width: fit-content;
+   padding: 10px;
+   border-radius: 7.5px;
+
+   span {
+      display: inline-block;
+      margin-bottom: 4px;
+   }
+}
+
+.common-queries-content-links {
+   margin-top: 30px;
+   display: flex;
+   column-gap: 30px;
+   align-items: center;
+}
+
+.separator {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+
+   &:after {
+      content: "";
+      width: 180px;
+      height: 1px;
+      background-color: $black;
+   }
+}
+
+// ** OUR PROCESS ** //
+.our-process-outer-container {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 70px 0;
+}
+
+.our-process-inner-container {
+   max-width: 850px;
+   width: 100%;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   h2 {
+      margin-top: 0;
+      color: #000;
+   }
+}
+
+.our-process-app-container {
+   border-spacing: 0;
+   width: 100%;
+   margin-bottom: 30px;
+
+   th {
+      border-bottom: solid 2px $pink;
+      padding: 10px;
+      width: 140px;
+
+      &.gap {
+         width: 30px;
+      }
+   }
+
+   td {
+      &.our-process-step-box {
+         border-radius: 0 0 10px 10px;
+         padding: 30px 10px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         row-gap: 20px;
+
+         img {
+            max-height: 50px;
+            max-width: 50px;
+         }
+
+         p {
+            margin: 0;
+         }
+
+         &.one {
+            background-color: #fafafa;
+         }
+
+         &.two {
+            background-color: #f5f5f5;  
+         }
+
+         &.three {
+            background-color: #e0e0e0;
+         }
+      }
+
+      h3 {
+         margin: 0;
+         font-size: 16px;
+         color: $black;
+      }
+   }
+}
+
+
+// ** MEDIA QUERIES ** //
+@media only screen and (max-width: 950px) {
+   .common-queries-app-sm {
+      display: block;
+   }
+
+   .common-queries-app-container {
+      display: none;
+   }
+
+   .common-queries-inner-container,
+   .our-process-inner-container {
+      width: 90%;
+   }
+
+   .our-process-app-container {
+      th {
+         &.gap {
+            width: 10px;
+         }
+      }
+   }
+}
+
+@media only screen and (max-width: 800px) {
+   #trustpilot-box {
+      width: 130px;
+   }
+
+   .our-process-app-container {
+      th {
+         &.gap {
+            width: 2px;
+         }
+      }
+   }
+}
+
+@media only screen and (max-width: 800px) {
+   
+}
+
+@media only screen and (max-width: 500px) {
+   .hero-inner-container {
+      h1 {
+         font-size: 2.8rem
+      }
+   }
+
+   .common-queries-content-links {
+      flex-direction: column;
+      row-gap: 10px
+   }
+}
+
+@media only screen and (max-width: 430px) {
+   .hero-inner-container {
+      h1 {
+         font-size: 2.4rem
+      }
+   }
+}

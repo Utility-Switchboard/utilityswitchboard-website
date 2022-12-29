@@ -1,0 +1,19 @@
+@import "../../sass/colours.scss";
+
+.navigation-widget-container {
+   padding: 20px;
+   background-color: $pink;
+   border-radius: 10px;
+   
+   h3 {
+      color: #FFF;
+      margin: 0 0 15px 0;
+   }
+
+   select {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      width: 100%
+   }
+}

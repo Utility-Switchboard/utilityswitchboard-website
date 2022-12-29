@@ -1,0 +1,130 @@
+@import "../colours.scss";
+@import "../animations.scss";
+
+// ** HERO SECTION ** //
+.product-landing-hero-outer-container {
+   width: 100%;
+   height: auto;
+   padding: 80px 0;
+   background-color: $pink;
+   display: flex;
+   justify-content: center;
+   overflow: hidden;
+}
+
+.product-landing-hero-inner-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   row-gap: 20px;
+
+   h1 {
+      color: #FFF;
+
+      #h1-span {
+         font-weight: normal;
+         font-size: clamp(1.8rem, 5vw, 2.5rem);
+      }
+   }
+
+   p {
+      color: #FFF;
+      max-width: 600px;
+      margin-top: 0;
+   }
+}
+
+.product-landing-content-outer-container {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   padding: 80px 0;
+   text-align: center;
+
+   h2 {
+      margin: 10px 0;
+   }
+
+   p {
+      max-width: 600px;
+      margin: 0 auto
+   }
+}
+
+// ** SUPPLIER / GUIDES ** //
+.supplier-guide-choice-container {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   column-gap: 50px;
+   margin-top: 40px;
+}
+
+.supplier-guide-choice-card {
+   max-width: 200px;
+   padding: 10px;
+   border-radius: 10px;
+   text-decoration: none;
+
+   h3 {
+      margin: 10px 0;
+   }
+
+   &:hover {
+      box-shadow: 2px 3px 10px #d0d0d0;
+      transform: scale(1.025);
+   }
+}
+
+// ** GUIDE TYPES ** //
+.product-guides-grid {
+   display: grid;
+   grid-template-columns: 30% 30% 30%;
+   column-gap: 5%;
+   row-gap: 30px;
+   margin: 40px 0 0 0;
+}
+
+.product-guides-link {
+   padding: 15px 10px;
+   background-color: $pink-cream;
+   text-decoration: none;
+   border-radius: 10px;
+   color: $black;
+
+   &:hover {
+      background-color: $dark-purple;
+      color: #FFF;
+
+      &:after {
+         font-family: "Font Awesome 5 Free";
+         font-weight: 900;
+         content: "\f30b";
+         margin-left: 20px;
+         animation: arrowShake forwards 0.6s;
+         display: inline-block;
+      }
+   }
+}
+
+// ** MEDIA QUERIES ** //
+@media only screen and (max-width: 900px) {
+   .product-guides-grid {
+      grid-template-columns: 47.5% 47.5%;
+   }
+}
+
+@media only screen and (max-width: 650px) {
+   .product-guides-grid {
+      grid-template-columns: 100%;
+      row-gap: 20px;
+   }
+}
+
+@media only screen and (max-width: 450px) {
+   .supplier-guide-choice-container {
+      flex-direction: column;
+      align-items: center;
+   }
+}

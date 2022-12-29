@@ -1,0 +1,61 @@
+@import "./colours.scss";
+
+// ** STANDARD BOX ** //
+.standard-info-box-container,
+.inner-box-info {
+   border-radius: 10px;
+   padding: 15px;
+   width: calc(100% - 30px);
+   border: solid 1px;
+   margin: 15px 0;
+   display: flex;
+
+   &:before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 60px;
+      padding: 20px;
+      align-self: center;
+   }
+
+   span {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   h3 {
+      margin: 0 0 10px 0
+   }
+
+   p {
+     margin: 0
+   }
+
+   // colors
+   &.question {
+      border-color: $purple;
+
+      h3 {
+         color: $purple
+      }
+
+      &:before {
+         content: "\f059";
+         color: $purple;
+      }
+   }
+
+   &.warning {
+      border-color: red;
+
+      h3 {
+         color: red
+      }
+
+      &:before {
+         content: "\f071";
+         color: red;
+      }
+   }
+}

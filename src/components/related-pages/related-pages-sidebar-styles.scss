@@ -1,0 +1,33 @@
+@import "../../sass/colours.scss";
+
+.related-pages-list {
+   margin: 15px;
+   padding: 15px 30px 15px 15px;
+   border-radius: 10px;
+   background-color: #FFF;
+
+   li {
+      &:first-of-type {
+         padding-top: 0;
+      }
+
+      &:last-of-type {
+         padding-bottom: 0;
+         border-bottom: none;
+      }
+
+      width: 100%;
+      padding: 15px 0;
+      margin-left: 15px;
+
+      &::marker {
+         color: $orange;
+         font-weight: bold;
+      }
+
+      a:hover {
+         color: $black;
+         text-decoration: underline;
+      }
+   }
+}
