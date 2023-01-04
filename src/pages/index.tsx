@@ -19,7 +19,7 @@ const HomePage: React.FC<PageProps> = () => {
       {/* Hero */}
       <div className="hero-outer-container">
         <div className="hero-inner-container container-width">
-          <h1>Utility switching<br/>made easier</h1>
+          <h1>Utility switching<br/>made&nbsp;easier</h1>
 
           <div id="trustpilot-box">
             <img
