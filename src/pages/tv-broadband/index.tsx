@@ -2,6 +2,7 @@ import { HeadFC } from "gatsby";
 import React from "react";
 import Footer from "../../components/footer/footer";
 import Navigation from "../../components/navigation/navigation";
+import SEO from "../../components/SEO/seo";
 
 // CSS
 import StylesComponent from "../../components/styles";
@@ -83,5 +84,10 @@ const TvBroadbandLandingPage: React.FC = () => {
 export default TvBroadbandLandingPage
 
 export const Head: HeadFC = () => (
-   <script src="https://kit.fontawesome.com/fc576cdb67.js" crossOrigin="anonymous" async></script>
+   <SEO
+      metaDescription="Using our provider guides, expert customer service line and full in-depth guides, become and energy expert and start saving £100s per year on your bills."
+      title="UK TV & Broadband guides"
+      titleTemplate="%s - Utility Switchboard"
+      slug="tv-broadband/guides"
+   />
  )
