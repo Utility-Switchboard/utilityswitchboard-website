@@ -7,6 +7,7 @@ import StylesComponent from "../components/styles";
 import "../sass/page-specific/homepage.scss"
 import common_queries_list from "../resources/common-queries";
 import Footer from "../components/footer/footer";
+import SEO from "../components/SEO/seo";
 
 const HomePage: React.FC<PageProps> = () => {
   const [queryIndex, setQueryIndex] = useState<number>(0)
@@ -204,5 +205,10 @@ const HomePage: React.FC<PageProps> = () => {
 export default HomePage
 
 export const Head: HeadFC = () => (
-  <script src="https://kit.fontawesome.com/fc576cdb67.js" crossOrigin="anonymous" async></script>
+  <SEO
+      metaDescription="Utility Switchboard is the UK's favourite utilities advice line. Get in touch and we'll help you with your gas, electricity, tv or broadband!"
+      title="Utility Switchboard | Utility switching made easier"
+      titleTemplate="%s"
+      slug="/"
+   />
 )
