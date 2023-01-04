@@ -31,6 +31,10 @@
 
 $font-stack: Rubik, Helvetica, sans-serif;
 
+html {
+   overflow-x: hidden;
+}
+
 body {
    padding: 0;
    margin: 0;

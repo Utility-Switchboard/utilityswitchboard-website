@@ -143,6 +143,7 @@ const HomePage: React.FC<PageProps> = () => {
         <div className="our-process-inner-container">
             <h2>Our process</h2>
 
+            {/* Large devices */}
             <table className="our-process-app-container">
               <tbody>
                 <tr>
@@ -176,6 +177,28 @@ const HomePage: React.FC<PageProps> = () => {
                 </tr>
               </tbody>
             </table>
+
+            {/* Small / medium devices */}
+            <div className="our-process-step-box sm-md one left">
+              <img src="/images/emojis/magnifying-glass.png"/>
+              <h3>Browse the best tariffs</h3>
+
+              <p>Well talk you through your options and handpick you the best fit for you</p>
+            </div>
+
+            <div className="our-process-step-box sm-md two right">
+              <img src="/images/emojis/ok-hand.png"/>
+              <h3>Choose</h3>
+
+              <p>Pick the tariff that you'd like to sign up to.</p>
+            </div>
+
+            <div className="our-process-step-box sm-md three left">
+              <img src="/images/emojis/check-mark.png"/>
+              <h3>Done</h3>
+
+              <p>...and as simple as that, you can save £100s on your utility bills.</p>
+            </div>
 
             <p>The process of switching your gas, electricity, tv or broadband bills with Utility Switchboard is extremely simple. We take care of everything for you. No need to cancel anything, we'll do that for you.</p>
         </div>

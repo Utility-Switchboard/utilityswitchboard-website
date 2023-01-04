@@ -153,16 +153,20 @@
 
 
 .extended-navigation {
-   height: calc(100vh - 45px);
+   padding: 30px 20px;
+   height: calc(100vh - 60px);   
    position: relative;
    top: 0;
    background-color: #FFF;
    width: 400px;
    margin: 0;
-   padding: 15px 15px 30px 15px;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
+
+   h2 {
+      margin-top: 0;
+   }
 
    &.hide {
       left: -460px;
@@ -224,7 +228,7 @@
 
 .navigation-close-container {
    position: absolute;
-   margin-left: 389px;
+   margin-left: 395px;
    height: 50px;
    width: 50px;
    border-radius: 50ch;
@@ -278,6 +282,60 @@
 @media only screen and (max-width: 1050px) {
    .extended-navigation-option {
       display: none;
+   }
+}
+
+@media only screen and (max-width: 600px) {
+   .extended-navigation {
+      padding: 30px;
+      height: calc(100vh - 60px);
+      width: calc(100vw - 60px);
+
+      h2 {
+         margin-top: 0;
+      }
+   }
+
+   .navigation-close-container {
+      margin: initial;
+      right: 5%;
+      border-radius: 5px;
+      border: solid 1px $black;
+      width: auto;
+      height: auto;
+
+      &:hover {
+         background-color: $black;
+         
+         .navigation-close-inner-circle {
+            height: initial;
+            width: initial;
+            background-color: initial;
+         }
+      }
+   }
+
+   .navigation-close-inner-circle {
+      width: auto;
+      height: fit-content;
+      padding: 10px 20px;
+   }
+
+   .navigation-close-button {
+      width: auto;
+      font-size: 16px;
+      
+      &:after {
+         font-family: Rubik;
+         content: "Close";
+         font-size: 16px;
+         color: $black;
+         font-weight: normal;
+      }
+   }
+
+   .extended-navigation-ul {
+      margin-top: 30px;
    }
 }
 
