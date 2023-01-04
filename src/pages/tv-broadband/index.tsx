@@ -1,6 +1,5 @@
 import { HeadFC } from "gatsby";
 import React from "react";
-import TextLoop from "react-text-loop";
 import Footer from "../../components/footer/footer";
 import Navigation from "../../components/navigation/navigation";
 
