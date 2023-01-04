@@ -1,9 +1,9 @@
 {
   "name": "utilityswitchboard-website",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "description": "utilityswitchboard-website",
-  "author": "Elliot Waterhouse",
+  "author": "Elliot Waterhouse-Barros",
   "keywords": [
     "gatsby"
   ],
