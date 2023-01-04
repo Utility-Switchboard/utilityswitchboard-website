@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Navigation from "../components/navigation/navigation";
 import type { HeadFC, PageProps } from "gatsby";
 import StylesComponent from "../components/styles";
-import TextLoop from "react-text-loop";
 
 // CSS
 import "../sass/page-specific/homepage.scss"
@@ -20,14 +19,7 @@ const HomePage: React.FC<PageProps> = () => {
       {/* Hero */}
       <div className="hero-outer-container">
         <div className="hero-inner-container container-width">
-          <h1>Utility switching<br/>made&nbsp;
-            <TextLoop
-              interval={2000}
-            >
-              <span>easier</span>
-              <span>greener</span>
-              <span>better</span>
-            </TextLoop>.</h1>
+          <h1>Utility switching<br/>made easier</h1>
 
           <div id="trustpilot-box">
             <img

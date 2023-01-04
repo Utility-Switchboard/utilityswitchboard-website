@@ -27,14 +27,7 @@ const TvBroadbandLandingPage: React.FC = () => {
          <div className="product-landing-hero-outer-container">
             <div className="product-landing-hero-inner-container container-width">
                <h1>
-                  <TextLoop
-                     interval={2000}
-                  >
-                     <span>Cheaper</span>
-                     <span>Faster</span>
-                     <span>Smarter</span>
-                  </TextLoop>
-                  &nbsp;TV & broadband<br/><span id="h1-span">Quick & simple! 💸</span>
+                  Cheaper TV & broadband<br/><span id="h1-span">Quick & simple! 💸</span>
                </h1>
 
                <p>Using our provider guides, expert customer service line and full in-depth guides, become and TV & broadband expert and start saving £100s per year on your bills.</p>

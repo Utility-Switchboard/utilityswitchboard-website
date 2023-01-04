@@ -1,6 +1,5 @@
 import { HeadFC } from "gatsby";
 import React from "react";
-import TextLoop from "react-text-loop";
 import Footer from "../../components/footer/footer";
 import Navigation from "../../components/navigation/navigation";
 import SEO from "../../components/SEO/seo";
@@ -29,14 +28,7 @@ const GasElectricityLandingPage: React.FC = () => {
          <div className="product-landing-hero-outer-container">
             <div className="product-landing-hero-inner-container container-width">
                <h1>
-                  <TextLoop
-                     interval={2000}
-                  >
-                     <span>Cheaper</span>
-                     <span>Greener</span>
-                     <span>Smarter</span>
-                  </TextLoop>
-                  &nbsp;energy bills<br/><span id="h1-span">Quick & simple! 💸</span>
+                  Cheaper energy bills<br/><span id="h1-span">Quick & simple! 💸</span>
                </h1>
 
                <p>Using our provider guides, expert customer service line and full in-depth guides, become and energy expert and start saving £100s per year on your bills.</p>
