@@ -40,6 +40,50 @@ exports.createPages = ({ graphql, actions }) => {
                }
             }
          }
+         allContentfulTvBroadbandProviderStandardPage {
+            edges {
+               node {
+                  title
+                  slug
+                  provider
+               }
+            }
+         }
+         allContentfulTvBroadbandProviderMainPage {
+            edges {
+               node {
+                  title
+                  slug
+                  provider
+               }
+            }
+         }
+         allContentfulTvBroadbandGuideStandardPage {
+            edges {
+               node {
+                  title
+                  slug
+                  category
+               }
+            }
+         }
+         allContentfulAllProductsNewsStandardPage {
+            edges {
+               node {
+                  title
+                  slug
+                  category
+               }
+            }
+         }
+         allContentfulPolicy {
+            edges {
+               node {
+                  title
+                  slug
+               }
+            }
+         }
       }
    `)
    .then( async (value) => {
@@ -72,7 +116,7 @@ exports.createPages = ({ graphql, actions }) => {
                page_params.context.provider = edge.node.provider
             }
 
-            if(template_prefix.includes("Guide") === true) {
+            if(template_prefix.includes("Guide") === true || template_prefix.includes("News") === true) {
                page_params.context.category = edge.node.category
             }
             

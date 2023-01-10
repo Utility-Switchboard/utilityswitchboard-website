@@ -35,6 +35,278 @@ type BooleanQueryOperatorInput = {
   readonly nin: InputMaybe<ReadonlyArray<InputMaybe<Scalars['Boolean']>>>;
 };
 
+type ContentfulAllProductsNewsStandardPage = ContentfulEntry & ContentfulReference & Node & {
+  readonly category: Maybe<Scalars['String']>;
+  /** Returns the first child node of type contentfulAllProductsNewsStandardPageContentTextNode or null if there are no children of given type on this node */
+  readonly childContentfulAllProductsNewsStandardPageContentTextNode: Maybe<contentfulAllProductsNewsStandardPageContentTextNode>;
+  /** Returns the first child node of type contentfulAllProductsNewsStandardPageMetaDescriptionTextNode or null if there are no children of given type on this node */
+  readonly childContentfulAllProductsNewsStandardPageMetaDescriptionTextNode: Maybe<contentfulAllProductsNewsStandardPageMetaDescriptionTextNode>;
+  /** Returns the first child node of type contentfulAllProductsNewsStandardPageNavigationJsonNode or null if there are no children of given type on this node */
+  readonly childContentfulAllProductsNewsStandardPageNavigationJsonNode: Maybe<contentfulAllProductsNewsStandardPageNavigationJsonNode>;
+  readonly children: ReadonlyArray<Node>;
+  /** Returns all children nodes filtered by type contentfulAllProductsNewsStandardPageContentTextNode */
+  readonly childrenContentfulAllProductsNewsStandardPageContentTextNode: Maybe<ReadonlyArray<Maybe<contentfulAllProductsNewsStandardPageContentTextNode>>>;
+  /** Returns all children nodes filtered by type contentfulAllProductsNewsStandardPageMetaDescriptionTextNode */
+  readonly childrenContentfulAllProductsNewsStandardPageMetaDescriptionTextNode: Maybe<ReadonlyArray<Maybe<contentfulAllProductsNewsStandardPageMetaDescriptionTextNode>>>;
+  /** Returns all children nodes filtered by type contentfulAllProductsNewsStandardPageNavigationJsonNode */
+  readonly childrenContentfulAllProductsNewsStandardPageNavigationJsonNode: Maybe<ReadonlyArray<Maybe<contentfulAllProductsNewsStandardPageNavigationJsonNode>>>;
+  readonly content: Maybe<contentfulAllProductsNewsStandardPageContentTextNode>;
+  readonly contentful_id: Scalars['String'];
+  readonly createdAt: Maybe<Scalars['Date']>;
+  readonly id: Scalars['ID'];
+  readonly internal: Internal;
+  readonly metaDescription: Maybe<contentfulAllProductsNewsStandardPageMetaDescriptionTextNode>;
+  readonly navigation: Maybe<contentfulAllProductsNewsStandardPageNavigationJsonNode>;
+  readonly node_locale: Scalars['String'];
+  readonly parent: Maybe<Node>;
+  readonly slug: Maybe<Scalars['String']>;
+  readonly spaceId: Maybe<Scalars['String']>;
+  readonly sys: Maybe<ContentfulAllProductsNewsStandardPageSys>;
+  readonly title: Maybe<Scalars['String']>;
+  readonly updatedAt: Maybe<Scalars['Date']>;
+};
+
+
+type ContentfulAllProductsNewsStandardPage_createdAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type ContentfulAllProductsNewsStandardPage_updatedAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+type ContentfulAllProductsNewsStandardPageConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<ContentfulAllProductsNewsStandardPageEdge>;
+  readonly group: ReadonlyArray<ContentfulAllProductsNewsStandardPageGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<ContentfulAllProductsNewsStandardPage>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type ContentfulAllProductsNewsStandardPageConnection_distinctArgs = {
+  field: ContentfulAllProductsNewsStandardPageFieldSelector;
+};
+
+
+type ContentfulAllProductsNewsStandardPageConnection_groupArgs = {
+  field: ContentfulAllProductsNewsStandardPageFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type ContentfulAllProductsNewsStandardPageConnection_maxArgs = {
+  field: ContentfulAllProductsNewsStandardPageFieldSelector;
+};
+
+
+type ContentfulAllProductsNewsStandardPageConnection_minArgs = {
+  field: ContentfulAllProductsNewsStandardPageFieldSelector;
+};
+
+
+type ContentfulAllProductsNewsStandardPageConnection_sumArgs = {
+  field: ContentfulAllProductsNewsStandardPageFieldSelector;
+};
+
+type ContentfulAllProductsNewsStandardPageEdge = {
+  readonly next: Maybe<ContentfulAllProductsNewsStandardPage>;
+  readonly node: ContentfulAllProductsNewsStandardPage;
+  readonly previous: Maybe<ContentfulAllProductsNewsStandardPage>;
+};
+
+type ContentfulAllProductsNewsStandardPageFieldSelector = {
+  readonly category: InputMaybe<FieldSelectorEnum>;
+  readonly childContentfulAllProductsNewsStandardPageContentTextNode: InputMaybe<contentfulAllProductsNewsStandardPageContentTextNodeFieldSelector>;
+  readonly childContentfulAllProductsNewsStandardPageMetaDescriptionTextNode: InputMaybe<contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeFieldSelector>;
+  readonly childContentfulAllProductsNewsStandardPageNavigationJsonNode: InputMaybe<contentfulAllProductsNewsStandardPageNavigationJsonNodeFieldSelector>;
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly childrenContentfulAllProductsNewsStandardPageContentTextNode: InputMaybe<contentfulAllProductsNewsStandardPageContentTextNodeFieldSelector>;
+  readonly childrenContentfulAllProductsNewsStandardPageMetaDescriptionTextNode: InputMaybe<contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeFieldSelector>;
+  readonly childrenContentfulAllProductsNewsStandardPageNavigationJsonNode: InputMaybe<contentfulAllProductsNewsStandardPageNavigationJsonNodeFieldSelector>;
+  readonly content: InputMaybe<contentfulAllProductsNewsStandardPageContentTextNodeFieldSelector>;
+  readonly contentful_id: InputMaybe<FieldSelectorEnum>;
+  readonly createdAt: InputMaybe<FieldSelectorEnum>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly metaDescription: InputMaybe<contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeFieldSelector>;
+  readonly navigation: InputMaybe<contentfulAllProductsNewsStandardPageNavigationJsonNodeFieldSelector>;
+  readonly node_locale: InputMaybe<FieldSelectorEnum>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly slug: InputMaybe<FieldSelectorEnum>;
+  readonly spaceId: InputMaybe<FieldSelectorEnum>;
+  readonly sys: InputMaybe<ContentfulAllProductsNewsStandardPageSysFieldSelector>;
+  readonly title: InputMaybe<FieldSelectorEnum>;
+  readonly updatedAt: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulAllProductsNewsStandardPageFilterInput = {
+  readonly category: InputMaybe<StringQueryOperatorInput>;
+  readonly childContentfulAllProductsNewsStandardPageContentTextNode: InputMaybe<contentfulAllProductsNewsStandardPageContentTextNodeFilterInput>;
+  readonly childContentfulAllProductsNewsStandardPageMetaDescriptionTextNode: InputMaybe<contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeFilterInput>;
+  readonly childContentfulAllProductsNewsStandardPageNavigationJsonNode: InputMaybe<contentfulAllProductsNewsStandardPageNavigationJsonNodeFilterInput>;
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly childrenContentfulAllProductsNewsStandardPageContentTextNode: InputMaybe<contentfulAllProductsNewsStandardPageContentTextNodeFilterListInput>;
+  readonly childrenContentfulAllProductsNewsStandardPageMetaDescriptionTextNode: InputMaybe<contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeFilterListInput>;
+  readonly childrenContentfulAllProductsNewsStandardPageNavigationJsonNode: InputMaybe<contentfulAllProductsNewsStandardPageNavigationJsonNodeFilterListInput>;
+  readonly content: InputMaybe<contentfulAllProductsNewsStandardPageContentTextNodeFilterInput>;
+  readonly contentful_id: InputMaybe<StringQueryOperatorInput>;
+  readonly createdAt: InputMaybe<DateQueryOperatorInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly metaDescription: InputMaybe<contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeFilterInput>;
+  readonly navigation: InputMaybe<contentfulAllProductsNewsStandardPageNavigationJsonNodeFilterInput>;
+  readonly node_locale: InputMaybe<StringQueryOperatorInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly slug: InputMaybe<StringQueryOperatorInput>;
+  readonly spaceId: InputMaybe<StringQueryOperatorInput>;
+  readonly sys: InputMaybe<ContentfulAllProductsNewsStandardPageSysFilterInput>;
+  readonly title: InputMaybe<StringQueryOperatorInput>;
+  readonly updatedAt: InputMaybe<DateQueryOperatorInput>;
+};
+
+type ContentfulAllProductsNewsStandardPageGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<ContentfulAllProductsNewsStandardPageEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<ContentfulAllProductsNewsStandardPageGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<ContentfulAllProductsNewsStandardPage>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type ContentfulAllProductsNewsStandardPageGroupConnection_distinctArgs = {
+  field: ContentfulAllProductsNewsStandardPageFieldSelector;
+};
+
+
+type ContentfulAllProductsNewsStandardPageGroupConnection_groupArgs = {
+  field: ContentfulAllProductsNewsStandardPageFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type ContentfulAllProductsNewsStandardPageGroupConnection_maxArgs = {
+  field: ContentfulAllProductsNewsStandardPageFieldSelector;
+};
+
+
+type ContentfulAllProductsNewsStandardPageGroupConnection_minArgs = {
+  field: ContentfulAllProductsNewsStandardPageFieldSelector;
+};
+
+
+type ContentfulAllProductsNewsStandardPageGroupConnection_sumArgs = {
+  field: ContentfulAllProductsNewsStandardPageFieldSelector;
+};
+
+type ContentfulAllProductsNewsStandardPageSortInput = {
+  readonly category: InputMaybe<SortOrderEnum>;
+  readonly childContentfulAllProductsNewsStandardPageContentTextNode: InputMaybe<contentfulAllProductsNewsStandardPageContentTextNodeSortInput>;
+  readonly childContentfulAllProductsNewsStandardPageMetaDescriptionTextNode: InputMaybe<contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeSortInput>;
+  readonly childContentfulAllProductsNewsStandardPageNavigationJsonNode: InputMaybe<contentfulAllProductsNewsStandardPageNavigationJsonNodeSortInput>;
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly childrenContentfulAllProductsNewsStandardPageContentTextNode: InputMaybe<contentfulAllProductsNewsStandardPageContentTextNodeSortInput>;
+  readonly childrenContentfulAllProductsNewsStandardPageMetaDescriptionTextNode: InputMaybe<contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeSortInput>;
+  readonly childrenContentfulAllProductsNewsStandardPageNavigationJsonNode: InputMaybe<contentfulAllProductsNewsStandardPageNavigationJsonNodeSortInput>;
+  readonly content: InputMaybe<contentfulAllProductsNewsStandardPageContentTextNodeSortInput>;
+  readonly contentful_id: InputMaybe<SortOrderEnum>;
+  readonly createdAt: InputMaybe<SortOrderEnum>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly metaDescription: InputMaybe<contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeSortInput>;
+  readonly navigation: InputMaybe<contentfulAllProductsNewsStandardPageNavigationJsonNodeSortInput>;
+  readonly node_locale: InputMaybe<SortOrderEnum>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly slug: InputMaybe<SortOrderEnum>;
+  readonly spaceId: InputMaybe<SortOrderEnum>;
+  readonly sys: InputMaybe<ContentfulAllProductsNewsStandardPageSysSortInput>;
+  readonly title: InputMaybe<SortOrderEnum>;
+  readonly updatedAt: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulAllProductsNewsStandardPageSys = {
+  readonly contentType: Maybe<ContentfulAllProductsNewsStandardPageSysContentType>;
+  readonly revision: Maybe<Scalars['Int']>;
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type ContentfulAllProductsNewsStandardPageSysContentType = {
+  readonly sys: Maybe<ContentfulAllProductsNewsStandardPageSysContentTypeSys>;
+};
+
+type ContentfulAllProductsNewsStandardPageSysContentTypeFieldSelector = {
+  readonly sys: InputMaybe<ContentfulAllProductsNewsStandardPageSysContentTypeSysFieldSelector>;
+};
+
+type ContentfulAllProductsNewsStandardPageSysContentTypeFilterInput = {
+  readonly sys: InputMaybe<ContentfulAllProductsNewsStandardPageSysContentTypeSysFilterInput>;
+};
+
+type ContentfulAllProductsNewsStandardPageSysContentTypeSortInput = {
+  readonly sys: InputMaybe<ContentfulAllProductsNewsStandardPageSysContentTypeSysSortInput>;
+};
+
+type ContentfulAllProductsNewsStandardPageSysContentTypeSys = {
+  readonly id: Maybe<Scalars['String']>;
+  readonly linkType: Maybe<Scalars['String']>;
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type ContentfulAllProductsNewsStandardPageSysContentTypeSysFieldSelector = {
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly linkType: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulAllProductsNewsStandardPageSysContentTypeSysFilterInput = {
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly linkType: InputMaybe<StringQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ContentfulAllProductsNewsStandardPageSysContentTypeSysSortInput = {
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly linkType: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulAllProductsNewsStandardPageSysFieldSelector = {
+  readonly contentType: InputMaybe<ContentfulAllProductsNewsStandardPageSysContentTypeFieldSelector>;
+  readonly revision: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulAllProductsNewsStandardPageSysFilterInput = {
+  readonly contentType: InputMaybe<ContentfulAllProductsNewsStandardPageSysContentTypeFilterInput>;
+  readonly revision: InputMaybe<IntQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ContentfulAllProductsNewsStandardPageSysSortInput = {
+  readonly contentType: InputMaybe<ContentfulAllProductsNewsStandardPageSysContentTypeSortInput>;
+  readonly revision: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
 type ContentfulAsset = ContentfulReference & Node & RemoteFile & {
   readonly children: ReadonlyArray<Node>;
   readonly contentful_id: Scalars['String'];
@@ -1750,9 +2022,1081 @@ type ContentfulImageCropFocus =
   | 'top_left'
   | 'top_right';
 
+type ContentfulPolicy = ContentfulEntry & ContentfulReference & Node & {
+  /** Returns the first child node of type contentfulPolicyContentTextNode or null if there are no children of given type on this node */
+  readonly childContentfulPolicyContentTextNode: Maybe<contentfulPolicyContentTextNode>;
+  /** Returns the first child node of type contentfulPolicyMetaDescriptionTextNode or null if there are no children of given type on this node */
+  readonly childContentfulPolicyMetaDescriptionTextNode: Maybe<contentfulPolicyMetaDescriptionTextNode>;
+  /** Returns the first child node of type contentfulPolicyNavigationJsonNode or null if there are no children of given type on this node */
+  readonly childContentfulPolicyNavigationJsonNode: Maybe<contentfulPolicyNavigationJsonNode>;
+  readonly children: ReadonlyArray<Node>;
+  /** Returns all children nodes filtered by type contentfulPolicyContentTextNode */
+  readonly childrenContentfulPolicyContentTextNode: Maybe<ReadonlyArray<Maybe<contentfulPolicyContentTextNode>>>;
+  /** Returns all children nodes filtered by type contentfulPolicyMetaDescriptionTextNode */
+  readonly childrenContentfulPolicyMetaDescriptionTextNode: Maybe<ReadonlyArray<Maybe<contentfulPolicyMetaDescriptionTextNode>>>;
+  /** Returns all children nodes filtered by type contentfulPolicyNavigationJsonNode */
+  readonly childrenContentfulPolicyNavigationJsonNode: Maybe<ReadonlyArray<Maybe<contentfulPolicyNavigationJsonNode>>>;
+  readonly content: Maybe<contentfulPolicyContentTextNode>;
+  readonly contentful_id: Scalars['String'];
+  readonly createdAt: Maybe<Scalars['Date']>;
+  readonly id: Scalars['ID'];
+  readonly internal: Internal;
+  readonly metaDescription: Maybe<contentfulPolicyMetaDescriptionTextNode>;
+  readonly navigation: Maybe<contentfulPolicyNavigationJsonNode>;
+  readonly node_locale: Scalars['String'];
+  readonly parent: Maybe<Node>;
+  readonly slug: Maybe<Scalars['String']>;
+  readonly spaceId: Maybe<Scalars['String']>;
+  readonly sys: Maybe<ContentfulPolicySys>;
+  readonly title: Maybe<Scalars['String']>;
+  readonly updatedAt: Maybe<Scalars['Date']>;
+};
+
+
+type ContentfulPolicy_createdAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type ContentfulPolicy_updatedAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+type ContentfulPolicyConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<ContentfulPolicyEdge>;
+  readonly group: ReadonlyArray<ContentfulPolicyGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<ContentfulPolicy>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type ContentfulPolicyConnection_distinctArgs = {
+  field: ContentfulPolicyFieldSelector;
+};
+
+
+type ContentfulPolicyConnection_groupArgs = {
+  field: ContentfulPolicyFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type ContentfulPolicyConnection_maxArgs = {
+  field: ContentfulPolicyFieldSelector;
+};
+
+
+type ContentfulPolicyConnection_minArgs = {
+  field: ContentfulPolicyFieldSelector;
+};
+
+
+type ContentfulPolicyConnection_sumArgs = {
+  field: ContentfulPolicyFieldSelector;
+};
+
+type ContentfulPolicyEdge = {
+  readonly next: Maybe<ContentfulPolicy>;
+  readonly node: ContentfulPolicy;
+  readonly previous: Maybe<ContentfulPolicy>;
+};
+
+type ContentfulPolicyFieldSelector = {
+  readonly childContentfulPolicyContentTextNode: InputMaybe<contentfulPolicyContentTextNodeFieldSelector>;
+  readonly childContentfulPolicyMetaDescriptionTextNode: InputMaybe<contentfulPolicyMetaDescriptionTextNodeFieldSelector>;
+  readonly childContentfulPolicyNavigationJsonNode: InputMaybe<contentfulPolicyNavigationJsonNodeFieldSelector>;
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly childrenContentfulPolicyContentTextNode: InputMaybe<contentfulPolicyContentTextNodeFieldSelector>;
+  readonly childrenContentfulPolicyMetaDescriptionTextNode: InputMaybe<contentfulPolicyMetaDescriptionTextNodeFieldSelector>;
+  readonly childrenContentfulPolicyNavigationJsonNode: InputMaybe<contentfulPolicyNavigationJsonNodeFieldSelector>;
+  readonly content: InputMaybe<contentfulPolicyContentTextNodeFieldSelector>;
+  readonly contentful_id: InputMaybe<FieldSelectorEnum>;
+  readonly createdAt: InputMaybe<FieldSelectorEnum>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly metaDescription: InputMaybe<contentfulPolicyMetaDescriptionTextNodeFieldSelector>;
+  readonly navigation: InputMaybe<contentfulPolicyNavigationJsonNodeFieldSelector>;
+  readonly node_locale: InputMaybe<FieldSelectorEnum>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly slug: InputMaybe<FieldSelectorEnum>;
+  readonly spaceId: InputMaybe<FieldSelectorEnum>;
+  readonly sys: InputMaybe<ContentfulPolicySysFieldSelector>;
+  readonly title: InputMaybe<FieldSelectorEnum>;
+  readonly updatedAt: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulPolicyFilterInput = {
+  readonly childContentfulPolicyContentTextNode: InputMaybe<contentfulPolicyContentTextNodeFilterInput>;
+  readonly childContentfulPolicyMetaDescriptionTextNode: InputMaybe<contentfulPolicyMetaDescriptionTextNodeFilterInput>;
+  readonly childContentfulPolicyNavigationJsonNode: InputMaybe<contentfulPolicyNavigationJsonNodeFilterInput>;
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly childrenContentfulPolicyContentTextNode: InputMaybe<contentfulPolicyContentTextNodeFilterListInput>;
+  readonly childrenContentfulPolicyMetaDescriptionTextNode: InputMaybe<contentfulPolicyMetaDescriptionTextNodeFilterListInput>;
+  readonly childrenContentfulPolicyNavigationJsonNode: InputMaybe<contentfulPolicyNavigationJsonNodeFilterListInput>;
+  readonly content: InputMaybe<contentfulPolicyContentTextNodeFilterInput>;
+  readonly contentful_id: InputMaybe<StringQueryOperatorInput>;
+  readonly createdAt: InputMaybe<DateQueryOperatorInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly metaDescription: InputMaybe<contentfulPolicyMetaDescriptionTextNodeFilterInput>;
+  readonly navigation: InputMaybe<contentfulPolicyNavigationJsonNodeFilterInput>;
+  readonly node_locale: InputMaybe<StringQueryOperatorInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly slug: InputMaybe<StringQueryOperatorInput>;
+  readonly spaceId: InputMaybe<StringQueryOperatorInput>;
+  readonly sys: InputMaybe<ContentfulPolicySysFilterInput>;
+  readonly title: InputMaybe<StringQueryOperatorInput>;
+  readonly updatedAt: InputMaybe<DateQueryOperatorInput>;
+};
+
+type ContentfulPolicyGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<ContentfulPolicyEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<ContentfulPolicyGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<ContentfulPolicy>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type ContentfulPolicyGroupConnection_distinctArgs = {
+  field: ContentfulPolicyFieldSelector;
+};
+
+
+type ContentfulPolicyGroupConnection_groupArgs = {
+  field: ContentfulPolicyFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type ContentfulPolicyGroupConnection_maxArgs = {
+  field: ContentfulPolicyFieldSelector;
+};
+
+
+type ContentfulPolicyGroupConnection_minArgs = {
+  field: ContentfulPolicyFieldSelector;
+};
+
+
+type ContentfulPolicyGroupConnection_sumArgs = {
+  field: ContentfulPolicyFieldSelector;
+};
+
+type ContentfulPolicySortInput = {
+  readonly childContentfulPolicyContentTextNode: InputMaybe<contentfulPolicyContentTextNodeSortInput>;
+  readonly childContentfulPolicyMetaDescriptionTextNode: InputMaybe<contentfulPolicyMetaDescriptionTextNodeSortInput>;
+  readonly childContentfulPolicyNavigationJsonNode: InputMaybe<contentfulPolicyNavigationJsonNodeSortInput>;
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly childrenContentfulPolicyContentTextNode: InputMaybe<contentfulPolicyContentTextNodeSortInput>;
+  readonly childrenContentfulPolicyMetaDescriptionTextNode: InputMaybe<contentfulPolicyMetaDescriptionTextNodeSortInput>;
+  readonly childrenContentfulPolicyNavigationJsonNode: InputMaybe<contentfulPolicyNavigationJsonNodeSortInput>;
+  readonly content: InputMaybe<contentfulPolicyContentTextNodeSortInput>;
+  readonly contentful_id: InputMaybe<SortOrderEnum>;
+  readonly createdAt: InputMaybe<SortOrderEnum>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly metaDescription: InputMaybe<contentfulPolicyMetaDescriptionTextNodeSortInput>;
+  readonly navigation: InputMaybe<contentfulPolicyNavigationJsonNodeSortInput>;
+  readonly node_locale: InputMaybe<SortOrderEnum>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly slug: InputMaybe<SortOrderEnum>;
+  readonly spaceId: InputMaybe<SortOrderEnum>;
+  readonly sys: InputMaybe<ContentfulPolicySysSortInput>;
+  readonly title: InputMaybe<SortOrderEnum>;
+  readonly updatedAt: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulPolicySys = {
+  readonly contentType: Maybe<ContentfulPolicySysContentType>;
+  readonly revision: Maybe<Scalars['Int']>;
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type ContentfulPolicySysContentType = {
+  readonly sys: Maybe<ContentfulPolicySysContentTypeSys>;
+};
+
+type ContentfulPolicySysContentTypeFieldSelector = {
+  readonly sys: InputMaybe<ContentfulPolicySysContentTypeSysFieldSelector>;
+};
+
+type ContentfulPolicySysContentTypeFilterInput = {
+  readonly sys: InputMaybe<ContentfulPolicySysContentTypeSysFilterInput>;
+};
+
+type ContentfulPolicySysContentTypeSortInput = {
+  readonly sys: InputMaybe<ContentfulPolicySysContentTypeSysSortInput>;
+};
+
+type ContentfulPolicySysContentTypeSys = {
+  readonly id: Maybe<Scalars['String']>;
+  readonly linkType: Maybe<Scalars['String']>;
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type ContentfulPolicySysContentTypeSysFieldSelector = {
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly linkType: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulPolicySysContentTypeSysFilterInput = {
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly linkType: InputMaybe<StringQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ContentfulPolicySysContentTypeSysSortInput = {
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly linkType: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulPolicySysFieldSelector = {
+  readonly contentType: InputMaybe<ContentfulPolicySysContentTypeFieldSelector>;
+  readonly revision: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulPolicySysFilterInput = {
+  readonly contentType: InputMaybe<ContentfulPolicySysContentTypeFilterInput>;
+  readonly revision: InputMaybe<IntQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ContentfulPolicySysSortInput = {
+  readonly contentType: InputMaybe<ContentfulPolicySysContentTypeSortInput>;
+  readonly revision: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
 type ContentfulReference = {
   readonly contentful_id: Scalars['String'];
   readonly id: Scalars['ID'];
+};
+
+type ContentfulTvBroadbandGuideStandardPage = ContentfulEntry & ContentfulReference & Node & {
+  readonly category: Maybe<Scalars['String']>;
+  /** Returns the first child node of type contentfulTvBroadbandGuideStandardPageContentTextNode or null if there are no children of given type on this node */
+  readonly childContentfulTvBroadbandGuideStandardPageContentTextNode: Maybe<contentfulTvBroadbandGuideStandardPageContentTextNode>;
+  /** Returns the first child node of type contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNode or null if there are no children of given type on this node */
+  readonly childContentfulTvBroadbandGuideStandardPageMetaDescriptionTextNode: Maybe<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNode>;
+  /** Returns the first child node of type contentfulTvBroadbandGuideStandardPageNavigationJsonNode or null if there are no children of given type on this node */
+  readonly childContentfulTvBroadbandGuideStandardPageNavigationJsonNode: Maybe<contentfulTvBroadbandGuideStandardPageNavigationJsonNode>;
+  readonly children: ReadonlyArray<Node>;
+  /** Returns all children nodes filtered by type contentfulTvBroadbandGuideStandardPageContentTextNode */
+  readonly childrenContentfulTvBroadbandGuideStandardPageContentTextNode: Maybe<ReadonlyArray<Maybe<contentfulTvBroadbandGuideStandardPageContentTextNode>>>;
+  /** Returns all children nodes filtered by type contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNode */
+  readonly childrenContentfulTvBroadbandGuideStandardPageMetaDescriptionTextNode: Maybe<ReadonlyArray<Maybe<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNode>>>;
+  /** Returns all children nodes filtered by type contentfulTvBroadbandGuideStandardPageNavigationJsonNode */
+  readonly childrenContentfulTvBroadbandGuideStandardPageNavigationJsonNode: Maybe<ReadonlyArray<Maybe<contentfulTvBroadbandGuideStandardPageNavigationJsonNode>>>;
+  readonly content: Maybe<contentfulTvBroadbandGuideStandardPageContentTextNode>;
+  readonly contentful_id: Scalars['String'];
+  readonly createdAt: Maybe<Scalars['Date']>;
+  readonly id: Scalars['ID'];
+  readonly internal: Internal;
+  readonly metaDescription: Maybe<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNode>;
+  readonly navigation: Maybe<contentfulTvBroadbandGuideStandardPageNavigationJsonNode>;
+  readonly node_locale: Scalars['String'];
+  readonly parent: Maybe<Node>;
+  readonly slug: Maybe<Scalars['String']>;
+  readonly spaceId: Maybe<Scalars['String']>;
+  readonly sys: Maybe<ContentfulTvBroadbandGuideStandardPageSys>;
+  readonly title: Maybe<Scalars['String']>;
+  readonly updatedAt: Maybe<Scalars['Date']>;
+};
+
+
+type ContentfulTvBroadbandGuideStandardPage_createdAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type ContentfulTvBroadbandGuideStandardPage_updatedAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+type ContentfulTvBroadbandGuideStandardPageConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<ContentfulTvBroadbandGuideStandardPageEdge>;
+  readonly group: ReadonlyArray<ContentfulTvBroadbandGuideStandardPageGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<ContentfulTvBroadbandGuideStandardPage>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type ContentfulTvBroadbandGuideStandardPageConnection_distinctArgs = {
+  field: ContentfulTvBroadbandGuideStandardPageFieldSelector;
+};
+
+
+type ContentfulTvBroadbandGuideStandardPageConnection_groupArgs = {
+  field: ContentfulTvBroadbandGuideStandardPageFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type ContentfulTvBroadbandGuideStandardPageConnection_maxArgs = {
+  field: ContentfulTvBroadbandGuideStandardPageFieldSelector;
+};
+
+
+type ContentfulTvBroadbandGuideStandardPageConnection_minArgs = {
+  field: ContentfulTvBroadbandGuideStandardPageFieldSelector;
+};
+
+
+type ContentfulTvBroadbandGuideStandardPageConnection_sumArgs = {
+  field: ContentfulTvBroadbandGuideStandardPageFieldSelector;
+};
+
+type ContentfulTvBroadbandGuideStandardPageEdge = {
+  readonly next: Maybe<ContentfulTvBroadbandGuideStandardPage>;
+  readonly node: ContentfulTvBroadbandGuideStandardPage;
+  readonly previous: Maybe<ContentfulTvBroadbandGuideStandardPage>;
+};
+
+type ContentfulTvBroadbandGuideStandardPageFieldSelector = {
+  readonly category: InputMaybe<FieldSelectorEnum>;
+  readonly childContentfulTvBroadbandGuideStandardPageContentTextNode: InputMaybe<contentfulTvBroadbandGuideStandardPageContentTextNodeFieldSelector>;
+  readonly childContentfulTvBroadbandGuideStandardPageMetaDescriptionTextNode: InputMaybe<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeFieldSelector>;
+  readonly childContentfulTvBroadbandGuideStandardPageNavigationJsonNode: InputMaybe<contentfulTvBroadbandGuideStandardPageNavigationJsonNodeFieldSelector>;
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly childrenContentfulTvBroadbandGuideStandardPageContentTextNode: InputMaybe<contentfulTvBroadbandGuideStandardPageContentTextNodeFieldSelector>;
+  readonly childrenContentfulTvBroadbandGuideStandardPageMetaDescriptionTextNode: InputMaybe<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeFieldSelector>;
+  readonly childrenContentfulTvBroadbandGuideStandardPageNavigationJsonNode: InputMaybe<contentfulTvBroadbandGuideStandardPageNavigationJsonNodeFieldSelector>;
+  readonly content: InputMaybe<contentfulTvBroadbandGuideStandardPageContentTextNodeFieldSelector>;
+  readonly contentful_id: InputMaybe<FieldSelectorEnum>;
+  readonly createdAt: InputMaybe<FieldSelectorEnum>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly metaDescription: InputMaybe<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeFieldSelector>;
+  readonly navigation: InputMaybe<contentfulTvBroadbandGuideStandardPageNavigationJsonNodeFieldSelector>;
+  readonly node_locale: InputMaybe<FieldSelectorEnum>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly slug: InputMaybe<FieldSelectorEnum>;
+  readonly spaceId: InputMaybe<FieldSelectorEnum>;
+  readonly sys: InputMaybe<ContentfulTvBroadbandGuideStandardPageSysFieldSelector>;
+  readonly title: InputMaybe<FieldSelectorEnum>;
+  readonly updatedAt: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulTvBroadbandGuideStandardPageFilterInput = {
+  readonly category: InputMaybe<StringQueryOperatorInput>;
+  readonly childContentfulTvBroadbandGuideStandardPageContentTextNode: InputMaybe<contentfulTvBroadbandGuideStandardPageContentTextNodeFilterInput>;
+  readonly childContentfulTvBroadbandGuideStandardPageMetaDescriptionTextNode: InputMaybe<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeFilterInput>;
+  readonly childContentfulTvBroadbandGuideStandardPageNavigationJsonNode: InputMaybe<contentfulTvBroadbandGuideStandardPageNavigationJsonNodeFilterInput>;
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly childrenContentfulTvBroadbandGuideStandardPageContentTextNode: InputMaybe<contentfulTvBroadbandGuideStandardPageContentTextNodeFilterListInput>;
+  readonly childrenContentfulTvBroadbandGuideStandardPageMetaDescriptionTextNode: InputMaybe<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeFilterListInput>;
+  readonly childrenContentfulTvBroadbandGuideStandardPageNavigationJsonNode: InputMaybe<contentfulTvBroadbandGuideStandardPageNavigationJsonNodeFilterListInput>;
+  readonly content: InputMaybe<contentfulTvBroadbandGuideStandardPageContentTextNodeFilterInput>;
+  readonly contentful_id: InputMaybe<StringQueryOperatorInput>;
+  readonly createdAt: InputMaybe<DateQueryOperatorInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly metaDescription: InputMaybe<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeFilterInput>;
+  readonly navigation: InputMaybe<contentfulTvBroadbandGuideStandardPageNavigationJsonNodeFilterInput>;
+  readonly node_locale: InputMaybe<StringQueryOperatorInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly slug: InputMaybe<StringQueryOperatorInput>;
+  readonly spaceId: InputMaybe<StringQueryOperatorInput>;
+  readonly sys: InputMaybe<ContentfulTvBroadbandGuideStandardPageSysFilterInput>;
+  readonly title: InputMaybe<StringQueryOperatorInput>;
+  readonly updatedAt: InputMaybe<DateQueryOperatorInput>;
+};
+
+type ContentfulTvBroadbandGuideStandardPageGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<ContentfulTvBroadbandGuideStandardPageEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<ContentfulTvBroadbandGuideStandardPageGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<ContentfulTvBroadbandGuideStandardPage>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type ContentfulTvBroadbandGuideStandardPageGroupConnection_distinctArgs = {
+  field: ContentfulTvBroadbandGuideStandardPageFieldSelector;
+};
+
+
+type ContentfulTvBroadbandGuideStandardPageGroupConnection_groupArgs = {
+  field: ContentfulTvBroadbandGuideStandardPageFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type ContentfulTvBroadbandGuideStandardPageGroupConnection_maxArgs = {
+  field: ContentfulTvBroadbandGuideStandardPageFieldSelector;
+};
+
+
+type ContentfulTvBroadbandGuideStandardPageGroupConnection_minArgs = {
+  field: ContentfulTvBroadbandGuideStandardPageFieldSelector;
+};
+
+
+type ContentfulTvBroadbandGuideStandardPageGroupConnection_sumArgs = {
+  field: ContentfulTvBroadbandGuideStandardPageFieldSelector;
+};
+
+type ContentfulTvBroadbandGuideStandardPageSortInput = {
+  readonly category: InputMaybe<SortOrderEnum>;
+  readonly childContentfulTvBroadbandGuideStandardPageContentTextNode: InputMaybe<contentfulTvBroadbandGuideStandardPageContentTextNodeSortInput>;
+  readonly childContentfulTvBroadbandGuideStandardPageMetaDescriptionTextNode: InputMaybe<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeSortInput>;
+  readonly childContentfulTvBroadbandGuideStandardPageNavigationJsonNode: InputMaybe<contentfulTvBroadbandGuideStandardPageNavigationJsonNodeSortInput>;
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly childrenContentfulTvBroadbandGuideStandardPageContentTextNode: InputMaybe<contentfulTvBroadbandGuideStandardPageContentTextNodeSortInput>;
+  readonly childrenContentfulTvBroadbandGuideStandardPageMetaDescriptionTextNode: InputMaybe<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeSortInput>;
+  readonly childrenContentfulTvBroadbandGuideStandardPageNavigationJsonNode: InputMaybe<contentfulTvBroadbandGuideStandardPageNavigationJsonNodeSortInput>;
+  readonly content: InputMaybe<contentfulTvBroadbandGuideStandardPageContentTextNodeSortInput>;
+  readonly contentful_id: InputMaybe<SortOrderEnum>;
+  readonly createdAt: InputMaybe<SortOrderEnum>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly metaDescription: InputMaybe<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeSortInput>;
+  readonly navigation: InputMaybe<contentfulTvBroadbandGuideStandardPageNavigationJsonNodeSortInput>;
+  readonly node_locale: InputMaybe<SortOrderEnum>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly slug: InputMaybe<SortOrderEnum>;
+  readonly spaceId: InputMaybe<SortOrderEnum>;
+  readonly sys: InputMaybe<ContentfulTvBroadbandGuideStandardPageSysSortInput>;
+  readonly title: InputMaybe<SortOrderEnum>;
+  readonly updatedAt: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulTvBroadbandGuideStandardPageSys = {
+  readonly contentType: Maybe<ContentfulTvBroadbandGuideStandardPageSysContentType>;
+  readonly revision: Maybe<Scalars['Int']>;
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type ContentfulTvBroadbandGuideStandardPageSysContentType = {
+  readonly sys: Maybe<ContentfulTvBroadbandGuideStandardPageSysContentTypeSys>;
+};
+
+type ContentfulTvBroadbandGuideStandardPageSysContentTypeFieldSelector = {
+  readonly sys: InputMaybe<ContentfulTvBroadbandGuideStandardPageSysContentTypeSysFieldSelector>;
+};
+
+type ContentfulTvBroadbandGuideStandardPageSysContentTypeFilterInput = {
+  readonly sys: InputMaybe<ContentfulTvBroadbandGuideStandardPageSysContentTypeSysFilterInput>;
+};
+
+type ContentfulTvBroadbandGuideStandardPageSysContentTypeSortInput = {
+  readonly sys: InputMaybe<ContentfulTvBroadbandGuideStandardPageSysContentTypeSysSortInput>;
+};
+
+type ContentfulTvBroadbandGuideStandardPageSysContentTypeSys = {
+  readonly id: Maybe<Scalars['String']>;
+  readonly linkType: Maybe<Scalars['String']>;
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type ContentfulTvBroadbandGuideStandardPageSysContentTypeSysFieldSelector = {
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly linkType: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulTvBroadbandGuideStandardPageSysContentTypeSysFilterInput = {
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly linkType: InputMaybe<StringQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ContentfulTvBroadbandGuideStandardPageSysContentTypeSysSortInput = {
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly linkType: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulTvBroadbandGuideStandardPageSysFieldSelector = {
+  readonly contentType: InputMaybe<ContentfulTvBroadbandGuideStandardPageSysContentTypeFieldSelector>;
+  readonly revision: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulTvBroadbandGuideStandardPageSysFilterInput = {
+  readonly contentType: InputMaybe<ContentfulTvBroadbandGuideStandardPageSysContentTypeFilterInput>;
+  readonly revision: InputMaybe<IntQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ContentfulTvBroadbandGuideStandardPageSysSortInput = {
+  readonly contentType: InputMaybe<ContentfulTvBroadbandGuideStandardPageSysContentTypeSortInput>;
+  readonly revision: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulTvBroadbandProviderMainPage = ContentfulEntry & ContentfulReference & Node & {
+  readonly category: Maybe<Scalars['String']>;
+  /** Returns the first child node of type contentfulTvBroadbandProviderMainPageMetaDescriptionTextNode or null if there are no children of given type on this node */
+  readonly childContentfulTvBroadbandProviderMainPageMetaDescriptionTextNode: Maybe<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNode>;
+  readonly children: ReadonlyArray<Node>;
+  /** Returns all children nodes filtered by type contentfulTvBroadbandProviderMainPageMetaDescriptionTextNode */
+  readonly childrenContentfulTvBroadbandProviderMainPageMetaDescriptionTextNode: Maybe<ReadonlyArray<Maybe<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNode>>>;
+  readonly contentful_id: Scalars['String'];
+  readonly createdAt: Maybe<Scalars['Date']>;
+  readonly id: Scalars['ID'];
+  readonly internal: Internal;
+  readonly logo: Maybe<ContentfulAsset>;
+  readonly metaDescription: Maybe<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNode>;
+  readonly node_locale: Scalars['String'];
+  readonly parent: Maybe<Node>;
+  readonly provider: Maybe<Scalars['String']>;
+  readonly slug: Maybe<Scalars['String']>;
+  readonly spaceId: Maybe<Scalars['String']>;
+  readonly sys: Maybe<ContentfulTvBroadbandProviderMainPageSys>;
+  readonly title: Maybe<Scalars['String']>;
+  readonly updatedAt: Maybe<Scalars['Date']>;
+};
+
+
+type ContentfulTvBroadbandProviderMainPage_createdAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type ContentfulTvBroadbandProviderMainPage_updatedAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+type ContentfulTvBroadbandProviderMainPageConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<ContentfulTvBroadbandProviderMainPageEdge>;
+  readonly group: ReadonlyArray<ContentfulTvBroadbandProviderMainPageGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<ContentfulTvBroadbandProviderMainPage>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type ContentfulTvBroadbandProviderMainPageConnection_distinctArgs = {
+  field: ContentfulTvBroadbandProviderMainPageFieldSelector;
+};
+
+
+type ContentfulTvBroadbandProviderMainPageConnection_groupArgs = {
+  field: ContentfulTvBroadbandProviderMainPageFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type ContentfulTvBroadbandProviderMainPageConnection_maxArgs = {
+  field: ContentfulTvBroadbandProviderMainPageFieldSelector;
+};
+
+
+type ContentfulTvBroadbandProviderMainPageConnection_minArgs = {
+  field: ContentfulTvBroadbandProviderMainPageFieldSelector;
+};
+
+
+type ContentfulTvBroadbandProviderMainPageConnection_sumArgs = {
+  field: ContentfulTvBroadbandProviderMainPageFieldSelector;
+};
+
+type ContentfulTvBroadbandProviderMainPageEdge = {
+  readonly next: Maybe<ContentfulTvBroadbandProviderMainPage>;
+  readonly node: ContentfulTvBroadbandProviderMainPage;
+  readonly previous: Maybe<ContentfulTvBroadbandProviderMainPage>;
+};
+
+type ContentfulTvBroadbandProviderMainPageFieldSelector = {
+  readonly category: InputMaybe<FieldSelectorEnum>;
+  readonly childContentfulTvBroadbandProviderMainPageMetaDescriptionTextNode: InputMaybe<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeFieldSelector>;
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly childrenContentfulTvBroadbandProviderMainPageMetaDescriptionTextNode: InputMaybe<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeFieldSelector>;
+  readonly contentful_id: InputMaybe<FieldSelectorEnum>;
+  readonly createdAt: InputMaybe<FieldSelectorEnum>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly logo: InputMaybe<ContentfulAssetFieldSelector>;
+  readonly metaDescription: InputMaybe<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeFieldSelector>;
+  readonly node_locale: InputMaybe<FieldSelectorEnum>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly provider: InputMaybe<FieldSelectorEnum>;
+  readonly slug: InputMaybe<FieldSelectorEnum>;
+  readonly spaceId: InputMaybe<FieldSelectorEnum>;
+  readonly sys: InputMaybe<ContentfulTvBroadbandProviderMainPageSysFieldSelector>;
+  readonly title: InputMaybe<FieldSelectorEnum>;
+  readonly updatedAt: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulTvBroadbandProviderMainPageFilterInput = {
+  readonly category: InputMaybe<StringQueryOperatorInput>;
+  readonly childContentfulTvBroadbandProviderMainPageMetaDescriptionTextNode: InputMaybe<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeFilterInput>;
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly childrenContentfulTvBroadbandProviderMainPageMetaDescriptionTextNode: InputMaybe<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeFilterListInput>;
+  readonly contentful_id: InputMaybe<StringQueryOperatorInput>;
+  readonly createdAt: InputMaybe<DateQueryOperatorInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly logo: InputMaybe<ContentfulAssetFilterInput>;
+  readonly metaDescription: InputMaybe<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeFilterInput>;
+  readonly node_locale: InputMaybe<StringQueryOperatorInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly provider: InputMaybe<StringQueryOperatorInput>;
+  readonly slug: InputMaybe<StringQueryOperatorInput>;
+  readonly spaceId: InputMaybe<StringQueryOperatorInput>;
+  readonly sys: InputMaybe<ContentfulTvBroadbandProviderMainPageSysFilterInput>;
+  readonly title: InputMaybe<StringQueryOperatorInput>;
+  readonly updatedAt: InputMaybe<DateQueryOperatorInput>;
+};
+
+type ContentfulTvBroadbandProviderMainPageGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<ContentfulTvBroadbandProviderMainPageEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<ContentfulTvBroadbandProviderMainPageGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<ContentfulTvBroadbandProviderMainPage>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type ContentfulTvBroadbandProviderMainPageGroupConnection_distinctArgs = {
+  field: ContentfulTvBroadbandProviderMainPageFieldSelector;
+};
+
+
+type ContentfulTvBroadbandProviderMainPageGroupConnection_groupArgs = {
+  field: ContentfulTvBroadbandProviderMainPageFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type ContentfulTvBroadbandProviderMainPageGroupConnection_maxArgs = {
+  field: ContentfulTvBroadbandProviderMainPageFieldSelector;
+};
+
+
+type ContentfulTvBroadbandProviderMainPageGroupConnection_minArgs = {
+  field: ContentfulTvBroadbandProviderMainPageFieldSelector;
+};
+
+
+type ContentfulTvBroadbandProviderMainPageGroupConnection_sumArgs = {
+  field: ContentfulTvBroadbandProviderMainPageFieldSelector;
+};
+
+type ContentfulTvBroadbandProviderMainPageSortInput = {
+  readonly category: InputMaybe<SortOrderEnum>;
+  readonly childContentfulTvBroadbandProviderMainPageMetaDescriptionTextNode: InputMaybe<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeSortInput>;
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly childrenContentfulTvBroadbandProviderMainPageMetaDescriptionTextNode: InputMaybe<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeSortInput>;
+  readonly contentful_id: InputMaybe<SortOrderEnum>;
+  readonly createdAt: InputMaybe<SortOrderEnum>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly logo: InputMaybe<ContentfulAssetSortInput>;
+  readonly metaDescription: InputMaybe<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeSortInput>;
+  readonly node_locale: InputMaybe<SortOrderEnum>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly provider: InputMaybe<SortOrderEnum>;
+  readonly slug: InputMaybe<SortOrderEnum>;
+  readonly spaceId: InputMaybe<SortOrderEnum>;
+  readonly sys: InputMaybe<ContentfulTvBroadbandProviderMainPageSysSortInput>;
+  readonly title: InputMaybe<SortOrderEnum>;
+  readonly updatedAt: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulTvBroadbandProviderMainPageSys = {
+  readonly contentType: Maybe<ContentfulTvBroadbandProviderMainPageSysContentType>;
+  readonly revision: Maybe<Scalars['Int']>;
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type ContentfulTvBroadbandProviderMainPageSysContentType = {
+  readonly sys: Maybe<ContentfulTvBroadbandProviderMainPageSysContentTypeSys>;
+};
+
+type ContentfulTvBroadbandProviderMainPageSysContentTypeFieldSelector = {
+  readonly sys: InputMaybe<ContentfulTvBroadbandProviderMainPageSysContentTypeSysFieldSelector>;
+};
+
+type ContentfulTvBroadbandProviderMainPageSysContentTypeFilterInput = {
+  readonly sys: InputMaybe<ContentfulTvBroadbandProviderMainPageSysContentTypeSysFilterInput>;
+};
+
+type ContentfulTvBroadbandProviderMainPageSysContentTypeSortInput = {
+  readonly sys: InputMaybe<ContentfulTvBroadbandProviderMainPageSysContentTypeSysSortInput>;
+};
+
+type ContentfulTvBroadbandProviderMainPageSysContentTypeSys = {
+  readonly id: Maybe<Scalars['String']>;
+  readonly linkType: Maybe<Scalars['String']>;
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type ContentfulTvBroadbandProviderMainPageSysContentTypeSysFieldSelector = {
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly linkType: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulTvBroadbandProviderMainPageSysContentTypeSysFilterInput = {
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly linkType: InputMaybe<StringQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ContentfulTvBroadbandProviderMainPageSysContentTypeSysSortInput = {
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly linkType: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulTvBroadbandProviderMainPageSysFieldSelector = {
+  readonly contentType: InputMaybe<ContentfulTvBroadbandProviderMainPageSysContentTypeFieldSelector>;
+  readonly revision: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulTvBroadbandProviderMainPageSysFilterInput = {
+  readonly contentType: InputMaybe<ContentfulTvBroadbandProviderMainPageSysContentTypeFilterInput>;
+  readonly revision: InputMaybe<IntQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ContentfulTvBroadbandProviderMainPageSysSortInput = {
+  readonly contentType: InputMaybe<ContentfulTvBroadbandProviderMainPageSysContentTypeSortInput>;
+  readonly revision: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulTvBroadbandProviderStandardPage = ContentfulEntry & ContentfulReference & Node & {
+  readonly category: Maybe<Scalars['String']>;
+  /** Returns the first child node of type contentfulTvBroadbandProviderStandardPageContentTextNode or null if there are no children of given type on this node */
+  readonly childContentfulTvBroadbandProviderStandardPageContentTextNode: Maybe<contentfulTvBroadbandProviderStandardPageContentTextNode>;
+  /** Returns the first child node of type contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNode or null if there are no children of given type on this node */
+  readonly childContentfulTvBroadbandProviderStandardPageMetaDescriptionTextNode: Maybe<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNode>;
+  /** Returns the first child node of type contentfulTvBroadbandProviderStandardPageNavigationJsonNode or null if there are no children of given type on this node */
+  readonly childContentfulTvBroadbandProviderStandardPageNavigationJsonNode: Maybe<contentfulTvBroadbandProviderStandardPageNavigationJsonNode>;
+  readonly children: ReadonlyArray<Node>;
+  /** Returns all children nodes filtered by type contentfulTvBroadbandProviderStandardPageContentTextNode */
+  readonly childrenContentfulTvBroadbandProviderStandardPageContentTextNode: Maybe<ReadonlyArray<Maybe<contentfulTvBroadbandProviderStandardPageContentTextNode>>>;
+  /** Returns all children nodes filtered by type contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNode */
+  readonly childrenContentfulTvBroadbandProviderStandardPageMetaDescriptionTextNode: Maybe<ReadonlyArray<Maybe<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNode>>>;
+  /** Returns all children nodes filtered by type contentfulTvBroadbandProviderStandardPageNavigationJsonNode */
+  readonly childrenContentfulTvBroadbandProviderStandardPageNavigationJsonNode: Maybe<ReadonlyArray<Maybe<contentfulTvBroadbandProviderStandardPageNavigationJsonNode>>>;
+  readonly content: Maybe<contentfulTvBroadbandProviderStandardPageContentTextNode>;
+  readonly contentful_id: Scalars['String'];
+  readonly createdAt: Maybe<Scalars['Date']>;
+  readonly id: Scalars['ID'];
+  readonly internal: Internal;
+  readonly logo: Maybe<ContentfulAsset>;
+  readonly metaDescription: Maybe<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNode>;
+  readonly navigation: Maybe<contentfulTvBroadbandProviderStandardPageNavigationJsonNode>;
+  readonly node_locale: Scalars['String'];
+  readonly parent: Maybe<Node>;
+  readonly provider: Maybe<Scalars['String']>;
+  readonly slug: Maybe<Scalars['String']>;
+  readonly spaceId: Maybe<Scalars['String']>;
+  readonly sys: Maybe<ContentfulTvBroadbandProviderStandardPageSys>;
+  readonly title: Maybe<Scalars['String']>;
+  readonly updatedAt: Maybe<Scalars['Date']>;
+};
+
+
+type ContentfulTvBroadbandProviderStandardPage_createdAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type ContentfulTvBroadbandProviderStandardPage_updatedAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+type ContentfulTvBroadbandProviderStandardPageConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<ContentfulTvBroadbandProviderStandardPageEdge>;
+  readonly group: ReadonlyArray<ContentfulTvBroadbandProviderStandardPageGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<ContentfulTvBroadbandProviderStandardPage>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type ContentfulTvBroadbandProviderStandardPageConnection_distinctArgs = {
+  field: ContentfulTvBroadbandProviderStandardPageFieldSelector;
+};
+
+
+type ContentfulTvBroadbandProviderStandardPageConnection_groupArgs = {
+  field: ContentfulTvBroadbandProviderStandardPageFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type ContentfulTvBroadbandProviderStandardPageConnection_maxArgs = {
+  field: ContentfulTvBroadbandProviderStandardPageFieldSelector;
+};
+
+
+type ContentfulTvBroadbandProviderStandardPageConnection_minArgs = {
+  field: ContentfulTvBroadbandProviderStandardPageFieldSelector;
+};
+
+
+type ContentfulTvBroadbandProviderStandardPageConnection_sumArgs = {
+  field: ContentfulTvBroadbandProviderStandardPageFieldSelector;
+};
+
+type ContentfulTvBroadbandProviderStandardPageEdge = {
+  readonly next: Maybe<ContentfulTvBroadbandProviderStandardPage>;
+  readonly node: ContentfulTvBroadbandProviderStandardPage;
+  readonly previous: Maybe<ContentfulTvBroadbandProviderStandardPage>;
+};
+
+type ContentfulTvBroadbandProviderStandardPageFieldSelector = {
+  readonly category: InputMaybe<FieldSelectorEnum>;
+  readonly childContentfulTvBroadbandProviderStandardPageContentTextNode: InputMaybe<contentfulTvBroadbandProviderStandardPageContentTextNodeFieldSelector>;
+  readonly childContentfulTvBroadbandProviderStandardPageMetaDescriptionTextNode: InputMaybe<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeFieldSelector>;
+  readonly childContentfulTvBroadbandProviderStandardPageNavigationJsonNode: InputMaybe<contentfulTvBroadbandProviderStandardPageNavigationJsonNodeFieldSelector>;
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly childrenContentfulTvBroadbandProviderStandardPageContentTextNode: InputMaybe<contentfulTvBroadbandProviderStandardPageContentTextNodeFieldSelector>;
+  readonly childrenContentfulTvBroadbandProviderStandardPageMetaDescriptionTextNode: InputMaybe<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeFieldSelector>;
+  readonly childrenContentfulTvBroadbandProviderStandardPageNavigationJsonNode: InputMaybe<contentfulTvBroadbandProviderStandardPageNavigationJsonNodeFieldSelector>;
+  readonly content: InputMaybe<contentfulTvBroadbandProviderStandardPageContentTextNodeFieldSelector>;
+  readonly contentful_id: InputMaybe<FieldSelectorEnum>;
+  readonly createdAt: InputMaybe<FieldSelectorEnum>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly logo: InputMaybe<ContentfulAssetFieldSelector>;
+  readonly metaDescription: InputMaybe<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeFieldSelector>;
+  readonly navigation: InputMaybe<contentfulTvBroadbandProviderStandardPageNavigationJsonNodeFieldSelector>;
+  readonly node_locale: InputMaybe<FieldSelectorEnum>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly provider: InputMaybe<FieldSelectorEnum>;
+  readonly slug: InputMaybe<FieldSelectorEnum>;
+  readonly spaceId: InputMaybe<FieldSelectorEnum>;
+  readonly sys: InputMaybe<ContentfulTvBroadbandProviderStandardPageSysFieldSelector>;
+  readonly title: InputMaybe<FieldSelectorEnum>;
+  readonly updatedAt: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulTvBroadbandProviderStandardPageFilterInput = {
+  readonly category: InputMaybe<StringQueryOperatorInput>;
+  readonly childContentfulTvBroadbandProviderStandardPageContentTextNode: InputMaybe<contentfulTvBroadbandProviderStandardPageContentTextNodeFilterInput>;
+  readonly childContentfulTvBroadbandProviderStandardPageMetaDescriptionTextNode: InputMaybe<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeFilterInput>;
+  readonly childContentfulTvBroadbandProviderStandardPageNavigationJsonNode: InputMaybe<contentfulTvBroadbandProviderStandardPageNavigationJsonNodeFilterInput>;
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly childrenContentfulTvBroadbandProviderStandardPageContentTextNode: InputMaybe<contentfulTvBroadbandProviderStandardPageContentTextNodeFilterListInput>;
+  readonly childrenContentfulTvBroadbandProviderStandardPageMetaDescriptionTextNode: InputMaybe<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeFilterListInput>;
+  readonly childrenContentfulTvBroadbandProviderStandardPageNavigationJsonNode: InputMaybe<contentfulTvBroadbandProviderStandardPageNavigationJsonNodeFilterListInput>;
+  readonly content: InputMaybe<contentfulTvBroadbandProviderStandardPageContentTextNodeFilterInput>;
+  readonly contentful_id: InputMaybe<StringQueryOperatorInput>;
+  readonly createdAt: InputMaybe<DateQueryOperatorInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly logo: InputMaybe<ContentfulAssetFilterInput>;
+  readonly metaDescription: InputMaybe<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeFilterInput>;
+  readonly navigation: InputMaybe<contentfulTvBroadbandProviderStandardPageNavigationJsonNodeFilterInput>;
+  readonly node_locale: InputMaybe<StringQueryOperatorInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly provider: InputMaybe<StringQueryOperatorInput>;
+  readonly slug: InputMaybe<StringQueryOperatorInput>;
+  readonly spaceId: InputMaybe<StringQueryOperatorInput>;
+  readonly sys: InputMaybe<ContentfulTvBroadbandProviderStandardPageSysFilterInput>;
+  readonly title: InputMaybe<StringQueryOperatorInput>;
+  readonly updatedAt: InputMaybe<DateQueryOperatorInput>;
+};
+
+type ContentfulTvBroadbandProviderStandardPageGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<ContentfulTvBroadbandProviderStandardPageEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<ContentfulTvBroadbandProviderStandardPageGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<ContentfulTvBroadbandProviderStandardPage>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type ContentfulTvBroadbandProviderStandardPageGroupConnection_distinctArgs = {
+  field: ContentfulTvBroadbandProviderStandardPageFieldSelector;
+};
+
+
+type ContentfulTvBroadbandProviderStandardPageGroupConnection_groupArgs = {
+  field: ContentfulTvBroadbandProviderStandardPageFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type ContentfulTvBroadbandProviderStandardPageGroupConnection_maxArgs = {
+  field: ContentfulTvBroadbandProviderStandardPageFieldSelector;
+};
+
+
+type ContentfulTvBroadbandProviderStandardPageGroupConnection_minArgs = {
+  field: ContentfulTvBroadbandProviderStandardPageFieldSelector;
+};
+
+
+type ContentfulTvBroadbandProviderStandardPageGroupConnection_sumArgs = {
+  field: ContentfulTvBroadbandProviderStandardPageFieldSelector;
+};
+
+type ContentfulTvBroadbandProviderStandardPageSortInput = {
+  readonly category: InputMaybe<SortOrderEnum>;
+  readonly childContentfulTvBroadbandProviderStandardPageContentTextNode: InputMaybe<contentfulTvBroadbandProviderStandardPageContentTextNodeSortInput>;
+  readonly childContentfulTvBroadbandProviderStandardPageMetaDescriptionTextNode: InputMaybe<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeSortInput>;
+  readonly childContentfulTvBroadbandProviderStandardPageNavigationJsonNode: InputMaybe<contentfulTvBroadbandProviderStandardPageNavigationJsonNodeSortInput>;
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly childrenContentfulTvBroadbandProviderStandardPageContentTextNode: InputMaybe<contentfulTvBroadbandProviderStandardPageContentTextNodeSortInput>;
+  readonly childrenContentfulTvBroadbandProviderStandardPageMetaDescriptionTextNode: InputMaybe<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeSortInput>;
+  readonly childrenContentfulTvBroadbandProviderStandardPageNavigationJsonNode: InputMaybe<contentfulTvBroadbandProviderStandardPageNavigationJsonNodeSortInput>;
+  readonly content: InputMaybe<contentfulTvBroadbandProviderStandardPageContentTextNodeSortInput>;
+  readonly contentful_id: InputMaybe<SortOrderEnum>;
+  readonly createdAt: InputMaybe<SortOrderEnum>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly logo: InputMaybe<ContentfulAssetSortInput>;
+  readonly metaDescription: InputMaybe<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeSortInput>;
+  readonly navigation: InputMaybe<contentfulTvBroadbandProviderStandardPageNavigationJsonNodeSortInput>;
+  readonly node_locale: InputMaybe<SortOrderEnum>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly provider: InputMaybe<SortOrderEnum>;
+  readonly slug: InputMaybe<SortOrderEnum>;
+  readonly spaceId: InputMaybe<SortOrderEnum>;
+  readonly sys: InputMaybe<ContentfulTvBroadbandProviderStandardPageSysSortInput>;
+  readonly title: InputMaybe<SortOrderEnum>;
+  readonly updatedAt: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulTvBroadbandProviderStandardPageSys = {
+  readonly contentType: Maybe<ContentfulTvBroadbandProviderStandardPageSysContentType>;
+  readonly revision: Maybe<Scalars['Int']>;
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type ContentfulTvBroadbandProviderStandardPageSysContentType = {
+  readonly sys: Maybe<ContentfulTvBroadbandProviderStandardPageSysContentTypeSys>;
+};
+
+type ContentfulTvBroadbandProviderStandardPageSysContentTypeFieldSelector = {
+  readonly sys: InputMaybe<ContentfulTvBroadbandProviderStandardPageSysContentTypeSysFieldSelector>;
+};
+
+type ContentfulTvBroadbandProviderStandardPageSysContentTypeFilterInput = {
+  readonly sys: InputMaybe<ContentfulTvBroadbandProviderStandardPageSysContentTypeSysFilterInput>;
+};
+
+type ContentfulTvBroadbandProviderStandardPageSysContentTypeSortInput = {
+  readonly sys: InputMaybe<ContentfulTvBroadbandProviderStandardPageSysContentTypeSysSortInput>;
+};
+
+type ContentfulTvBroadbandProviderStandardPageSysContentTypeSys = {
+  readonly id: Maybe<Scalars['String']>;
+  readonly linkType: Maybe<Scalars['String']>;
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type ContentfulTvBroadbandProviderStandardPageSysContentTypeSysFieldSelector = {
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly linkType: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulTvBroadbandProviderStandardPageSysContentTypeSysFilterInput = {
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly linkType: InputMaybe<StringQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ContentfulTvBroadbandProviderStandardPageSysContentTypeSysSortInput = {
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly linkType: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulTvBroadbandProviderStandardPageSysFieldSelector = {
+  readonly contentType: InputMaybe<ContentfulTvBroadbandProviderStandardPageSysContentTypeFieldSelector>;
+  readonly revision: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulTvBroadbandProviderStandardPageSysFilterInput = {
+  readonly contentType: InputMaybe<ContentfulTvBroadbandProviderStandardPageSysContentTypeFilterInput>;
+  readonly revision: InputMaybe<IntQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ContentfulTvBroadbandProviderStandardPageSysSortInput = {
+  readonly contentType: InputMaybe<ContentfulTvBroadbandProviderStandardPageSysContentTypeSortInput>;
+  readonly revision: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
 };
 
 type DateQueryOperatorInput = {
@@ -2523,6 +3867,10 @@ type PageInfo = {
 };
 
 type Query = {
+  readonly allContentfulAllProductsNewsStandardPage: ContentfulAllProductsNewsStandardPageConnection;
+  readonly allContentfulAllProductsNewsStandardPageContentTextNode: contentfulAllProductsNewsStandardPageContentTextNodeConnection;
+  readonly allContentfulAllProductsNewsStandardPageMetaDescriptionTextNode: contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeConnection;
+  readonly allContentfulAllProductsNewsStandardPageNavigationJsonNode: contentfulAllProductsNewsStandardPageNavigationJsonNodeConnection;
   readonly allContentfulAsset: ContentfulAssetConnection;
   readonly allContentfulContentType: ContentfulContentTypeConnection;
   readonly allContentfulEntry: ContentfulEntryConnection;
@@ -2540,6 +3888,20 @@ type Query = {
   readonly allContentfulGasElectricityProviderStandardPageContentTextNode: contentfulGasElectricityProviderStandardPageContentTextNodeConnection;
   readonly allContentfulGasElectricityProviderStandardPageMetaDescriptionTextNode: contentfulGasElectricityProviderStandardPageMetaDescriptionTextNodeConnection;
   readonly allContentfulGasElectricityProviderStandardPageNavigationJsonNode: contentfulGasElectricityProviderStandardPageNavigationJsonNodeConnection;
+  readonly allContentfulPolicy: ContentfulPolicyConnection;
+  readonly allContentfulPolicyContentTextNode: contentfulPolicyContentTextNodeConnection;
+  readonly allContentfulPolicyMetaDescriptionTextNode: contentfulPolicyMetaDescriptionTextNodeConnection;
+  readonly allContentfulPolicyNavigationJsonNode: contentfulPolicyNavigationJsonNodeConnection;
+  readonly allContentfulTvBroadbandGuideStandardPage: ContentfulTvBroadbandGuideStandardPageConnection;
+  readonly allContentfulTvBroadbandGuideStandardPageContentTextNode: contentfulTvBroadbandGuideStandardPageContentTextNodeConnection;
+  readonly allContentfulTvBroadbandGuideStandardPageMetaDescriptionTextNode: contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeConnection;
+  readonly allContentfulTvBroadbandGuideStandardPageNavigationJsonNode: contentfulTvBroadbandGuideStandardPageNavigationJsonNodeConnection;
+  readonly allContentfulTvBroadbandProviderMainPage: ContentfulTvBroadbandProviderMainPageConnection;
+  readonly allContentfulTvBroadbandProviderMainPageMetaDescriptionTextNode: contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeConnection;
+  readonly allContentfulTvBroadbandProviderStandardPage: ContentfulTvBroadbandProviderStandardPageConnection;
+  readonly allContentfulTvBroadbandProviderStandardPageContentTextNode: contentfulTvBroadbandProviderStandardPageContentTextNodeConnection;
+  readonly allContentfulTvBroadbandProviderStandardPageMetaDescriptionTextNode: contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeConnection;
+  readonly allContentfulTvBroadbandProviderStandardPageNavigationJsonNode: contentfulTvBroadbandProviderStandardPageNavigationJsonNodeConnection;
   readonly allDirectory: DirectoryConnection;
   readonly allFile: FileConnection;
   readonly allSite: SiteConnection;
@@ -2547,6 +3909,10 @@ type Query = {
   readonly allSiteFunction: SiteFunctionConnection;
   readonly allSitePage: SitePageConnection;
   readonly allSitePlugin: SitePluginConnection;
+  readonly contentfulAllProductsNewsStandardPage: Maybe<ContentfulAllProductsNewsStandardPage>;
+  readonly contentfulAllProductsNewsStandardPageContentTextNode: Maybe<contentfulAllProductsNewsStandardPageContentTextNode>;
+  readonly contentfulAllProductsNewsStandardPageMetaDescriptionTextNode: Maybe<contentfulAllProductsNewsStandardPageMetaDescriptionTextNode>;
+  readonly contentfulAllProductsNewsStandardPageNavigationJsonNode: Maybe<contentfulAllProductsNewsStandardPageNavigationJsonNode>;
   readonly contentfulAsset: Maybe<ContentfulAsset>;
   readonly contentfulContentType: Maybe<ContentfulContentType>;
   readonly contentfulEntry: Maybe<ContentfulEntry>;
@@ -2564,6 +3930,20 @@ type Query = {
   readonly contentfulGasElectricityProviderStandardPageContentTextNode: Maybe<contentfulGasElectricityProviderStandardPageContentTextNode>;
   readonly contentfulGasElectricityProviderStandardPageMetaDescriptionTextNode: Maybe<contentfulGasElectricityProviderStandardPageMetaDescriptionTextNode>;
   readonly contentfulGasElectricityProviderStandardPageNavigationJsonNode: Maybe<contentfulGasElectricityProviderStandardPageNavigationJsonNode>;
+  readonly contentfulPolicy: Maybe<ContentfulPolicy>;
+  readonly contentfulPolicyContentTextNode: Maybe<contentfulPolicyContentTextNode>;
+  readonly contentfulPolicyMetaDescriptionTextNode: Maybe<contentfulPolicyMetaDescriptionTextNode>;
+  readonly contentfulPolicyNavigationJsonNode: Maybe<contentfulPolicyNavigationJsonNode>;
+  readonly contentfulTvBroadbandGuideStandardPage: Maybe<ContentfulTvBroadbandGuideStandardPage>;
+  readonly contentfulTvBroadbandGuideStandardPageContentTextNode: Maybe<contentfulTvBroadbandGuideStandardPageContentTextNode>;
+  readonly contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNode: Maybe<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNode>;
+  readonly contentfulTvBroadbandGuideStandardPageNavigationJsonNode: Maybe<contentfulTvBroadbandGuideStandardPageNavigationJsonNode>;
+  readonly contentfulTvBroadbandProviderMainPage: Maybe<ContentfulTvBroadbandProviderMainPage>;
+  readonly contentfulTvBroadbandProviderMainPageMetaDescriptionTextNode: Maybe<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNode>;
+  readonly contentfulTvBroadbandProviderStandardPage: Maybe<ContentfulTvBroadbandProviderStandardPage>;
+  readonly contentfulTvBroadbandProviderStandardPageContentTextNode: Maybe<contentfulTvBroadbandProviderStandardPageContentTextNode>;
+  readonly contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNode: Maybe<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNode>;
+  readonly contentfulTvBroadbandProviderStandardPageNavigationJsonNode: Maybe<contentfulTvBroadbandProviderStandardPageNavigationJsonNode>;
   readonly directory: Maybe<Directory>;
   readonly file: Maybe<File>;
   readonly site: Maybe<Site>;
@@ -2571,6 +3951,38 @@ type Query = {
   readonly siteFunction: Maybe<SiteFunction>;
   readonly sitePage: Maybe<SitePage>;
   readonly sitePlugin: Maybe<SitePlugin>;
+};
+
+
+type Query_allContentfulAllProductsNewsStandardPageArgs = {
+  filter: InputMaybe<ContentfulAllProductsNewsStandardPageFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<ContentfulAllProductsNewsStandardPageSortInput>>>;
+};
+
+
+type Query_allContentfulAllProductsNewsStandardPageContentTextNodeArgs = {
+  filter: InputMaybe<contentfulAllProductsNewsStandardPageContentTextNodeFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<contentfulAllProductsNewsStandardPageContentTextNodeSortInput>>>;
+};
+
+
+type Query_allContentfulAllProductsNewsStandardPageMetaDescriptionTextNodeArgs = {
+  filter: InputMaybe<contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeSortInput>>>;
+};
+
+
+type Query_allContentfulAllProductsNewsStandardPageNavigationJsonNodeArgs = {
+  filter: InputMaybe<contentfulAllProductsNewsStandardPageNavigationJsonNodeFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<contentfulAllProductsNewsStandardPageNavigationJsonNodeSortInput>>>;
 };
 
 
@@ -2710,6 +4122,118 @@ type Query_allContentfulGasElectricityProviderStandardPageNavigationJsonNodeArgs
 };
 
 
+type Query_allContentfulPolicyArgs = {
+  filter: InputMaybe<ContentfulPolicyFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<ContentfulPolicySortInput>>>;
+};
+
+
+type Query_allContentfulPolicyContentTextNodeArgs = {
+  filter: InputMaybe<contentfulPolicyContentTextNodeFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<contentfulPolicyContentTextNodeSortInput>>>;
+};
+
+
+type Query_allContentfulPolicyMetaDescriptionTextNodeArgs = {
+  filter: InputMaybe<contentfulPolicyMetaDescriptionTextNodeFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<contentfulPolicyMetaDescriptionTextNodeSortInput>>>;
+};
+
+
+type Query_allContentfulPolicyNavigationJsonNodeArgs = {
+  filter: InputMaybe<contentfulPolicyNavigationJsonNodeFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<contentfulPolicyNavigationJsonNodeSortInput>>>;
+};
+
+
+type Query_allContentfulTvBroadbandGuideStandardPageArgs = {
+  filter: InputMaybe<ContentfulTvBroadbandGuideStandardPageFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<ContentfulTvBroadbandGuideStandardPageSortInput>>>;
+};
+
+
+type Query_allContentfulTvBroadbandGuideStandardPageContentTextNodeArgs = {
+  filter: InputMaybe<contentfulTvBroadbandGuideStandardPageContentTextNodeFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<contentfulTvBroadbandGuideStandardPageContentTextNodeSortInput>>>;
+};
+
+
+type Query_allContentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeArgs = {
+  filter: InputMaybe<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeSortInput>>>;
+};
+
+
+type Query_allContentfulTvBroadbandGuideStandardPageNavigationJsonNodeArgs = {
+  filter: InputMaybe<contentfulTvBroadbandGuideStandardPageNavigationJsonNodeFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<contentfulTvBroadbandGuideStandardPageNavigationJsonNodeSortInput>>>;
+};
+
+
+type Query_allContentfulTvBroadbandProviderMainPageArgs = {
+  filter: InputMaybe<ContentfulTvBroadbandProviderMainPageFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<ContentfulTvBroadbandProviderMainPageSortInput>>>;
+};
+
+
+type Query_allContentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeArgs = {
+  filter: InputMaybe<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeSortInput>>>;
+};
+
+
+type Query_allContentfulTvBroadbandProviderStandardPageArgs = {
+  filter: InputMaybe<ContentfulTvBroadbandProviderStandardPageFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<ContentfulTvBroadbandProviderStandardPageSortInput>>>;
+};
+
+
+type Query_allContentfulTvBroadbandProviderStandardPageContentTextNodeArgs = {
+  filter: InputMaybe<contentfulTvBroadbandProviderStandardPageContentTextNodeFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<contentfulTvBroadbandProviderStandardPageContentTextNodeSortInput>>>;
+};
+
+
+type Query_allContentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeArgs = {
+  filter: InputMaybe<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeSortInput>>>;
+};
+
+
+type Query_allContentfulTvBroadbandProviderStandardPageNavigationJsonNodeArgs = {
+  filter: InputMaybe<contentfulTvBroadbandProviderStandardPageNavigationJsonNodeFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<contentfulTvBroadbandProviderStandardPageNavigationJsonNodeSortInput>>>;
+};
+
+
 type Query_allDirectoryArgs = {
   filter: InputMaybe<DirectoryFilterInput>;
   limit: InputMaybe<Scalars['Int']>;
@@ -2763,6 +4287,76 @@ type Query_allSitePluginArgs = {
   limit: InputMaybe<Scalars['Int']>;
   skip: InputMaybe<Scalars['Int']>;
   sort: InputMaybe<ReadonlyArray<InputMaybe<SitePluginSortInput>>>;
+};
+
+
+type Query_contentfulAllProductsNewsStandardPageArgs = {
+  category: InputMaybe<StringQueryOperatorInput>;
+  childContentfulAllProductsNewsStandardPageContentTextNode: InputMaybe<contentfulAllProductsNewsStandardPageContentTextNodeFilterInput>;
+  childContentfulAllProductsNewsStandardPageMetaDescriptionTextNode: InputMaybe<contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeFilterInput>;
+  childContentfulAllProductsNewsStandardPageNavigationJsonNode: InputMaybe<contentfulAllProductsNewsStandardPageNavigationJsonNodeFilterInput>;
+  children: InputMaybe<NodeFilterListInput>;
+  childrenContentfulAllProductsNewsStandardPageContentTextNode: InputMaybe<contentfulAllProductsNewsStandardPageContentTextNodeFilterListInput>;
+  childrenContentfulAllProductsNewsStandardPageMetaDescriptionTextNode: InputMaybe<contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeFilterListInput>;
+  childrenContentfulAllProductsNewsStandardPageNavigationJsonNode: InputMaybe<contentfulAllProductsNewsStandardPageNavigationJsonNodeFilterListInput>;
+  content: InputMaybe<contentfulAllProductsNewsStandardPageContentTextNodeFilterInput>;
+  contentful_id: InputMaybe<StringQueryOperatorInput>;
+  createdAt: InputMaybe<DateQueryOperatorInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  metaDescription: InputMaybe<contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeFilterInput>;
+  navigation: InputMaybe<contentfulAllProductsNewsStandardPageNavigationJsonNodeFilterInput>;
+  node_locale: InputMaybe<StringQueryOperatorInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  slug: InputMaybe<StringQueryOperatorInput>;
+  spaceId: InputMaybe<StringQueryOperatorInput>;
+  sys: InputMaybe<ContentfulAllProductsNewsStandardPageSysFilterInput>;
+  title: InputMaybe<StringQueryOperatorInput>;
+  updatedAt: InputMaybe<DateQueryOperatorInput>;
+};
+
+
+type Query_contentfulAllProductsNewsStandardPageContentTextNodeArgs = {
+  children: InputMaybe<NodeFilterListInput>;
+  content: InputMaybe<StringQueryOperatorInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  sys: InputMaybe<contentfulAllProductsNewsStandardPageContentTextNodeSysFilterInput>;
+};
+
+
+type Query_contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeArgs = {
+  children: InputMaybe<NodeFilterListInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  metaDescription: InputMaybe<StringQueryOperatorInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  sys: InputMaybe<contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeSysFilterInput>;
+};
+
+
+type Query_contentfulAllProductsNewsStandardPageNavigationJsonNodeArgs = {
+  How_much_could_you_save_: InputMaybe<StringQueryOperatorInput>;
+  How_to_avoid_price_increase: InputMaybe<StringQueryOperatorInput>;
+  How_to_avoid_the_price_cap_increase_: InputMaybe<StringQueryOperatorInput>;
+  What_did_Virgin_Media_say_: InputMaybe<StringQueryOperatorInput>;
+  What_does_OFGEM_say_: InputMaybe<StringQueryOperatorInput>;
+  What_does_the_change_mean_for_you_: InputMaybe<StringQueryOperatorInput>;
+  What_does_this_mean_for_Nabuh_customers_: InputMaybe<StringQueryOperatorInput>;
+  What_happened_: InputMaybe<StringQueryOperatorInput>;
+  What_if_I_don_t_want_British_Gas: InputMaybe<StringQueryOperatorInput>;
+  When_will_changes_take_place_: InputMaybe<StringQueryOperatorInput>;
+  Where_should_you_keep_your_router_: InputMaybe<StringQueryOperatorInput>;
+  Who_is_affected_by_the_price_cap_: InputMaybe<StringQueryOperatorInput>;
+  Why_does_the_price_cap_change_: InputMaybe<StringQueryOperatorInput>;
+  Why_is_the_price_cap_increasing_: InputMaybe<StringQueryOperatorInput>;
+  Why_should_you_keep_router_out_of_sun_: InputMaybe<StringQueryOperatorInput>;
+  children: InputMaybe<NodeFilterListInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  sys: InputMaybe<contentfulAllProductsNewsStandardPageNavigationJsonNodeSysFilterInput>;
 };
 
 
@@ -3324,6 +4918,469 @@ type Query_contentfulGasElectricityProviderStandardPageNavigationJsonNodeArgs = 
   internal: InputMaybe<InternalFilterInput>;
   parent: InputMaybe<NodeFilterInput>;
   sys: InputMaybe<contentfulGasElectricityProviderStandardPageNavigationJsonNodeSysFilterInput>;
+};
+
+
+type Query_contentfulPolicyArgs = {
+  childContentfulPolicyContentTextNode: InputMaybe<contentfulPolicyContentTextNodeFilterInput>;
+  childContentfulPolicyMetaDescriptionTextNode: InputMaybe<contentfulPolicyMetaDescriptionTextNodeFilterInput>;
+  childContentfulPolicyNavigationJsonNode: InputMaybe<contentfulPolicyNavigationJsonNodeFilterInput>;
+  children: InputMaybe<NodeFilterListInput>;
+  childrenContentfulPolicyContentTextNode: InputMaybe<contentfulPolicyContentTextNodeFilterListInput>;
+  childrenContentfulPolicyMetaDescriptionTextNode: InputMaybe<contentfulPolicyMetaDescriptionTextNodeFilterListInput>;
+  childrenContentfulPolicyNavigationJsonNode: InputMaybe<contentfulPolicyNavigationJsonNodeFilterListInput>;
+  content: InputMaybe<contentfulPolicyContentTextNodeFilterInput>;
+  contentful_id: InputMaybe<StringQueryOperatorInput>;
+  createdAt: InputMaybe<DateQueryOperatorInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  metaDescription: InputMaybe<contentfulPolicyMetaDescriptionTextNodeFilterInput>;
+  navigation: InputMaybe<contentfulPolicyNavigationJsonNodeFilterInput>;
+  node_locale: InputMaybe<StringQueryOperatorInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  slug: InputMaybe<StringQueryOperatorInput>;
+  spaceId: InputMaybe<StringQueryOperatorInput>;
+  sys: InputMaybe<ContentfulPolicySysFilterInput>;
+  title: InputMaybe<StringQueryOperatorInput>;
+  updatedAt: InputMaybe<DateQueryOperatorInput>;
+};
+
+
+type Query_contentfulPolicyContentTextNodeArgs = {
+  children: InputMaybe<NodeFilterListInput>;
+  content: InputMaybe<StringQueryOperatorInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  sys: InputMaybe<contentfulPolicyContentTextNodeSysFilterInput>;
+};
+
+
+type Query_contentfulPolicyMetaDescriptionTextNodeArgs = {
+  children: InputMaybe<NodeFilterListInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  metaDescription: InputMaybe<StringQueryOperatorInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  sys: InputMaybe<contentfulPolicyMetaDescriptionTextNodeSysFilterInput>;
+};
+
+
+type Query_contentfulPolicyNavigationJsonNodeArgs = {
+  Changes_to_these_Terms_of_Use: InputMaybe<StringQueryOperatorInput>;
+  Changes_to_this_privacy_policy: InputMaybe<StringQueryOperatorInput>;
+  Complaints: InputMaybe<StringQueryOperatorInput>;
+  Contact_us: InputMaybe<StringQueryOperatorInput>;
+  Energy_comparison: InputMaybe<StringQueryOperatorInput>;
+  Further_information: InputMaybe<StringQueryOperatorInput>;
+  Home_services_comparison: InputMaybe<StringQueryOperatorInput>;
+  How_personal_information_is_stored: InputMaybe<StringQueryOperatorInput>;
+  How_we_collect_personal_information: InputMaybe<StringQueryOperatorInput>;
+  How_we_use_cookies: InputMaybe<StringQueryOperatorInput>;
+  How_we_use_personal_information: InputMaybe<StringQueryOperatorInput>;
+  Intellectual_Property: InputMaybe<StringQueryOperatorInput>;
+  Legal: InputMaybe<StringQueryOperatorInput>;
+  Managing_your_cookies: InputMaybe<StringQueryOperatorInput>;
+  Our_partners: InputMaybe<StringQueryOperatorInput>;
+  Permitted_use_of_our_Services: InputMaybe<StringQueryOperatorInput>;
+  Privacy_policy: InputMaybe<StringQueryOperatorInput>;
+  Security: InputMaybe<StringQueryOperatorInput>;
+  Sending_personal_information_outside_EEA: InputMaybe<StringQueryOperatorInput>;
+  TV___Broadband_comparison: InputMaybe<StringQueryOperatorInput>;
+  Third_party_websites___services: InputMaybe<StringQueryOperatorInput>;
+  What_do_we_do_: InputMaybe<StringQueryOperatorInput>;
+  What_do_we_not_do_: InputMaybe<StringQueryOperatorInput>;
+  What_is_a_cookie_: InputMaybe<StringQueryOperatorInput>;
+  What_personal_information_we_collect: InputMaybe<StringQueryOperatorInput>;
+  Who_are_we_: InputMaybe<StringQueryOperatorInput>;
+  Who_we_share_personal_information_with: InputMaybe<StringQueryOperatorInput>;
+  Your_acceptance_of_these_Terms_of_Use: InputMaybe<StringQueryOperatorInput>;
+  Your_personal_information: InputMaybe<StringQueryOperatorInput>;
+  Your_personal_information_rights: InputMaybe<StringQueryOperatorInput>;
+  children: InputMaybe<NodeFilterListInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  sys: InputMaybe<contentfulPolicyNavigationJsonNodeSysFilterInput>;
+};
+
+
+type Query_contentfulTvBroadbandGuideStandardPageArgs = {
+  category: InputMaybe<StringQueryOperatorInput>;
+  childContentfulTvBroadbandGuideStandardPageContentTextNode: InputMaybe<contentfulTvBroadbandGuideStandardPageContentTextNodeFilterInput>;
+  childContentfulTvBroadbandGuideStandardPageMetaDescriptionTextNode: InputMaybe<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeFilterInput>;
+  childContentfulTvBroadbandGuideStandardPageNavigationJsonNode: InputMaybe<contentfulTvBroadbandGuideStandardPageNavigationJsonNodeFilterInput>;
+  children: InputMaybe<NodeFilterListInput>;
+  childrenContentfulTvBroadbandGuideStandardPageContentTextNode: InputMaybe<contentfulTvBroadbandGuideStandardPageContentTextNodeFilterListInput>;
+  childrenContentfulTvBroadbandGuideStandardPageMetaDescriptionTextNode: InputMaybe<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeFilterListInput>;
+  childrenContentfulTvBroadbandGuideStandardPageNavigationJsonNode: InputMaybe<contentfulTvBroadbandGuideStandardPageNavigationJsonNodeFilterListInput>;
+  content: InputMaybe<contentfulTvBroadbandGuideStandardPageContentTextNodeFilterInput>;
+  contentful_id: InputMaybe<StringQueryOperatorInput>;
+  createdAt: InputMaybe<DateQueryOperatorInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  metaDescription: InputMaybe<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeFilterInput>;
+  navigation: InputMaybe<contentfulTvBroadbandGuideStandardPageNavigationJsonNodeFilterInput>;
+  node_locale: InputMaybe<StringQueryOperatorInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  slug: InputMaybe<StringQueryOperatorInput>;
+  spaceId: InputMaybe<StringQueryOperatorInput>;
+  sys: InputMaybe<ContentfulTvBroadbandGuideStandardPageSysFilterInput>;
+  title: InputMaybe<StringQueryOperatorInput>;
+  updatedAt: InputMaybe<DateQueryOperatorInput>;
+};
+
+
+type Query_contentfulTvBroadbandGuideStandardPageContentTextNodeArgs = {
+  children: InputMaybe<NodeFilterListInput>;
+  content: InputMaybe<StringQueryOperatorInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  sys: InputMaybe<contentfulTvBroadbandGuideStandardPageContentTextNodeSysFilterInput>;
+};
+
+
+type Query_contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeArgs = {
+  children: InputMaybe<NodeFilterListInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  metaDescription: InputMaybe<StringQueryOperatorInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  sys: InputMaybe<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeSysFilterInput>;
+};
+
+
+type Query_contentfulTvBroadbandGuideStandardPageNavigationJsonNodeArgs = {
+  Are_broadband_bills_proof_of_address_: InputMaybe<StringQueryOperatorInput>;
+  Average_UK_broadband_speed: InputMaybe<StringQueryOperatorInput>;
+  Broadband_without_line_rental: InputMaybe<StringQueryOperatorInput>;
+  Business_vs_home_broadband: InputMaybe<StringQueryOperatorInput>;
+  Can_I_get_fibre_in_my_area_: InputMaybe<StringQueryOperatorInput>;
+  Can_I_pay_monthly_for_my_broadband_: InputMaybe<StringQueryOperatorInput>;
+  Can_I_transfer_my_existing_contract: InputMaybe<StringQueryOperatorInput>;
+  Cancelling_your_broadband_package: InputMaybe<StringQueryOperatorInput>;
+  Check_my_speeds: InputMaybe<StringQueryOperatorInput>;
+  Companies_that_offer_business_broadband: InputMaybe<StringQueryOperatorInput>;
+  Conducting_a_speed_test: InputMaybe<StringQueryOperatorInput>;
+  Contact_TV_Licensing_company: InputMaybe<StringQueryOperatorInput>;
+  Different_types_of_business_broadband: InputMaybe<StringQueryOperatorInput>;
+  Do_you_need_a_TV_licence_: InputMaybe<StringQueryOperatorInput>;
+  Do_you_need_a_static_IP_address_: InputMaybe<StringQueryOperatorInput>;
+  Does_it_work_any_differently_to_residential_: InputMaybe<StringQueryOperatorInput>;
+  Download_speed: InputMaybe<StringQueryOperatorInput>;
+  Fees_associated_with_moving: InputMaybe<StringQueryOperatorInput>;
+  Finding_the_best_broadband_in_my_area: InputMaybe<StringQueryOperatorInput>;
+  Finding_the_right_broadband: InputMaybe<StringQueryOperatorInput>;
+  How_does_broadband_work_: InputMaybe<StringQueryOperatorInput>;
+  How_is_broadband_speed_measured_: InputMaybe<StringQueryOperatorInput>;
+  How_long_to_set_up_in_new_house: InputMaybe<StringQueryOperatorInput>;
+  How_much_are_early_termination_fees_: InputMaybe<StringQueryOperatorInput>;
+  How_much_does_a_licence_cost_: InputMaybe<StringQueryOperatorInput>;
+  How_much_does_line_rental_cost_: InputMaybe<StringQueryOperatorInput>;
+  How_to_cancel_TV_licence: InputMaybe<StringQueryOperatorInput>;
+  How_to_cancel_my_broadband: InputMaybe<StringQueryOperatorInput>;
+  How_to_contact_your_provider_about_moving: InputMaybe<StringQueryOperatorInput>;
+  How_to_improve_broadband_speed: InputMaybe<StringQueryOperatorInput>;
+  How_to_move_your_broadband: InputMaybe<StringQueryOperatorInput>;
+  How_to_pay_TV_licence_fees: InputMaybe<StringQueryOperatorInput>;
+  How_to_pay_your_bill_: InputMaybe<StringQueryOperatorInput>;
+  How_to_reduce_your_broadband_bills: InputMaybe<StringQueryOperatorInput>;
+  How_to_renew_TV_licence: InputMaybe<StringQueryOperatorInput>;
+  I_can_t_switch: InputMaybe<StringQueryOperatorInput>;
+  I_don_t_have_a_landline: InputMaybe<StringQueryOperatorInput>;
+  I_don_t_need_a_TV_licence: InputMaybe<StringQueryOperatorInput>;
+  I_m_moving_house: InputMaybe<StringQueryOperatorInput>;
+  I_think_that_my_bill_might_be_incorrect: InputMaybe<StringQueryOperatorInput>;
+  I_ve_been_sent_a_fake_bill: InputMaybe<StringQueryOperatorInput>;
+  Is_broadband_expensive: InputMaybe<StringQueryOperatorInput>;
+  Is_it_easy_to_use_: InputMaybe<StringQueryOperatorInput>;
+  Mobile_broadband___data: InputMaybe<StringQueryOperatorInput>;
+  Ping: InputMaybe<StringQueryOperatorInput>;
+  Price_differences_between_home___business: InputMaybe<StringQueryOperatorInput>;
+  Switching_broadband: InputMaybe<StringQueryOperatorInput>;
+  Switching_process: InputMaybe<StringQueryOperatorInput>;
+  Switching_when_you_move_house: InputMaybe<StringQueryOperatorInput>;
+  Upload_speed: InputMaybe<StringQueryOperatorInput>;
+  Upload_vs_download_speeds: InputMaybe<StringQueryOperatorInput>;
+  What_affects_broadband_speed_: InputMaybe<StringQueryOperatorInput>;
+  What_are_early_termination_fees_: InputMaybe<StringQueryOperatorInput>;
+  What_is_a_TV_licence_: InputMaybe<StringQueryOperatorInput>;
+  What_is_broadband_: InputMaybe<StringQueryOperatorInput>;
+  What_is_business_broadband_: InputMaybe<StringQueryOperatorInput>;
+  What_is_dial_up_broadband: InputMaybe<StringQueryOperatorInput>;
+  What_is_line_rental_: InputMaybe<StringQueryOperatorInput>;
+  What_is_on_a_broadband_bill_: InputMaybe<StringQueryOperatorInput>;
+  What_speed_do_you_need_: InputMaybe<StringQueryOperatorInput>;
+  When_can_you_cancel_for_free_: InputMaybe<StringQueryOperatorInput>;
+  Where_you_ll_see_these_terms: InputMaybe<StringQueryOperatorInput>;
+  Why_do_you_have_to_pay_: InputMaybe<StringQueryOperatorInput>;
+  Why_do_you_pay_line_rental_: InputMaybe<StringQueryOperatorInput>;
+  Why_is_my_bill_so_high_: InputMaybe<StringQueryOperatorInput>;
+  Work_from_home_broadband: InputMaybe<StringQueryOperatorInput>;
+  children: InputMaybe<NodeFilterListInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  sys: InputMaybe<contentfulTvBroadbandGuideStandardPageNavigationJsonNodeSysFilterInput>;
+};
+
+
+type Query_contentfulTvBroadbandProviderMainPageArgs = {
+  category: InputMaybe<StringQueryOperatorInput>;
+  childContentfulTvBroadbandProviderMainPageMetaDescriptionTextNode: InputMaybe<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeFilterInput>;
+  children: InputMaybe<NodeFilterListInput>;
+  childrenContentfulTvBroadbandProviderMainPageMetaDescriptionTextNode: InputMaybe<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeFilterListInput>;
+  contentful_id: InputMaybe<StringQueryOperatorInput>;
+  createdAt: InputMaybe<DateQueryOperatorInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  logo: InputMaybe<ContentfulAssetFilterInput>;
+  metaDescription: InputMaybe<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeFilterInput>;
+  node_locale: InputMaybe<StringQueryOperatorInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  provider: InputMaybe<StringQueryOperatorInput>;
+  slug: InputMaybe<StringQueryOperatorInput>;
+  spaceId: InputMaybe<StringQueryOperatorInput>;
+  sys: InputMaybe<ContentfulTvBroadbandProviderMainPageSysFilterInput>;
+  title: InputMaybe<StringQueryOperatorInput>;
+  updatedAt: InputMaybe<DateQueryOperatorInput>;
+};
+
+
+type Query_contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeArgs = {
+  children: InputMaybe<NodeFilterListInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  metaDescription: InputMaybe<StringQueryOperatorInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  sys: InputMaybe<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeSysFilterInput>;
+};
+
+
+type Query_contentfulTvBroadbandProviderStandardPageArgs = {
+  category: InputMaybe<StringQueryOperatorInput>;
+  childContentfulTvBroadbandProviderStandardPageContentTextNode: InputMaybe<contentfulTvBroadbandProviderStandardPageContentTextNodeFilterInput>;
+  childContentfulTvBroadbandProviderStandardPageMetaDescriptionTextNode: InputMaybe<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeFilterInput>;
+  childContentfulTvBroadbandProviderStandardPageNavigationJsonNode: InputMaybe<contentfulTvBroadbandProviderStandardPageNavigationJsonNodeFilterInput>;
+  children: InputMaybe<NodeFilterListInput>;
+  childrenContentfulTvBroadbandProviderStandardPageContentTextNode: InputMaybe<contentfulTvBroadbandProviderStandardPageContentTextNodeFilterListInput>;
+  childrenContentfulTvBroadbandProviderStandardPageMetaDescriptionTextNode: InputMaybe<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeFilterListInput>;
+  childrenContentfulTvBroadbandProviderStandardPageNavigationJsonNode: InputMaybe<contentfulTvBroadbandProviderStandardPageNavigationJsonNodeFilterListInput>;
+  content: InputMaybe<contentfulTvBroadbandProviderStandardPageContentTextNodeFilterInput>;
+  contentful_id: InputMaybe<StringQueryOperatorInput>;
+  createdAt: InputMaybe<DateQueryOperatorInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  logo: InputMaybe<ContentfulAssetFilterInput>;
+  metaDescription: InputMaybe<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeFilterInput>;
+  navigation: InputMaybe<contentfulTvBroadbandProviderStandardPageNavigationJsonNodeFilterInput>;
+  node_locale: InputMaybe<StringQueryOperatorInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  provider: InputMaybe<StringQueryOperatorInput>;
+  slug: InputMaybe<StringQueryOperatorInput>;
+  spaceId: InputMaybe<StringQueryOperatorInput>;
+  sys: InputMaybe<ContentfulTvBroadbandProviderStandardPageSysFilterInput>;
+  title: InputMaybe<StringQueryOperatorInput>;
+  updatedAt: InputMaybe<DateQueryOperatorInput>;
+};
+
+
+type Query_contentfulTvBroadbandProviderStandardPageContentTextNodeArgs = {
+  children: InputMaybe<NodeFilterListInput>;
+  content: InputMaybe<StringQueryOperatorInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  sys: InputMaybe<contentfulTvBroadbandProviderStandardPageContentTextNodeSysFilterInput>;
+};
+
+
+type Query_contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeArgs = {
+  children: InputMaybe<NodeFilterListInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  metaDescription: InputMaybe<StringQueryOperatorInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  sys: InputMaybe<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeSysFilterInput>;
+};
+
+
+type Query_contentfulTvBroadbandProviderStandardPageNavigationJsonNodeArgs = {
+  Add_ons: InputMaybe<StringQueryOperatorInput>;
+  Add_ons___extras: InputMaybe<StringQueryOperatorInput>;
+  Are_you_owed_a_refund_: InputMaybe<StringQueryOperatorInput>;
+  BT_Account_features: InputMaybe<StringQueryOperatorInput>;
+  BT_Complete_Wifi: InputMaybe<StringQueryOperatorInput>;
+  BT_Hybrid_Connect: InputMaybe<StringQueryOperatorInput>;
+  BT_Sports_Monthly_Pass: InputMaybe<StringQueryOperatorInput>;
+  BT_Sports_app: InputMaybe<StringQueryOperatorInput>;
+  BT_Sports_with_Sky_TV: InputMaybe<StringQueryOperatorInput>;
+  BT_TV_App_Extra: InputMaybe<StringQueryOperatorInput>;
+  BT_TV_guide_won_t_load: InputMaybe<StringQueryOperatorInput>;
+  BT_TV_packages: InputMaybe<StringQueryOperatorInput>;
+  BT_TV_store: InputMaybe<StringQueryOperatorInput>;
+  BT_troubleshooter: InputMaybe<StringQueryOperatorInput>;
+  Broadband_Boost: InputMaybe<StringQueryOperatorInput>;
+  Broadband_Buddy: InputMaybe<StringQueryOperatorInput>;
+  Broadband_deals: InputMaybe<StringQueryOperatorInput>;
+  Broadband_packages: InputMaybe<StringQueryOperatorInput>;
+  Broadband_security: InputMaybe<StringQueryOperatorInput>;
+  Bundles: InputMaybe<StringQueryOperatorInput>;
+  Buy_one__give_one: InputMaybe<StringQueryOperatorInput>;
+  Call_Protect: InputMaybe<StringQueryOperatorInput>;
+  Call_plans: InputMaybe<StringQueryOperatorInput>;
+  Can_I_access_TV_guide_via_app_: InputMaybe<StringQueryOperatorInput>;
+  Can_I_transfer_my_current_plan_: InputMaybe<StringQueryOperatorInput>;
+  Can_you_change_BT_Router_password_: InputMaybe<StringQueryOperatorInput>;
+  Can_you_have_multiple_boxes_: InputMaybe<StringQueryOperatorInput>;
+  Cancel_your_contract: InputMaybe<StringQueryOperatorInput>;
+  Cancellation_fees: InputMaybe<StringQueryOperatorInput>;
+  Check_my_broadband_speed: InputMaybe<StringQueryOperatorInput>;
+  Cost_of_cancellation: InputMaybe<StringQueryOperatorInput>;
+  Cost_of_moving_home_with_BT: InputMaybe<StringQueryOperatorInput>;
+  Deals: InputMaybe<StringQueryOperatorInput>;
+  Delete_email_account: InputMaybe<StringQueryOperatorInput>;
+  Difference_between_Halo_3_and_3_: InputMaybe<StringQueryOperatorInput>;
+  Do_I_need_an_account_: InputMaybe<StringQueryOperatorInput>;
+  Do_you_need_BT_Broadband_: InputMaybe<StringQueryOperatorInput>;
+  Do_you_need_BT_TV_: InputMaybe<StringQueryOperatorInput>;
+  Do_you_need_a_TV_licence: InputMaybe<StringQueryOperatorInput>;
+  Does_it_cover_all_channels_: InputMaybe<StringQueryOperatorInput>;
+  Does_it_require_an_aerial_: InputMaybe<StringQueryOperatorInput>;
+  Download_the_My_BT_app: InputMaybe<StringQueryOperatorInput>;
+  Existing_customer_offers: InputMaybe<StringQueryOperatorInput>;
+  Fibre_broadband_packages: InputMaybe<StringQueryOperatorInput>;
+  Fixed_Price_Plus: InputMaybe<StringQueryOperatorInput>;
+  Free_cancellation: InputMaybe<StringQueryOperatorInput>;
+  Freeview: InputMaybe<StringQueryOperatorInput>;
+  Gadget_rescue: InputMaybe<StringQueryOperatorInput>;
+  Get_a_second_TV_box: InputMaybe<StringQueryOperatorInput>;
+  Gigabit_broadband: InputMaybe<StringQueryOperatorInput>;
+  Gigafast___Ultrafast: InputMaybe<StringQueryOperatorInput>;
+  Help_logging_in: InputMaybe<StringQueryOperatorInput>;
+  Homeworker_broadband: InputMaybe<StringQueryOperatorInput>;
+  How_BT_TV_guide_works: InputMaybe<StringQueryOperatorInput>;
+  How_BT_TV_works: InputMaybe<StringQueryOperatorInput>;
+  How_do_I_get_NOW_Sports_: InputMaybe<StringQueryOperatorInput>;
+  How_long_does_it_take_to_activate_: InputMaybe<StringQueryOperatorInput>;
+  How_the_router_login_works: InputMaybe<StringQueryOperatorInput>;
+  How_to_access_app: InputMaybe<StringQueryOperatorInput>;
+  How_to_cancel: InputMaybe<StringQueryOperatorInput>;
+  How_to_cancel_BT_Broadband: InputMaybe<StringQueryOperatorInput>;
+  How_to_cancel_BT_Mobile: InputMaybe<StringQueryOperatorInput>;
+  How_to_cancel_BT_Sport: InputMaybe<StringQueryOperatorInput>;
+  How_to_cancel_BT_Sports: InputMaybe<StringQueryOperatorInput>;
+  How_to_cancel_Virgin_Media: InputMaybe<StringQueryOperatorInput>;
+  How_to_cancel_phone_line: InputMaybe<StringQueryOperatorInput>;
+  How_to_change_call_plan: InputMaybe<StringQueryOperatorInput>;
+  How_to_connect_to_your_router: InputMaybe<StringQueryOperatorInput>;
+  How_to_download: InputMaybe<StringQueryOperatorInput>;
+  How_to_find_your_Wifi_password: InputMaybe<StringQueryOperatorInput>;
+  How_to_get_a_BT_TV_box: InputMaybe<StringQueryOperatorInput>;
+  How_to_pick_your_BT_TV_package: InputMaybe<StringQueryOperatorInput>;
+  How_to_reset_your_box: InputMaybe<StringQueryOperatorInput>;
+  How_to_set_up_BT_Account: InputMaybe<StringQueryOperatorInput>;
+  How_to_upgrade_your_router: InputMaybe<StringQueryOperatorInput>;
+  I_only_want_one_channel: InputMaybe<StringQueryOperatorInput>;
+  Intelligent_WiFi_Plus: InputMaybe<StringQueryOperatorInput>;
+  Internet_security: InputMaybe<StringQueryOperatorInput>;
+  Is_TalkTalk_TV_worth_it_: InputMaybe<StringQueryOperatorInput>;
+  Is_it_accessible_online_: InputMaybe<StringQueryOperatorInput>;
+  Is_it_worth_staying_with_Virgin_Media_: InputMaybe<StringQueryOperatorInput>;
+  Issues_with_recordings: InputMaybe<StringQueryOperatorInput>;
+  Keep_the_same_landline_number: InputMaybe<StringQueryOperatorInput>;
+  Length_of_contract: InputMaybe<StringQueryOperatorInput>;
+  Let_BT_know_you_re_moving: InputMaybe<StringQueryOperatorInput>;
+  Logging_into_your_My_Sky_Account: InputMaybe<StringQueryOperatorInput>;
+  Make_a_complaint: InputMaybe<StringQueryOperatorInput>;
+  Meanings_of_lights_on_box: InputMaybe<StringQueryOperatorInput>;
+  Mobile__broadband___TV_bundles: InputMaybe<StringQueryOperatorInput>;
+  Move_into_a_new_house: InputMaybe<StringQueryOperatorInput>;
+  Move_into_new_house: InputMaybe<StringQueryOperatorInput>;
+  Move_to_a_new_house: InputMaybe<StringQueryOperatorInput>;
+  My_BT_TV_box_isn_t_working: InputMaybe<StringQueryOperatorInput>;
+  My_Sky_features: InputMaybe<StringQueryOperatorInput>;
+  NOW_Broadband_packages: InputMaybe<StringQueryOperatorInput>;
+  NOW_TV_Boost: InputMaybe<StringQueryOperatorInput>;
+  NOW_TV_passes: InputMaybe<StringQueryOperatorInput>;
+  Navigating_through_your_account: InputMaybe<StringQueryOperatorInput>;
+  New_customer_offers: InputMaybe<StringQueryOperatorInput>;
+  Parental_controls: InputMaybe<StringQueryOperatorInput>;
+  Prices___plans: InputMaybe<StringQueryOperatorInput>;
+  Report_connection_issues: InputMaybe<StringQueryOperatorInput>;
+  Returning_your_Sky_equipment: InputMaybe<StringQueryOperatorInput>;
+  Rolling_contracts: InputMaybe<StringQueryOperatorInput>;
+  Router_light_definitions: InputMaybe<StringQueryOperatorInput>;
+  Set_up_Smarthub_with_app: InputMaybe<StringQueryOperatorInput>;
+  Set_up_your_BT_TV_box: InputMaybe<StringQueryOperatorInput>;
+  Set_up_your_Sky_iD: InputMaybe<StringQueryOperatorInput>;
+  Setting_up_BT_Broadband_in_your_new_home: InputMaybe<StringQueryOperatorInput>;
+  Setting_up_your_router: InputMaybe<StringQueryOperatorInput>;
+  Signing_up_to_NOW_TV: InputMaybe<StringQueryOperatorInput>;
+  Sky_Go_Extra: InputMaybe<StringQueryOperatorInput>;
+  Sky_Q: InputMaybe<StringQueryOperatorInput>;
+  Sky_Sports_is_not_working: InputMaybe<StringQueryOperatorInput>;
+  Sky_Store: InputMaybe<StringQueryOperatorInput>;
+  Sky_VIP: InputMaybe<StringQueryOperatorInput>;
+  Sky_router_login: InputMaybe<StringQueryOperatorInput>;
+  Smart_stick___box: InputMaybe<StringQueryOperatorInput>;
+  Subscription: InputMaybe<StringQueryOperatorInput>;
+  Switch_provider_or_tariff: InputMaybe<StringQueryOperatorInput>;
+  Switch_to_BT_Halo: InputMaybe<StringQueryOperatorInput>;
+  Switching_to_NOW_Broadband: InputMaybe<StringQueryOperatorInput>;
+  TV___Broadband_bundles: InputMaybe<StringQueryOperatorInput>;
+  TV___broadband_deals: InputMaybe<StringQueryOperatorInput>;
+  TV_boxes: InputMaybe<StringQueryOperatorInput>;
+  TV_channels: InputMaybe<StringQueryOperatorInput>;
+  TV_packages: InputMaybe<StringQueryOperatorInput>;
+  TV_store: InputMaybe<StringQueryOperatorInput>;
+  TalkTalk_TV: InputMaybe<StringQueryOperatorInput>;
+  TalkTalk_TV_packages: InputMaybe<StringQueryOperatorInput>;
+  TalkTalk_UFO: InputMaybe<StringQueryOperatorInput>;
+  Talk_about_my_bill: InputMaybe<StringQueryOperatorInput>;
+  Talk_about_my_bill_s_: InputMaybe<StringQueryOperatorInput>;
+  Talk_about_something_else: InputMaybe<StringQueryOperatorInput>;
+  Upgrading_your_router: InputMaybe<StringQueryOperatorInput>;
+  Using_the_My_Sky_app: InputMaybe<StringQueryOperatorInput>;
+  Virgin_Media_Connect_app: InputMaybe<StringQueryOperatorInput>;
+  Virgin_Media_Store: InputMaybe<StringQueryOperatorInput>;
+  Virgin_Media_TV_packages: InputMaybe<StringQueryOperatorInput>;
+  Virgin_Media_broadband_packages: InputMaybe<StringQueryOperatorInput>;
+  Virgin_TV_Go: InputMaybe<StringQueryOperatorInput>;
+  Virgin_TV_control: InputMaybe<StringQueryOperatorInput>;
+  Virus_protection: InputMaybe<StringQueryOperatorInput>;
+  VodafoneGigaCube: InputMaybe<StringQueryOperatorInput>;
+  Vodafone_broadband_app: InputMaybe<StringQueryOperatorInput>;
+  Watch_TV_online: InputMaybe<StringQueryOperatorInput>;
+  What_apps_can_be_downloaded_: InputMaybe<StringQueryOperatorInput>;
+  What_can_I_do_with_My_BT_: InputMaybe<StringQueryOperatorInput>;
+  What_can_you_watch_on_BT_Sports_: InputMaybe<StringQueryOperatorInput>;
+  What_channels_does_it_have_: InputMaybe<StringQueryOperatorInput>;
+  What_devices_is_NOW_Sports_available_on_: InputMaybe<StringQueryOperatorInput>;
+  What_do_the_lights_mean_: InputMaybe<StringQueryOperatorInput>;
+  What_is_BT_Halo_: InputMaybe<StringQueryOperatorInput>;
+  What_is_BT_TV_box: InputMaybe<StringQueryOperatorInput>;
+  What_is_NOW_Sports: InputMaybe<StringQueryOperatorInput>;
+  What_is_Sky_Sports: InputMaybe<StringQueryOperatorInput>;
+  What_is_Virgin_Media_s_notice_period: InputMaybe<StringQueryOperatorInput>;
+  What_is_a_Sky_router_: InputMaybe<StringQueryOperatorInput>;
+  What_is_included_: InputMaybe<StringQueryOperatorInput>;
+  What_routers_are_available_: InputMaybe<StringQueryOperatorInput>;
+  What_to_do_when_moving_house: InputMaybe<StringQueryOperatorInput>;
+  What_to_do_with_BT_equipment: InputMaybe<StringQueryOperatorInput>;
+  What_to_do_with_your_equipment: InputMaybe<StringQueryOperatorInput>;
+  Where_to_find_login_details: InputMaybe<StringQueryOperatorInput>;
+  Where_to_find_login_page_: InputMaybe<StringQueryOperatorInput>;
+  Why_BT_Sports_: InputMaybe<StringQueryOperatorInput>;
+  Why_is_My_BT_not_working_: InputMaybe<StringQueryOperatorInput>;
+  Why_is_Virgin_Media_cancellation_different_: InputMaybe<StringQueryOperatorInput>;
+  WiFi_extenders: InputMaybe<StringQueryOperatorInput>;
+  children: InputMaybe<NodeFilterListInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  sys: InputMaybe<contentfulTvBroadbandProviderStandardPageNavigationJsonNodeSysFilterInput>;
 };
 
 
@@ -4356,6 +6413,488 @@ type StringQueryOperatorInput = {
   readonly ne: InputMaybe<Scalars['String']>;
   readonly nin: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
   readonly regex: InputMaybe<Scalars['String']>;
+};
+
+type contentfulAllProductsNewsStandardPageContentTextNode = Node & {
+  readonly children: ReadonlyArray<Node>;
+  readonly content: Maybe<Scalars['String']>;
+  readonly id: Scalars['ID'];
+  readonly internal: Internal;
+  readonly parent: Maybe<Node>;
+  readonly sys: Maybe<contentfulAllProductsNewsStandardPageContentTextNodeSys>;
+};
+
+type contentfulAllProductsNewsStandardPageContentTextNodeConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<contentfulAllProductsNewsStandardPageContentTextNodeEdge>;
+  readonly group: ReadonlyArray<contentfulAllProductsNewsStandardPageContentTextNodeGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<contentfulAllProductsNewsStandardPageContentTextNode>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type contentfulAllProductsNewsStandardPageContentTextNodeConnection_distinctArgs = {
+  field: contentfulAllProductsNewsStandardPageContentTextNodeFieldSelector;
+};
+
+
+type contentfulAllProductsNewsStandardPageContentTextNodeConnection_groupArgs = {
+  field: contentfulAllProductsNewsStandardPageContentTextNodeFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type contentfulAllProductsNewsStandardPageContentTextNodeConnection_maxArgs = {
+  field: contentfulAllProductsNewsStandardPageContentTextNodeFieldSelector;
+};
+
+
+type contentfulAllProductsNewsStandardPageContentTextNodeConnection_minArgs = {
+  field: contentfulAllProductsNewsStandardPageContentTextNodeFieldSelector;
+};
+
+
+type contentfulAllProductsNewsStandardPageContentTextNodeConnection_sumArgs = {
+  field: contentfulAllProductsNewsStandardPageContentTextNodeFieldSelector;
+};
+
+type contentfulAllProductsNewsStandardPageContentTextNodeEdge = {
+  readonly next: Maybe<contentfulAllProductsNewsStandardPageContentTextNode>;
+  readonly node: contentfulAllProductsNewsStandardPageContentTextNode;
+  readonly previous: Maybe<contentfulAllProductsNewsStandardPageContentTextNode>;
+};
+
+type contentfulAllProductsNewsStandardPageContentTextNodeFieldSelector = {
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly content: InputMaybe<FieldSelectorEnum>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly sys: InputMaybe<contentfulAllProductsNewsStandardPageContentTextNodeSysFieldSelector>;
+};
+
+type contentfulAllProductsNewsStandardPageContentTextNodeFilterInput = {
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly content: InputMaybe<StringQueryOperatorInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly sys: InputMaybe<contentfulAllProductsNewsStandardPageContentTextNodeSysFilterInput>;
+};
+
+type contentfulAllProductsNewsStandardPageContentTextNodeFilterListInput = {
+  readonly elemMatch: InputMaybe<contentfulAllProductsNewsStandardPageContentTextNodeFilterInput>;
+};
+
+type contentfulAllProductsNewsStandardPageContentTextNodeGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<contentfulAllProductsNewsStandardPageContentTextNodeEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<contentfulAllProductsNewsStandardPageContentTextNodeGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<contentfulAllProductsNewsStandardPageContentTextNode>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type contentfulAllProductsNewsStandardPageContentTextNodeGroupConnection_distinctArgs = {
+  field: contentfulAllProductsNewsStandardPageContentTextNodeFieldSelector;
+};
+
+
+type contentfulAllProductsNewsStandardPageContentTextNodeGroupConnection_groupArgs = {
+  field: contentfulAllProductsNewsStandardPageContentTextNodeFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type contentfulAllProductsNewsStandardPageContentTextNodeGroupConnection_maxArgs = {
+  field: contentfulAllProductsNewsStandardPageContentTextNodeFieldSelector;
+};
+
+
+type contentfulAllProductsNewsStandardPageContentTextNodeGroupConnection_minArgs = {
+  field: contentfulAllProductsNewsStandardPageContentTextNodeFieldSelector;
+};
+
+
+type contentfulAllProductsNewsStandardPageContentTextNodeGroupConnection_sumArgs = {
+  field: contentfulAllProductsNewsStandardPageContentTextNodeFieldSelector;
+};
+
+type contentfulAllProductsNewsStandardPageContentTextNodeSortInput = {
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly content: InputMaybe<SortOrderEnum>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly sys: InputMaybe<contentfulAllProductsNewsStandardPageContentTextNodeSysSortInput>;
+};
+
+type contentfulAllProductsNewsStandardPageContentTextNodeSys = {
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type contentfulAllProductsNewsStandardPageContentTextNodeSysFieldSelector = {
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type contentfulAllProductsNewsStandardPageContentTextNodeSysFilterInput = {
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type contentfulAllProductsNewsStandardPageContentTextNodeSysSortInput = {
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type contentfulAllProductsNewsStandardPageMetaDescriptionTextNode = Node & {
+  readonly children: ReadonlyArray<Node>;
+  readonly id: Scalars['ID'];
+  readonly internal: Internal;
+  readonly metaDescription: Maybe<Scalars['String']>;
+  readonly parent: Maybe<Node>;
+  readonly sys: Maybe<contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeSys>;
+};
+
+type contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeEdge>;
+  readonly group: ReadonlyArray<contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<contentfulAllProductsNewsStandardPageMetaDescriptionTextNode>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeConnection_distinctArgs = {
+  field: contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeFieldSelector;
+};
+
+
+type contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeConnection_groupArgs = {
+  field: contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeConnection_maxArgs = {
+  field: contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeFieldSelector;
+};
+
+
+type contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeConnection_minArgs = {
+  field: contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeFieldSelector;
+};
+
+
+type contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeConnection_sumArgs = {
+  field: contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeFieldSelector;
+};
+
+type contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeEdge = {
+  readonly next: Maybe<contentfulAllProductsNewsStandardPageMetaDescriptionTextNode>;
+  readonly node: contentfulAllProductsNewsStandardPageMetaDescriptionTextNode;
+  readonly previous: Maybe<contentfulAllProductsNewsStandardPageMetaDescriptionTextNode>;
+};
+
+type contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeFieldSelector = {
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly metaDescription: InputMaybe<FieldSelectorEnum>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly sys: InputMaybe<contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeSysFieldSelector>;
+};
+
+type contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeFilterInput = {
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly metaDescription: InputMaybe<StringQueryOperatorInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly sys: InputMaybe<contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeSysFilterInput>;
+};
+
+type contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeFilterListInput = {
+  readonly elemMatch: InputMaybe<contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeFilterInput>;
+};
+
+type contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<contentfulAllProductsNewsStandardPageMetaDescriptionTextNode>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeGroupConnection_distinctArgs = {
+  field: contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeFieldSelector;
+};
+
+
+type contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeGroupConnection_groupArgs = {
+  field: contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeGroupConnection_maxArgs = {
+  field: contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeFieldSelector;
+};
+
+
+type contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeGroupConnection_minArgs = {
+  field: contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeFieldSelector;
+};
+
+
+type contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeGroupConnection_sumArgs = {
+  field: contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeFieldSelector;
+};
+
+type contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeSortInput = {
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly metaDescription: InputMaybe<SortOrderEnum>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly sys: InputMaybe<contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeSysSortInput>;
+};
+
+type contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeSys = {
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeSysFieldSelector = {
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeSysFilterInput = {
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type contentfulAllProductsNewsStandardPageMetaDescriptionTextNodeSysSortInput = {
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type contentfulAllProductsNewsStandardPageNavigationJsonNode = Node & {
+  readonly How_much_could_you_save_: Maybe<Scalars['String']>;
+  readonly How_to_avoid_price_increase: Maybe<Scalars['String']>;
+  readonly How_to_avoid_the_price_cap_increase_: Maybe<Scalars['String']>;
+  readonly What_did_Virgin_Media_say_: Maybe<Scalars['String']>;
+  readonly What_does_OFGEM_say_: Maybe<Scalars['String']>;
+  readonly What_does_the_change_mean_for_you_: Maybe<Scalars['String']>;
+  readonly What_does_this_mean_for_Nabuh_customers_: Maybe<Scalars['String']>;
+  readonly What_happened_: Maybe<Scalars['String']>;
+  readonly What_if_I_don_t_want_British_Gas: Maybe<Scalars['String']>;
+  readonly When_will_changes_take_place_: Maybe<Scalars['String']>;
+  readonly Where_should_you_keep_your_router_: Maybe<Scalars['String']>;
+  readonly Who_is_affected_by_the_price_cap_: Maybe<Scalars['String']>;
+  readonly Why_does_the_price_cap_change_: Maybe<Scalars['String']>;
+  readonly Why_is_the_price_cap_increasing_: Maybe<Scalars['String']>;
+  readonly Why_should_you_keep_router_out_of_sun_: Maybe<Scalars['String']>;
+  readonly children: ReadonlyArray<Node>;
+  readonly id: Scalars['ID'];
+  readonly internal: Internal;
+  readonly parent: Maybe<Node>;
+  readonly sys: Maybe<contentfulAllProductsNewsStandardPageNavigationJsonNodeSys>;
+};
+
+type contentfulAllProductsNewsStandardPageNavigationJsonNodeConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<contentfulAllProductsNewsStandardPageNavigationJsonNodeEdge>;
+  readonly group: ReadonlyArray<contentfulAllProductsNewsStandardPageNavigationJsonNodeGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<contentfulAllProductsNewsStandardPageNavigationJsonNode>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type contentfulAllProductsNewsStandardPageNavigationJsonNodeConnection_distinctArgs = {
+  field: contentfulAllProductsNewsStandardPageNavigationJsonNodeFieldSelector;
+};
+
+
+type contentfulAllProductsNewsStandardPageNavigationJsonNodeConnection_groupArgs = {
+  field: contentfulAllProductsNewsStandardPageNavigationJsonNodeFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type contentfulAllProductsNewsStandardPageNavigationJsonNodeConnection_maxArgs = {
+  field: contentfulAllProductsNewsStandardPageNavigationJsonNodeFieldSelector;
+};
+
+
+type contentfulAllProductsNewsStandardPageNavigationJsonNodeConnection_minArgs = {
+  field: contentfulAllProductsNewsStandardPageNavigationJsonNodeFieldSelector;
+};
+
+
+type contentfulAllProductsNewsStandardPageNavigationJsonNodeConnection_sumArgs = {
+  field: contentfulAllProductsNewsStandardPageNavigationJsonNodeFieldSelector;
+};
+
+type contentfulAllProductsNewsStandardPageNavigationJsonNodeEdge = {
+  readonly next: Maybe<contentfulAllProductsNewsStandardPageNavigationJsonNode>;
+  readonly node: contentfulAllProductsNewsStandardPageNavigationJsonNode;
+  readonly previous: Maybe<contentfulAllProductsNewsStandardPageNavigationJsonNode>;
+};
+
+type contentfulAllProductsNewsStandardPageNavigationJsonNodeFieldSelector = {
+  readonly How_much_could_you_save_: InputMaybe<FieldSelectorEnum>;
+  readonly How_to_avoid_price_increase: InputMaybe<FieldSelectorEnum>;
+  readonly How_to_avoid_the_price_cap_increase_: InputMaybe<FieldSelectorEnum>;
+  readonly What_did_Virgin_Media_say_: InputMaybe<FieldSelectorEnum>;
+  readonly What_does_OFGEM_say_: InputMaybe<FieldSelectorEnum>;
+  readonly What_does_the_change_mean_for_you_: InputMaybe<FieldSelectorEnum>;
+  readonly What_does_this_mean_for_Nabuh_customers_: InputMaybe<FieldSelectorEnum>;
+  readonly What_happened_: InputMaybe<FieldSelectorEnum>;
+  readonly What_if_I_don_t_want_British_Gas: InputMaybe<FieldSelectorEnum>;
+  readonly When_will_changes_take_place_: InputMaybe<FieldSelectorEnum>;
+  readonly Where_should_you_keep_your_router_: InputMaybe<FieldSelectorEnum>;
+  readonly Who_is_affected_by_the_price_cap_: InputMaybe<FieldSelectorEnum>;
+  readonly Why_does_the_price_cap_change_: InputMaybe<FieldSelectorEnum>;
+  readonly Why_is_the_price_cap_increasing_: InputMaybe<FieldSelectorEnum>;
+  readonly Why_should_you_keep_router_out_of_sun_: InputMaybe<FieldSelectorEnum>;
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly sys: InputMaybe<contentfulAllProductsNewsStandardPageNavigationJsonNodeSysFieldSelector>;
+};
+
+type contentfulAllProductsNewsStandardPageNavigationJsonNodeFilterInput = {
+  readonly How_much_could_you_save_: InputMaybe<StringQueryOperatorInput>;
+  readonly How_to_avoid_price_increase: InputMaybe<StringQueryOperatorInput>;
+  readonly How_to_avoid_the_price_cap_increase_: InputMaybe<StringQueryOperatorInput>;
+  readonly What_did_Virgin_Media_say_: InputMaybe<StringQueryOperatorInput>;
+  readonly What_does_OFGEM_say_: InputMaybe<StringQueryOperatorInput>;
+  readonly What_does_the_change_mean_for_you_: InputMaybe<StringQueryOperatorInput>;
+  readonly What_does_this_mean_for_Nabuh_customers_: InputMaybe<StringQueryOperatorInput>;
+  readonly What_happened_: InputMaybe<StringQueryOperatorInput>;
+  readonly What_if_I_don_t_want_British_Gas: InputMaybe<StringQueryOperatorInput>;
+  readonly When_will_changes_take_place_: InputMaybe<StringQueryOperatorInput>;
+  readonly Where_should_you_keep_your_router_: InputMaybe<StringQueryOperatorInput>;
+  readonly Who_is_affected_by_the_price_cap_: InputMaybe<StringQueryOperatorInput>;
+  readonly Why_does_the_price_cap_change_: InputMaybe<StringQueryOperatorInput>;
+  readonly Why_is_the_price_cap_increasing_: InputMaybe<StringQueryOperatorInput>;
+  readonly Why_should_you_keep_router_out_of_sun_: InputMaybe<StringQueryOperatorInput>;
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly sys: InputMaybe<contentfulAllProductsNewsStandardPageNavigationJsonNodeSysFilterInput>;
+};
+
+type contentfulAllProductsNewsStandardPageNavigationJsonNodeFilterListInput = {
+  readonly elemMatch: InputMaybe<contentfulAllProductsNewsStandardPageNavigationJsonNodeFilterInput>;
+};
+
+type contentfulAllProductsNewsStandardPageNavigationJsonNodeGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<contentfulAllProductsNewsStandardPageNavigationJsonNodeEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<contentfulAllProductsNewsStandardPageNavigationJsonNodeGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<contentfulAllProductsNewsStandardPageNavigationJsonNode>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type contentfulAllProductsNewsStandardPageNavigationJsonNodeGroupConnection_distinctArgs = {
+  field: contentfulAllProductsNewsStandardPageNavigationJsonNodeFieldSelector;
+};
+
+
+type contentfulAllProductsNewsStandardPageNavigationJsonNodeGroupConnection_groupArgs = {
+  field: contentfulAllProductsNewsStandardPageNavigationJsonNodeFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type contentfulAllProductsNewsStandardPageNavigationJsonNodeGroupConnection_maxArgs = {
+  field: contentfulAllProductsNewsStandardPageNavigationJsonNodeFieldSelector;
+};
+
+
+type contentfulAllProductsNewsStandardPageNavigationJsonNodeGroupConnection_minArgs = {
+  field: contentfulAllProductsNewsStandardPageNavigationJsonNodeFieldSelector;
+};
+
+
+type contentfulAllProductsNewsStandardPageNavigationJsonNodeGroupConnection_sumArgs = {
+  field: contentfulAllProductsNewsStandardPageNavigationJsonNodeFieldSelector;
+};
+
+type contentfulAllProductsNewsStandardPageNavigationJsonNodeSortInput = {
+  readonly How_much_could_you_save_: InputMaybe<SortOrderEnum>;
+  readonly How_to_avoid_price_increase: InputMaybe<SortOrderEnum>;
+  readonly How_to_avoid_the_price_cap_increase_: InputMaybe<SortOrderEnum>;
+  readonly What_did_Virgin_Media_say_: InputMaybe<SortOrderEnum>;
+  readonly What_does_OFGEM_say_: InputMaybe<SortOrderEnum>;
+  readonly What_does_the_change_mean_for_you_: InputMaybe<SortOrderEnum>;
+  readonly What_does_this_mean_for_Nabuh_customers_: InputMaybe<SortOrderEnum>;
+  readonly What_happened_: InputMaybe<SortOrderEnum>;
+  readonly What_if_I_don_t_want_British_Gas: InputMaybe<SortOrderEnum>;
+  readonly When_will_changes_take_place_: InputMaybe<SortOrderEnum>;
+  readonly Where_should_you_keep_your_router_: InputMaybe<SortOrderEnum>;
+  readonly Who_is_affected_by_the_price_cap_: InputMaybe<SortOrderEnum>;
+  readonly Why_does_the_price_cap_change_: InputMaybe<SortOrderEnum>;
+  readonly Why_is_the_price_cap_increasing_: InputMaybe<SortOrderEnum>;
+  readonly Why_should_you_keep_router_out_of_sun_: InputMaybe<SortOrderEnum>;
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly sys: InputMaybe<contentfulAllProductsNewsStandardPageNavigationJsonNodeSysSortInput>;
+};
+
+type contentfulAllProductsNewsStandardPageNavigationJsonNodeSys = {
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type contentfulAllProductsNewsStandardPageNavigationJsonNodeSysFieldSelector = {
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type contentfulAllProductsNewsStandardPageNavigationJsonNodeSysFilterInput = {
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type contentfulAllProductsNewsStandardPageNavigationJsonNodeSysSortInput = {
+  readonly type: InputMaybe<SortOrderEnum>;
 };
 
 type contentfulGasElectricityGuideCompanyPageContentTextNode = Node & {
@@ -7002,18 +9541,2486 @@ type contentfulGasElectricityProviderStandardPageNavigationJsonNodeSysSortInput 
   readonly type: InputMaybe<SortOrderEnum>;
 };
 
+type contentfulPolicyContentTextNode = Node & {
+  readonly children: ReadonlyArray<Node>;
+  readonly content: Maybe<Scalars['String']>;
+  readonly id: Scalars['ID'];
+  readonly internal: Internal;
+  readonly parent: Maybe<Node>;
+  readonly sys: Maybe<contentfulPolicyContentTextNodeSys>;
+};
+
+type contentfulPolicyContentTextNodeConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<contentfulPolicyContentTextNodeEdge>;
+  readonly group: ReadonlyArray<contentfulPolicyContentTextNodeGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<contentfulPolicyContentTextNode>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type contentfulPolicyContentTextNodeConnection_distinctArgs = {
+  field: contentfulPolicyContentTextNodeFieldSelector;
+};
+
+
+type contentfulPolicyContentTextNodeConnection_groupArgs = {
+  field: contentfulPolicyContentTextNodeFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type contentfulPolicyContentTextNodeConnection_maxArgs = {
+  field: contentfulPolicyContentTextNodeFieldSelector;
+};
+
+
+type contentfulPolicyContentTextNodeConnection_minArgs = {
+  field: contentfulPolicyContentTextNodeFieldSelector;
+};
+
+
+type contentfulPolicyContentTextNodeConnection_sumArgs = {
+  field: contentfulPolicyContentTextNodeFieldSelector;
+};
+
+type contentfulPolicyContentTextNodeEdge = {
+  readonly next: Maybe<contentfulPolicyContentTextNode>;
+  readonly node: contentfulPolicyContentTextNode;
+  readonly previous: Maybe<contentfulPolicyContentTextNode>;
+};
+
+type contentfulPolicyContentTextNodeFieldSelector = {
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly content: InputMaybe<FieldSelectorEnum>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly sys: InputMaybe<contentfulPolicyContentTextNodeSysFieldSelector>;
+};
+
+type contentfulPolicyContentTextNodeFilterInput = {
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly content: InputMaybe<StringQueryOperatorInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly sys: InputMaybe<contentfulPolicyContentTextNodeSysFilterInput>;
+};
+
+type contentfulPolicyContentTextNodeFilterListInput = {
+  readonly elemMatch: InputMaybe<contentfulPolicyContentTextNodeFilterInput>;
+};
+
+type contentfulPolicyContentTextNodeGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<contentfulPolicyContentTextNodeEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<contentfulPolicyContentTextNodeGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<contentfulPolicyContentTextNode>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type contentfulPolicyContentTextNodeGroupConnection_distinctArgs = {
+  field: contentfulPolicyContentTextNodeFieldSelector;
+};
+
+
+type contentfulPolicyContentTextNodeGroupConnection_groupArgs = {
+  field: contentfulPolicyContentTextNodeFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type contentfulPolicyContentTextNodeGroupConnection_maxArgs = {
+  field: contentfulPolicyContentTextNodeFieldSelector;
+};
+
+
+type contentfulPolicyContentTextNodeGroupConnection_minArgs = {
+  field: contentfulPolicyContentTextNodeFieldSelector;
+};
+
+
+type contentfulPolicyContentTextNodeGroupConnection_sumArgs = {
+  field: contentfulPolicyContentTextNodeFieldSelector;
+};
+
+type contentfulPolicyContentTextNodeSortInput = {
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly content: InputMaybe<SortOrderEnum>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly sys: InputMaybe<contentfulPolicyContentTextNodeSysSortInput>;
+};
+
+type contentfulPolicyContentTextNodeSys = {
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type contentfulPolicyContentTextNodeSysFieldSelector = {
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type contentfulPolicyContentTextNodeSysFilterInput = {
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type contentfulPolicyContentTextNodeSysSortInput = {
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type contentfulPolicyMetaDescriptionTextNode = Node & {
+  readonly children: ReadonlyArray<Node>;
+  readonly id: Scalars['ID'];
+  readonly internal: Internal;
+  readonly metaDescription: Maybe<Scalars['String']>;
+  readonly parent: Maybe<Node>;
+  readonly sys: Maybe<contentfulPolicyMetaDescriptionTextNodeSys>;
+};
+
+type contentfulPolicyMetaDescriptionTextNodeConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<contentfulPolicyMetaDescriptionTextNodeEdge>;
+  readonly group: ReadonlyArray<contentfulPolicyMetaDescriptionTextNodeGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<contentfulPolicyMetaDescriptionTextNode>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type contentfulPolicyMetaDescriptionTextNodeConnection_distinctArgs = {
+  field: contentfulPolicyMetaDescriptionTextNodeFieldSelector;
+};
+
+
+type contentfulPolicyMetaDescriptionTextNodeConnection_groupArgs = {
+  field: contentfulPolicyMetaDescriptionTextNodeFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type contentfulPolicyMetaDescriptionTextNodeConnection_maxArgs = {
+  field: contentfulPolicyMetaDescriptionTextNodeFieldSelector;
+};
+
+
+type contentfulPolicyMetaDescriptionTextNodeConnection_minArgs = {
+  field: contentfulPolicyMetaDescriptionTextNodeFieldSelector;
+};
+
+
+type contentfulPolicyMetaDescriptionTextNodeConnection_sumArgs = {
+  field: contentfulPolicyMetaDescriptionTextNodeFieldSelector;
+};
+
+type contentfulPolicyMetaDescriptionTextNodeEdge = {
+  readonly next: Maybe<contentfulPolicyMetaDescriptionTextNode>;
+  readonly node: contentfulPolicyMetaDescriptionTextNode;
+  readonly previous: Maybe<contentfulPolicyMetaDescriptionTextNode>;
+};
+
+type contentfulPolicyMetaDescriptionTextNodeFieldSelector = {
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly metaDescription: InputMaybe<FieldSelectorEnum>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly sys: InputMaybe<contentfulPolicyMetaDescriptionTextNodeSysFieldSelector>;
+};
+
+type contentfulPolicyMetaDescriptionTextNodeFilterInput = {
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly metaDescription: InputMaybe<StringQueryOperatorInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly sys: InputMaybe<contentfulPolicyMetaDescriptionTextNodeSysFilterInput>;
+};
+
+type contentfulPolicyMetaDescriptionTextNodeFilterListInput = {
+  readonly elemMatch: InputMaybe<contentfulPolicyMetaDescriptionTextNodeFilterInput>;
+};
+
+type contentfulPolicyMetaDescriptionTextNodeGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<contentfulPolicyMetaDescriptionTextNodeEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<contentfulPolicyMetaDescriptionTextNodeGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<contentfulPolicyMetaDescriptionTextNode>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type contentfulPolicyMetaDescriptionTextNodeGroupConnection_distinctArgs = {
+  field: contentfulPolicyMetaDescriptionTextNodeFieldSelector;
+};
+
+
+type contentfulPolicyMetaDescriptionTextNodeGroupConnection_groupArgs = {
+  field: contentfulPolicyMetaDescriptionTextNodeFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type contentfulPolicyMetaDescriptionTextNodeGroupConnection_maxArgs = {
+  field: contentfulPolicyMetaDescriptionTextNodeFieldSelector;
+};
+
+
+type contentfulPolicyMetaDescriptionTextNodeGroupConnection_minArgs = {
+  field: contentfulPolicyMetaDescriptionTextNodeFieldSelector;
+};
+
+
+type contentfulPolicyMetaDescriptionTextNodeGroupConnection_sumArgs = {
+  field: contentfulPolicyMetaDescriptionTextNodeFieldSelector;
+};
+
+type contentfulPolicyMetaDescriptionTextNodeSortInput = {
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly metaDescription: InputMaybe<SortOrderEnum>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly sys: InputMaybe<contentfulPolicyMetaDescriptionTextNodeSysSortInput>;
+};
+
+type contentfulPolicyMetaDescriptionTextNodeSys = {
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type contentfulPolicyMetaDescriptionTextNodeSysFieldSelector = {
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type contentfulPolicyMetaDescriptionTextNodeSysFilterInput = {
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type contentfulPolicyMetaDescriptionTextNodeSysSortInput = {
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type contentfulPolicyNavigationJsonNode = Node & {
+  readonly Changes_to_these_Terms_of_Use: Maybe<Scalars['String']>;
+  readonly Changes_to_this_privacy_policy: Maybe<Scalars['String']>;
+  readonly Complaints: Maybe<Scalars['String']>;
+  readonly Contact_us: Maybe<Scalars['String']>;
+  readonly Energy_comparison: Maybe<Scalars['String']>;
+  readonly Further_information: Maybe<Scalars['String']>;
+  readonly Home_services_comparison: Maybe<Scalars['String']>;
+  readonly How_personal_information_is_stored: Maybe<Scalars['String']>;
+  readonly How_we_collect_personal_information: Maybe<Scalars['String']>;
+  readonly How_we_use_cookies: Maybe<Scalars['String']>;
+  readonly How_we_use_personal_information: Maybe<Scalars['String']>;
+  readonly Intellectual_Property: Maybe<Scalars['String']>;
+  readonly Legal: Maybe<Scalars['String']>;
+  readonly Managing_your_cookies: Maybe<Scalars['String']>;
+  readonly Our_partners: Maybe<Scalars['String']>;
+  readonly Permitted_use_of_our_Services: Maybe<Scalars['String']>;
+  readonly Privacy_policy: Maybe<Scalars['String']>;
+  readonly Security: Maybe<Scalars['String']>;
+  readonly Sending_personal_information_outside_EEA: Maybe<Scalars['String']>;
+  readonly TV___Broadband_comparison: Maybe<Scalars['String']>;
+  readonly Third_party_websites___services: Maybe<Scalars['String']>;
+  readonly What_do_we_do_: Maybe<Scalars['String']>;
+  readonly What_do_we_not_do_: Maybe<Scalars['String']>;
+  readonly What_is_a_cookie_: Maybe<Scalars['String']>;
+  readonly What_personal_information_we_collect: Maybe<Scalars['String']>;
+  readonly Who_are_we_: Maybe<Scalars['String']>;
+  readonly Who_we_share_personal_information_with: Maybe<Scalars['String']>;
+  readonly Your_acceptance_of_these_Terms_of_Use: Maybe<Scalars['String']>;
+  readonly Your_personal_information: Maybe<Scalars['String']>;
+  readonly Your_personal_information_rights: Maybe<Scalars['String']>;
+  readonly children: ReadonlyArray<Node>;
+  readonly id: Scalars['ID'];
+  readonly internal: Internal;
+  readonly parent: Maybe<Node>;
+  readonly sys: Maybe<contentfulPolicyNavigationJsonNodeSys>;
+};
+
+type contentfulPolicyNavigationJsonNodeConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<contentfulPolicyNavigationJsonNodeEdge>;
+  readonly group: ReadonlyArray<contentfulPolicyNavigationJsonNodeGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<contentfulPolicyNavigationJsonNode>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type contentfulPolicyNavigationJsonNodeConnection_distinctArgs = {
+  field: contentfulPolicyNavigationJsonNodeFieldSelector;
+};
+
+
+type contentfulPolicyNavigationJsonNodeConnection_groupArgs = {
+  field: contentfulPolicyNavigationJsonNodeFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type contentfulPolicyNavigationJsonNodeConnection_maxArgs = {
+  field: contentfulPolicyNavigationJsonNodeFieldSelector;
+};
+
+
+type contentfulPolicyNavigationJsonNodeConnection_minArgs = {
+  field: contentfulPolicyNavigationJsonNodeFieldSelector;
+};
+
+
+type contentfulPolicyNavigationJsonNodeConnection_sumArgs = {
+  field: contentfulPolicyNavigationJsonNodeFieldSelector;
+};
+
+type contentfulPolicyNavigationJsonNodeEdge = {
+  readonly next: Maybe<contentfulPolicyNavigationJsonNode>;
+  readonly node: contentfulPolicyNavigationJsonNode;
+  readonly previous: Maybe<contentfulPolicyNavigationJsonNode>;
+};
+
+type contentfulPolicyNavigationJsonNodeFieldSelector = {
+  readonly Changes_to_these_Terms_of_Use: InputMaybe<FieldSelectorEnum>;
+  readonly Changes_to_this_privacy_policy: InputMaybe<FieldSelectorEnum>;
+  readonly Complaints: InputMaybe<FieldSelectorEnum>;
+  readonly Contact_us: InputMaybe<FieldSelectorEnum>;
+  readonly Energy_comparison: InputMaybe<FieldSelectorEnum>;
+  readonly Further_information: InputMaybe<FieldSelectorEnum>;
+  readonly Home_services_comparison: InputMaybe<FieldSelectorEnum>;
+  readonly How_personal_information_is_stored: InputMaybe<FieldSelectorEnum>;
+  readonly How_we_collect_personal_information: InputMaybe<FieldSelectorEnum>;
+  readonly How_we_use_cookies: InputMaybe<FieldSelectorEnum>;
+  readonly How_we_use_personal_information: InputMaybe<FieldSelectorEnum>;
+  readonly Intellectual_Property: InputMaybe<FieldSelectorEnum>;
+  readonly Legal: InputMaybe<FieldSelectorEnum>;
+  readonly Managing_your_cookies: InputMaybe<FieldSelectorEnum>;
+  readonly Our_partners: InputMaybe<FieldSelectorEnum>;
+  readonly Permitted_use_of_our_Services: InputMaybe<FieldSelectorEnum>;
+  readonly Privacy_policy: InputMaybe<FieldSelectorEnum>;
+  readonly Security: InputMaybe<FieldSelectorEnum>;
+  readonly Sending_personal_information_outside_EEA: InputMaybe<FieldSelectorEnum>;
+  readonly TV___Broadband_comparison: InputMaybe<FieldSelectorEnum>;
+  readonly Third_party_websites___services: InputMaybe<FieldSelectorEnum>;
+  readonly What_do_we_do_: InputMaybe<FieldSelectorEnum>;
+  readonly What_do_we_not_do_: InputMaybe<FieldSelectorEnum>;
+  readonly What_is_a_cookie_: InputMaybe<FieldSelectorEnum>;
+  readonly What_personal_information_we_collect: InputMaybe<FieldSelectorEnum>;
+  readonly Who_are_we_: InputMaybe<FieldSelectorEnum>;
+  readonly Who_we_share_personal_information_with: InputMaybe<FieldSelectorEnum>;
+  readonly Your_acceptance_of_these_Terms_of_Use: InputMaybe<FieldSelectorEnum>;
+  readonly Your_personal_information: InputMaybe<FieldSelectorEnum>;
+  readonly Your_personal_information_rights: InputMaybe<FieldSelectorEnum>;
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly sys: InputMaybe<contentfulPolicyNavigationJsonNodeSysFieldSelector>;
+};
+
+type contentfulPolicyNavigationJsonNodeFilterInput = {
+  readonly Changes_to_these_Terms_of_Use: InputMaybe<StringQueryOperatorInput>;
+  readonly Changes_to_this_privacy_policy: InputMaybe<StringQueryOperatorInput>;
+  readonly Complaints: InputMaybe<StringQueryOperatorInput>;
+  readonly Contact_us: InputMaybe<StringQueryOperatorInput>;
+  readonly Energy_comparison: InputMaybe<StringQueryOperatorInput>;
+  readonly Further_information: InputMaybe<StringQueryOperatorInput>;
+  readonly Home_services_comparison: InputMaybe<StringQueryOperatorInput>;
+  readonly How_personal_information_is_stored: InputMaybe<StringQueryOperatorInput>;
+  readonly How_we_collect_personal_information: InputMaybe<StringQueryOperatorInput>;
+  readonly How_we_use_cookies: InputMaybe<StringQueryOperatorInput>;
+  readonly How_we_use_personal_information: InputMaybe<StringQueryOperatorInput>;
+  readonly Intellectual_Property: InputMaybe<StringQueryOperatorInput>;
+  readonly Legal: InputMaybe<StringQueryOperatorInput>;
+  readonly Managing_your_cookies: InputMaybe<StringQueryOperatorInput>;
+  readonly Our_partners: InputMaybe<StringQueryOperatorInput>;
+  readonly Permitted_use_of_our_Services: InputMaybe<StringQueryOperatorInput>;
+  readonly Privacy_policy: InputMaybe<StringQueryOperatorInput>;
+  readonly Security: InputMaybe<StringQueryOperatorInput>;
+  readonly Sending_personal_information_outside_EEA: InputMaybe<StringQueryOperatorInput>;
+  readonly TV___Broadband_comparison: InputMaybe<StringQueryOperatorInput>;
+  readonly Third_party_websites___services: InputMaybe<StringQueryOperatorInput>;
+  readonly What_do_we_do_: InputMaybe<StringQueryOperatorInput>;
+  readonly What_do_we_not_do_: InputMaybe<StringQueryOperatorInput>;
+  readonly What_is_a_cookie_: InputMaybe<StringQueryOperatorInput>;
+  readonly What_personal_information_we_collect: InputMaybe<StringQueryOperatorInput>;
+  readonly Who_are_we_: InputMaybe<StringQueryOperatorInput>;
+  readonly Who_we_share_personal_information_with: InputMaybe<StringQueryOperatorInput>;
+  readonly Your_acceptance_of_these_Terms_of_Use: InputMaybe<StringQueryOperatorInput>;
+  readonly Your_personal_information: InputMaybe<StringQueryOperatorInput>;
+  readonly Your_personal_information_rights: InputMaybe<StringQueryOperatorInput>;
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly sys: InputMaybe<contentfulPolicyNavigationJsonNodeSysFilterInput>;
+};
+
+type contentfulPolicyNavigationJsonNodeFilterListInput = {
+  readonly elemMatch: InputMaybe<contentfulPolicyNavigationJsonNodeFilterInput>;
+};
+
+type contentfulPolicyNavigationJsonNodeGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<contentfulPolicyNavigationJsonNodeEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<contentfulPolicyNavigationJsonNodeGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<contentfulPolicyNavigationJsonNode>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type contentfulPolicyNavigationJsonNodeGroupConnection_distinctArgs = {
+  field: contentfulPolicyNavigationJsonNodeFieldSelector;
+};
+
+
+type contentfulPolicyNavigationJsonNodeGroupConnection_groupArgs = {
+  field: contentfulPolicyNavigationJsonNodeFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type contentfulPolicyNavigationJsonNodeGroupConnection_maxArgs = {
+  field: contentfulPolicyNavigationJsonNodeFieldSelector;
+};
+
+
+type contentfulPolicyNavigationJsonNodeGroupConnection_minArgs = {
+  field: contentfulPolicyNavigationJsonNodeFieldSelector;
+};
+
+
+type contentfulPolicyNavigationJsonNodeGroupConnection_sumArgs = {
+  field: contentfulPolicyNavigationJsonNodeFieldSelector;
+};
+
+type contentfulPolicyNavigationJsonNodeSortInput = {
+  readonly Changes_to_these_Terms_of_Use: InputMaybe<SortOrderEnum>;
+  readonly Changes_to_this_privacy_policy: InputMaybe<SortOrderEnum>;
+  readonly Complaints: InputMaybe<SortOrderEnum>;
+  readonly Contact_us: InputMaybe<SortOrderEnum>;
+  readonly Energy_comparison: InputMaybe<SortOrderEnum>;
+  readonly Further_information: InputMaybe<SortOrderEnum>;
+  readonly Home_services_comparison: InputMaybe<SortOrderEnum>;
+  readonly How_personal_information_is_stored: InputMaybe<SortOrderEnum>;
+  readonly How_we_collect_personal_information: InputMaybe<SortOrderEnum>;
+  readonly How_we_use_cookies: InputMaybe<SortOrderEnum>;
+  readonly How_we_use_personal_information: InputMaybe<SortOrderEnum>;
+  readonly Intellectual_Property: InputMaybe<SortOrderEnum>;
+  readonly Legal: InputMaybe<SortOrderEnum>;
+  readonly Managing_your_cookies: InputMaybe<SortOrderEnum>;
+  readonly Our_partners: InputMaybe<SortOrderEnum>;
+  readonly Permitted_use_of_our_Services: InputMaybe<SortOrderEnum>;
+  readonly Privacy_policy: InputMaybe<SortOrderEnum>;
+  readonly Security: InputMaybe<SortOrderEnum>;
+  readonly Sending_personal_information_outside_EEA: InputMaybe<SortOrderEnum>;
+  readonly TV___Broadband_comparison: InputMaybe<SortOrderEnum>;
+  readonly Third_party_websites___services: InputMaybe<SortOrderEnum>;
+  readonly What_do_we_do_: InputMaybe<SortOrderEnum>;
+  readonly What_do_we_not_do_: InputMaybe<SortOrderEnum>;
+  readonly What_is_a_cookie_: InputMaybe<SortOrderEnum>;
+  readonly What_personal_information_we_collect: InputMaybe<SortOrderEnum>;
+  readonly Who_are_we_: InputMaybe<SortOrderEnum>;
+  readonly Who_we_share_personal_information_with: InputMaybe<SortOrderEnum>;
+  readonly Your_acceptance_of_these_Terms_of_Use: InputMaybe<SortOrderEnum>;
+  readonly Your_personal_information: InputMaybe<SortOrderEnum>;
+  readonly Your_personal_information_rights: InputMaybe<SortOrderEnum>;
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly sys: InputMaybe<contentfulPolicyNavigationJsonNodeSysSortInput>;
+};
+
+type contentfulPolicyNavigationJsonNodeSys = {
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type contentfulPolicyNavigationJsonNodeSysFieldSelector = {
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type contentfulPolicyNavigationJsonNodeSysFilterInput = {
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type contentfulPolicyNavigationJsonNodeSysSortInput = {
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type contentfulTvBroadbandGuideStandardPageContentTextNode = Node & {
+  readonly children: ReadonlyArray<Node>;
+  readonly content: Maybe<Scalars['String']>;
+  readonly id: Scalars['ID'];
+  readonly internal: Internal;
+  readonly parent: Maybe<Node>;
+  readonly sys: Maybe<contentfulTvBroadbandGuideStandardPageContentTextNodeSys>;
+};
+
+type contentfulTvBroadbandGuideStandardPageContentTextNodeConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<contentfulTvBroadbandGuideStandardPageContentTextNodeEdge>;
+  readonly group: ReadonlyArray<contentfulTvBroadbandGuideStandardPageContentTextNodeGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<contentfulTvBroadbandGuideStandardPageContentTextNode>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type contentfulTvBroadbandGuideStandardPageContentTextNodeConnection_distinctArgs = {
+  field: contentfulTvBroadbandGuideStandardPageContentTextNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandGuideStandardPageContentTextNodeConnection_groupArgs = {
+  field: contentfulTvBroadbandGuideStandardPageContentTextNodeFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type contentfulTvBroadbandGuideStandardPageContentTextNodeConnection_maxArgs = {
+  field: contentfulTvBroadbandGuideStandardPageContentTextNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandGuideStandardPageContentTextNodeConnection_minArgs = {
+  field: contentfulTvBroadbandGuideStandardPageContentTextNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandGuideStandardPageContentTextNodeConnection_sumArgs = {
+  field: contentfulTvBroadbandGuideStandardPageContentTextNodeFieldSelector;
+};
+
+type contentfulTvBroadbandGuideStandardPageContentTextNodeEdge = {
+  readonly next: Maybe<contentfulTvBroadbandGuideStandardPageContentTextNode>;
+  readonly node: contentfulTvBroadbandGuideStandardPageContentTextNode;
+  readonly previous: Maybe<contentfulTvBroadbandGuideStandardPageContentTextNode>;
+};
+
+type contentfulTvBroadbandGuideStandardPageContentTextNodeFieldSelector = {
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly content: InputMaybe<FieldSelectorEnum>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly sys: InputMaybe<contentfulTvBroadbandGuideStandardPageContentTextNodeSysFieldSelector>;
+};
+
+type contentfulTvBroadbandGuideStandardPageContentTextNodeFilterInput = {
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly content: InputMaybe<StringQueryOperatorInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly sys: InputMaybe<contentfulTvBroadbandGuideStandardPageContentTextNodeSysFilterInput>;
+};
+
+type contentfulTvBroadbandGuideStandardPageContentTextNodeFilterListInput = {
+  readonly elemMatch: InputMaybe<contentfulTvBroadbandGuideStandardPageContentTextNodeFilterInput>;
+};
+
+type contentfulTvBroadbandGuideStandardPageContentTextNodeGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<contentfulTvBroadbandGuideStandardPageContentTextNodeEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<contentfulTvBroadbandGuideStandardPageContentTextNodeGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<contentfulTvBroadbandGuideStandardPageContentTextNode>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type contentfulTvBroadbandGuideStandardPageContentTextNodeGroupConnection_distinctArgs = {
+  field: contentfulTvBroadbandGuideStandardPageContentTextNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandGuideStandardPageContentTextNodeGroupConnection_groupArgs = {
+  field: contentfulTvBroadbandGuideStandardPageContentTextNodeFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type contentfulTvBroadbandGuideStandardPageContentTextNodeGroupConnection_maxArgs = {
+  field: contentfulTvBroadbandGuideStandardPageContentTextNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandGuideStandardPageContentTextNodeGroupConnection_minArgs = {
+  field: contentfulTvBroadbandGuideStandardPageContentTextNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandGuideStandardPageContentTextNodeGroupConnection_sumArgs = {
+  field: contentfulTvBroadbandGuideStandardPageContentTextNodeFieldSelector;
+};
+
+type contentfulTvBroadbandGuideStandardPageContentTextNodeSortInput = {
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly content: InputMaybe<SortOrderEnum>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly sys: InputMaybe<contentfulTvBroadbandGuideStandardPageContentTextNodeSysSortInput>;
+};
+
+type contentfulTvBroadbandGuideStandardPageContentTextNodeSys = {
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type contentfulTvBroadbandGuideStandardPageContentTextNodeSysFieldSelector = {
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type contentfulTvBroadbandGuideStandardPageContentTextNodeSysFilterInput = {
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type contentfulTvBroadbandGuideStandardPageContentTextNodeSysSortInput = {
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNode = Node & {
+  readonly children: ReadonlyArray<Node>;
+  readonly id: Scalars['ID'];
+  readonly internal: Internal;
+  readonly metaDescription: Maybe<Scalars['String']>;
+  readonly parent: Maybe<Node>;
+  readonly sys: Maybe<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeSys>;
+};
+
+type contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeEdge>;
+  readonly group: ReadonlyArray<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNode>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeConnection_distinctArgs = {
+  field: contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeConnection_groupArgs = {
+  field: contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeConnection_maxArgs = {
+  field: contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeConnection_minArgs = {
+  field: contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeConnection_sumArgs = {
+  field: contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeFieldSelector;
+};
+
+type contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeEdge = {
+  readonly next: Maybe<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNode>;
+  readonly node: contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNode;
+  readonly previous: Maybe<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNode>;
+};
+
+type contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeFieldSelector = {
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly metaDescription: InputMaybe<FieldSelectorEnum>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly sys: InputMaybe<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeSysFieldSelector>;
+};
+
+type contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeFilterInput = {
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly metaDescription: InputMaybe<StringQueryOperatorInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly sys: InputMaybe<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeSysFilterInput>;
+};
+
+type contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeFilterListInput = {
+  readonly elemMatch: InputMaybe<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeFilterInput>;
+};
+
+type contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNode>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeGroupConnection_distinctArgs = {
+  field: contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeGroupConnection_groupArgs = {
+  field: contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeGroupConnection_maxArgs = {
+  field: contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeGroupConnection_minArgs = {
+  field: contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeGroupConnection_sumArgs = {
+  field: contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeFieldSelector;
+};
+
+type contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeSortInput = {
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly metaDescription: InputMaybe<SortOrderEnum>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly sys: InputMaybe<contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeSysSortInput>;
+};
+
+type contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeSys = {
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeSysFieldSelector = {
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeSysFilterInput = {
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type contentfulTvBroadbandGuideStandardPageMetaDescriptionTextNodeSysSortInput = {
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type contentfulTvBroadbandGuideStandardPageNavigationJsonNode = Node & {
+  readonly Are_broadband_bills_proof_of_address_: Maybe<Scalars['String']>;
+  readonly Average_UK_broadband_speed: Maybe<Scalars['String']>;
+  readonly Broadband_without_line_rental: Maybe<Scalars['String']>;
+  readonly Business_vs_home_broadband: Maybe<Scalars['String']>;
+  readonly Can_I_get_fibre_in_my_area_: Maybe<Scalars['String']>;
+  readonly Can_I_pay_monthly_for_my_broadband_: Maybe<Scalars['String']>;
+  readonly Can_I_transfer_my_existing_contract: Maybe<Scalars['String']>;
+  readonly Cancelling_your_broadband_package: Maybe<Scalars['String']>;
+  readonly Check_my_speeds: Maybe<Scalars['String']>;
+  readonly Companies_that_offer_business_broadband: Maybe<Scalars['String']>;
+  readonly Conducting_a_speed_test: Maybe<Scalars['String']>;
+  readonly Contact_TV_Licensing_company: Maybe<Scalars['String']>;
+  readonly Different_types_of_business_broadband: Maybe<Scalars['String']>;
+  readonly Do_you_need_a_TV_licence_: Maybe<Scalars['String']>;
+  readonly Do_you_need_a_static_IP_address_: Maybe<Scalars['String']>;
+  readonly Does_it_work_any_differently_to_residential_: Maybe<Scalars['String']>;
+  readonly Download_speed: Maybe<Scalars['String']>;
+  readonly Fees_associated_with_moving: Maybe<Scalars['String']>;
+  readonly Finding_the_best_broadband_in_my_area: Maybe<Scalars['String']>;
+  readonly Finding_the_right_broadband: Maybe<Scalars['String']>;
+  readonly How_does_broadband_work_: Maybe<Scalars['String']>;
+  readonly How_is_broadband_speed_measured_: Maybe<Scalars['String']>;
+  readonly How_long_to_set_up_in_new_house: Maybe<Scalars['String']>;
+  readonly How_much_are_early_termination_fees_: Maybe<Scalars['String']>;
+  readonly How_much_does_a_licence_cost_: Maybe<Scalars['String']>;
+  readonly How_much_does_line_rental_cost_: Maybe<Scalars['String']>;
+  readonly How_to_cancel_TV_licence: Maybe<Scalars['String']>;
+  readonly How_to_cancel_my_broadband: Maybe<Scalars['String']>;
+  readonly How_to_contact_your_provider_about_moving: Maybe<Scalars['String']>;
+  readonly How_to_improve_broadband_speed: Maybe<Scalars['String']>;
+  readonly How_to_move_your_broadband: Maybe<Scalars['String']>;
+  readonly How_to_pay_TV_licence_fees: Maybe<Scalars['String']>;
+  readonly How_to_pay_your_bill_: Maybe<Scalars['String']>;
+  readonly How_to_reduce_your_broadband_bills: Maybe<Scalars['String']>;
+  readonly How_to_renew_TV_licence: Maybe<Scalars['String']>;
+  readonly I_can_t_switch: Maybe<Scalars['String']>;
+  readonly I_don_t_have_a_landline: Maybe<Scalars['String']>;
+  readonly I_don_t_need_a_TV_licence: Maybe<Scalars['String']>;
+  readonly I_m_moving_house: Maybe<Scalars['String']>;
+  readonly I_think_that_my_bill_might_be_incorrect: Maybe<Scalars['String']>;
+  readonly I_ve_been_sent_a_fake_bill: Maybe<Scalars['String']>;
+  readonly Is_broadband_expensive: Maybe<Scalars['String']>;
+  readonly Is_it_easy_to_use_: Maybe<Scalars['String']>;
+  readonly Mobile_broadband___data: Maybe<Scalars['String']>;
+  readonly Ping: Maybe<Scalars['String']>;
+  readonly Price_differences_between_home___business: Maybe<Scalars['String']>;
+  readonly Switching_broadband: Maybe<Scalars['String']>;
+  readonly Switching_process: Maybe<Scalars['String']>;
+  readonly Switching_when_you_move_house: Maybe<Scalars['String']>;
+  readonly Upload_speed: Maybe<Scalars['String']>;
+  readonly Upload_vs_download_speeds: Maybe<Scalars['String']>;
+  readonly What_affects_broadband_speed_: Maybe<Scalars['String']>;
+  readonly What_are_early_termination_fees_: Maybe<Scalars['String']>;
+  readonly What_is_a_TV_licence_: Maybe<Scalars['String']>;
+  readonly What_is_broadband_: Maybe<Scalars['String']>;
+  readonly What_is_business_broadband_: Maybe<Scalars['String']>;
+  readonly What_is_dial_up_broadband: Maybe<Scalars['String']>;
+  readonly What_is_line_rental_: Maybe<Scalars['String']>;
+  readonly What_is_on_a_broadband_bill_: Maybe<Scalars['String']>;
+  readonly What_speed_do_you_need_: Maybe<Scalars['String']>;
+  readonly When_can_you_cancel_for_free_: Maybe<Scalars['String']>;
+  readonly Where_you_ll_see_these_terms: Maybe<Scalars['String']>;
+  readonly Why_do_you_have_to_pay_: Maybe<Scalars['String']>;
+  readonly Why_do_you_pay_line_rental_: Maybe<Scalars['String']>;
+  readonly Why_is_my_bill_so_high_: Maybe<Scalars['String']>;
+  readonly Work_from_home_broadband: Maybe<Scalars['String']>;
+  readonly children: ReadonlyArray<Node>;
+  readonly id: Scalars['ID'];
+  readonly internal: Internal;
+  readonly parent: Maybe<Node>;
+  readonly sys: Maybe<contentfulTvBroadbandGuideStandardPageNavigationJsonNodeSys>;
+};
+
+type contentfulTvBroadbandGuideStandardPageNavigationJsonNodeConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<contentfulTvBroadbandGuideStandardPageNavigationJsonNodeEdge>;
+  readonly group: ReadonlyArray<contentfulTvBroadbandGuideStandardPageNavigationJsonNodeGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<contentfulTvBroadbandGuideStandardPageNavigationJsonNode>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type contentfulTvBroadbandGuideStandardPageNavigationJsonNodeConnection_distinctArgs = {
+  field: contentfulTvBroadbandGuideStandardPageNavigationJsonNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandGuideStandardPageNavigationJsonNodeConnection_groupArgs = {
+  field: contentfulTvBroadbandGuideStandardPageNavigationJsonNodeFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type contentfulTvBroadbandGuideStandardPageNavigationJsonNodeConnection_maxArgs = {
+  field: contentfulTvBroadbandGuideStandardPageNavigationJsonNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandGuideStandardPageNavigationJsonNodeConnection_minArgs = {
+  field: contentfulTvBroadbandGuideStandardPageNavigationJsonNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandGuideStandardPageNavigationJsonNodeConnection_sumArgs = {
+  field: contentfulTvBroadbandGuideStandardPageNavigationJsonNodeFieldSelector;
+};
+
+type contentfulTvBroadbandGuideStandardPageNavigationJsonNodeEdge = {
+  readonly next: Maybe<contentfulTvBroadbandGuideStandardPageNavigationJsonNode>;
+  readonly node: contentfulTvBroadbandGuideStandardPageNavigationJsonNode;
+  readonly previous: Maybe<contentfulTvBroadbandGuideStandardPageNavigationJsonNode>;
+};
+
+type contentfulTvBroadbandGuideStandardPageNavigationJsonNodeFieldSelector = {
+  readonly Are_broadband_bills_proof_of_address_: InputMaybe<FieldSelectorEnum>;
+  readonly Average_UK_broadband_speed: InputMaybe<FieldSelectorEnum>;
+  readonly Broadband_without_line_rental: InputMaybe<FieldSelectorEnum>;
+  readonly Business_vs_home_broadband: InputMaybe<FieldSelectorEnum>;
+  readonly Can_I_get_fibre_in_my_area_: InputMaybe<FieldSelectorEnum>;
+  readonly Can_I_pay_monthly_for_my_broadband_: InputMaybe<FieldSelectorEnum>;
+  readonly Can_I_transfer_my_existing_contract: InputMaybe<FieldSelectorEnum>;
+  readonly Cancelling_your_broadband_package: InputMaybe<FieldSelectorEnum>;
+  readonly Check_my_speeds: InputMaybe<FieldSelectorEnum>;
+  readonly Companies_that_offer_business_broadband: InputMaybe<FieldSelectorEnum>;
+  readonly Conducting_a_speed_test: InputMaybe<FieldSelectorEnum>;
+  readonly Contact_TV_Licensing_company: InputMaybe<FieldSelectorEnum>;
+  readonly Different_types_of_business_broadband: InputMaybe<FieldSelectorEnum>;
+  readonly Do_you_need_a_TV_licence_: InputMaybe<FieldSelectorEnum>;
+  readonly Do_you_need_a_static_IP_address_: InputMaybe<FieldSelectorEnum>;
+  readonly Does_it_work_any_differently_to_residential_: InputMaybe<FieldSelectorEnum>;
+  readonly Download_speed: InputMaybe<FieldSelectorEnum>;
+  readonly Fees_associated_with_moving: InputMaybe<FieldSelectorEnum>;
+  readonly Finding_the_best_broadband_in_my_area: InputMaybe<FieldSelectorEnum>;
+  readonly Finding_the_right_broadband: InputMaybe<FieldSelectorEnum>;
+  readonly How_does_broadband_work_: InputMaybe<FieldSelectorEnum>;
+  readonly How_is_broadband_speed_measured_: InputMaybe<FieldSelectorEnum>;
+  readonly How_long_to_set_up_in_new_house: InputMaybe<FieldSelectorEnum>;
+  readonly How_much_are_early_termination_fees_: InputMaybe<FieldSelectorEnum>;
+  readonly How_much_does_a_licence_cost_: InputMaybe<FieldSelectorEnum>;
+  readonly How_much_does_line_rental_cost_: InputMaybe<FieldSelectorEnum>;
+  readonly How_to_cancel_TV_licence: InputMaybe<FieldSelectorEnum>;
+  readonly How_to_cancel_my_broadband: InputMaybe<FieldSelectorEnum>;
+  readonly How_to_contact_your_provider_about_moving: InputMaybe<FieldSelectorEnum>;
+  readonly How_to_improve_broadband_speed: InputMaybe<FieldSelectorEnum>;
+  readonly How_to_move_your_broadband: InputMaybe<FieldSelectorEnum>;
+  readonly How_to_pay_TV_licence_fees: InputMaybe<FieldSelectorEnum>;
+  readonly How_to_pay_your_bill_: InputMaybe<FieldSelectorEnum>;
+  readonly How_to_reduce_your_broadband_bills: InputMaybe<FieldSelectorEnum>;
+  readonly How_to_renew_TV_licence: InputMaybe<FieldSelectorEnum>;
+  readonly I_can_t_switch: InputMaybe<FieldSelectorEnum>;
+  readonly I_don_t_have_a_landline: InputMaybe<FieldSelectorEnum>;
+  readonly I_don_t_need_a_TV_licence: InputMaybe<FieldSelectorEnum>;
+  readonly I_m_moving_house: InputMaybe<FieldSelectorEnum>;
+  readonly I_think_that_my_bill_might_be_incorrect: InputMaybe<FieldSelectorEnum>;
+  readonly I_ve_been_sent_a_fake_bill: InputMaybe<FieldSelectorEnum>;
+  readonly Is_broadband_expensive: InputMaybe<FieldSelectorEnum>;
+  readonly Is_it_easy_to_use_: InputMaybe<FieldSelectorEnum>;
+  readonly Mobile_broadband___data: InputMaybe<FieldSelectorEnum>;
+  readonly Ping: InputMaybe<FieldSelectorEnum>;
+  readonly Price_differences_between_home___business: InputMaybe<FieldSelectorEnum>;
+  readonly Switching_broadband: InputMaybe<FieldSelectorEnum>;
+  readonly Switching_process: InputMaybe<FieldSelectorEnum>;
+  readonly Switching_when_you_move_house: InputMaybe<FieldSelectorEnum>;
+  readonly Upload_speed: InputMaybe<FieldSelectorEnum>;
+  readonly Upload_vs_download_speeds: InputMaybe<FieldSelectorEnum>;
+  readonly What_affects_broadband_speed_: InputMaybe<FieldSelectorEnum>;
+  readonly What_are_early_termination_fees_: InputMaybe<FieldSelectorEnum>;
+  readonly What_is_a_TV_licence_: InputMaybe<FieldSelectorEnum>;
+  readonly What_is_broadband_: InputMaybe<FieldSelectorEnum>;
+  readonly What_is_business_broadband_: InputMaybe<FieldSelectorEnum>;
+  readonly What_is_dial_up_broadband: InputMaybe<FieldSelectorEnum>;
+  readonly What_is_line_rental_: InputMaybe<FieldSelectorEnum>;
+  readonly What_is_on_a_broadband_bill_: InputMaybe<FieldSelectorEnum>;
+  readonly What_speed_do_you_need_: InputMaybe<FieldSelectorEnum>;
+  readonly When_can_you_cancel_for_free_: InputMaybe<FieldSelectorEnum>;
+  readonly Where_you_ll_see_these_terms: InputMaybe<FieldSelectorEnum>;
+  readonly Why_do_you_have_to_pay_: InputMaybe<FieldSelectorEnum>;
+  readonly Why_do_you_pay_line_rental_: InputMaybe<FieldSelectorEnum>;
+  readonly Why_is_my_bill_so_high_: InputMaybe<FieldSelectorEnum>;
+  readonly Work_from_home_broadband: InputMaybe<FieldSelectorEnum>;
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly sys: InputMaybe<contentfulTvBroadbandGuideStandardPageNavigationJsonNodeSysFieldSelector>;
+};
+
+type contentfulTvBroadbandGuideStandardPageNavigationJsonNodeFilterInput = {
+  readonly Are_broadband_bills_proof_of_address_: InputMaybe<StringQueryOperatorInput>;
+  readonly Average_UK_broadband_speed: InputMaybe<StringQueryOperatorInput>;
+  readonly Broadband_without_line_rental: InputMaybe<StringQueryOperatorInput>;
+  readonly Business_vs_home_broadband: InputMaybe<StringQueryOperatorInput>;
+  readonly Can_I_get_fibre_in_my_area_: InputMaybe<StringQueryOperatorInput>;
+  readonly Can_I_pay_monthly_for_my_broadband_: InputMaybe<StringQueryOperatorInput>;
+  readonly Can_I_transfer_my_existing_contract: InputMaybe<StringQueryOperatorInput>;
+  readonly Cancelling_your_broadband_package: InputMaybe<StringQueryOperatorInput>;
+  readonly Check_my_speeds: InputMaybe<StringQueryOperatorInput>;
+  readonly Companies_that_offer_business_broadband: InputMaybe<StringQueryOperatorInput>;
+  readonly Conducting_a_speed_test: InputMaybe<StringQueryOperatorInput>;
+  readonly Contact_TV_Licensing_company: InputMaybe<StringQueryOperatorInput>;
+  readonly Different_types_of_business_broadband: InputMaybe<StringQueryOperatorInput>;
+  readonly Do_you_need_a_TV_licence_: InputMaybe<StringQueryOperatorInput>;
+  readonly Do_you_need_a_static_IP_address_: InputMaybe<StringQueryOperatorInput>;
+  readonly Does_it_work_any_differently_to_residential_: InputMaybe<StringQueryOperatorInput>;
+  readonly Download_speed: InputMaybe<StringQueryOperatorInput>;
+  readonly Fees_associated_with_moving: InputMaybe<StringQueryOperatorInput>;
+  readonly Finding_the_best_broadband_in_my_area: InputMaybe<StringQueryOperatorInput>;
+  readonly Finding_the_right_broadband: InputMaybe<StringQueryOperatorInput>;
+  readonly How_does_broadband_work_: InputMaybe<StringQueryOperatorInput>;
+  readonly How_is_broadband_speed_measured_: InputMaybe<StringQueryOperatorInput>;
+  readonly How_long_to_set_up_in_new_house: InputMaybe<StringQueryOperatorInput>;
+  readonly How_much_are_early_termination_fees_: InputMaybe<StringQueryOperatorInput>;
+  readonly How_much_does_a_licence_cost_: InputMaybe<StringQueryOperatorInput>;
+  readonly How_much_does_line_rental_cost_: InputMaybe<StringQueryOperatorInput>;
+  readonly How_to_cancel_TV_licence: InputMaybe<StringQueryOperatorInput>;
+  readonly How_to_cancel_my_broadband: InputMaybe<StringQueryOperatorInput>;
+  readonly How_to_contact_your_provider_about_moving: InputMaybe<StringQueryOperatorInput>;
+  readonly How_to_improve_broadband_speed: InputMaybe<StringQueryOperatorInput>;
+  readonly How_to_move_your_broadband: InputMaybe<StringQueryOperatorInput>;
+  readonly How_to_pay_TV_licence_fees: InputMaybe<StringQueryOperatorInput>;
+  readonly How_to_pay_your_bill_: InputMaybe<StringQueryOperatorInput>;
+  readonly How_to_reduce_your_broadband_bills: InputMaybe<StringQueryOperatorInput>;
+  readonly How_to_renew_TV_licence: InputMaybe<StringQueryOperatorInput>;
+  readonly I_can_t_switch: InputMaybe<StringQueryOperatorInput>;
+  readonly I_don_t_have_a_landline: InputMaybe<StringQueryOperatorInput>;
+  readonly I_don_t_need_a_TV_licence: InputMaybe<StringQueryOperatorInput>;
+  readonly I_m_moving_house: InputMaybe<StringQueryOperatorInput>;
+  readonly I_think_that_my_bill_might_be_incorrect: InputMaybe<StringQueryOperatorInput>;
+  readonly I_ve_been_sent_a_fake_bill: InputMaybe<StringQueryOperatorInput>;
+  readonly Is_broadband_expensive: InputMaybe<StringQueryOperatorInput>;
+  readonly Is_it_easy_to_use_: InputMaybe<StringQueryOperatorInput>;
+  readonly Mobile_broadband___data: InputMaybe<StringQueryOperatorInput>;
+  readonly Ping: InputMaybe<StringQueryOperatorInput>;
+  readonly Price_differences_between_home___business: InputMaybe<StringQueryOperatorInput>;
+  readonly Switching_broadband: InputMaybe<StringQueryOperatorInput>;
+  readonly Switching_process: InputMaybe<StringQueryOperatorInput>;
+  readonly Switching_when_you_move_house: InputMaybe<StringQueryOperatorInput>;
+  readonly Upload_speed: InputMaybe<StringQueryOperatorInput>;
+  readonly Upload_vs_download_speeds: InputMaybe<StringQueryOperatorInput>;
+  readonly What_affects_broadband_speed_: InputMaybe<StringQueryOperatorInput>;
+  readonly What_are_early_termination_fees_: InputMaybe<StringQueryOperatorInput>;
+  readonly What_is_a_TV_licence_: InputMaybe<StringQueryOperatorInput>;
+  readonly What_is_broadband_: InputMaybe<StringQueryOperatorInput>;
+  readonly What_is_business_broadband_: InputMaybe<StringQueryOperatorInput>;
+  readonly What_is_dial_up_broadband: InputMaybe<StringQueryOperatorInput>;
+  readonly What_is_line_rental_: InputMaybe<StringQueryOperatorInput>;
+  readonly What_is_on_a_broadband_bill_: InputMaybe<StringQueryOperatorInput>;
+  readonly What_speed_do_you_need_: InputMaybe<StringQueryOperatorInput>;
+  readonly When_can_you_cancel_for_free_: InputMaybe<StringQueryOperatorInput>;
+  readonly Where_you_ll_see_these_terms: InputMaybe<StringQueryOperatorInput>;
+  readonly Why_do_you_have_to_pay_: InputMaybe<StringQueryOperatorInput>;
+  readonly Why_do_you_pay_line_rental_: InputMaybe<StringQueryOperatorInput>;
+  readonly Why_is_my_bill_so_high_: InputMaybe<StringQueryOperatorInput>;
+  readonly Work_from_home_broadband: InputMaybe<StringQueryOperatorInput>;
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly sys: InputMaybe<contentfulTvBroadbandGuideStandardPageNavigationJsonNodeSysFilterInput>;
+};
+
+type contentfulTvBroadbandGuideStandardPageNavigationJsonNodeFilterListInput = {
+  readonly elemMatch: InputMaybe<contentfulTvBroadbandGuideStandardPageNavigationJsonNodeFilterInput>;
+};
+
+type contentfulTvBroadbandGuideStandardPageNavigationJsonNodeGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<contentfulTvBroadbandGuideStandardPageNavigationJsonNodeEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<contentfulTvBroadbandGuideStandardPageNavigationJsonNodeGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<contentfulTvBroadbandGuideStandardPageNavigationJsonNode>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type contentfulTvBroadbandGuideStandardPageNavigationJsonNodeGroupConnection_distinctArgs = {
+  field: contentfulTvBroadbandGuideStandardPageNavigationJsonNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandGuideStandardPageNavigationJsonNodeGroupConnection_groupArgs = {
+  field: contentfulTvBroadbandGuideStandardPageNavigationJsonNodeFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type contentfulTvBroadbandGuideStandardPageNavigationJsonNodeGroupConnection_maxArgs = {
+  field: contentfulTvBroadbandGuideStandardPageNavigationJsonNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandGuideStandardPageNavigationJsonNodeGroupConnection_minArgs = {
+  field: contentfulTvBroadbandGuideStandardPageNavigationJsonNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandGuideStandardPageNavigationJsonNodeGroupConnection_sumArgs = {
+  field: contentfulTvBroadbandGuideStandardPageNavigationJsonNodeFieldSelector;
+};
+
+type contentfulTvBroadbandGuideStandardPageNavigationJsonNodeSortInput = {
+  readonly Are_broadband_bills_proof_of_address_: InputMaybe<SortOrderEnum>;
+  readonly Average_UK_broadband_speed: InputMaybe<SortOrderEnum>;
+  readonly Broadband_without_line_rental: InputMaybe<SortOrderEnum>;
+  readonly Business_vs_home_broadband: InputMaybe<SortOrderEnum>;
+  readonly Can_I_get_fibre_in_my_area_: InputMaybe<SortOrderEnum>;
+  readonly Can_I_pay_monthly_for_my_broadband_: InputMaybe<SortOrderEnum>;
+  readonly Can_I_transfer_my_existing_contract: InputMaybe<SortOrderEnum>;
+  readonly Cancelling_your_broadband_package: InputMaybe<SortOrderEnum>;
+  readonly Check_my_speeds: InputMaybe<SortOrderEnum>;
+  readonly Companies_that_offer_business_broadband: InputMaybe<SortOrderEnum>;
+  readonly Conducting_a_speed_test: InputMaybe<SortOrderEnum>;
+  readonly Contact_TV_Licensing_company: InputMaybe<SortOrderEnum>;
+  readonly Different_types_of_business_broadband: InputMaybe<SortOrderEnum>;
+  readonly Do_you_need_a_TV_licence_: InputMaybe<SortOrderEnum>;
+  readonly Do_you_need_a_static_IP_address_: InputMaybe<SortOrderEnum>;
+  readonly Does_it_work_any_differently_to_residential_: InputMaybe<SortOrderEnum>;
+  readonly Download_speed: InputMaybe<SortOrderEnum>;
+  readonly Fees_associated_with_moving: InputMaybe<SortOrderEnum>;
+  readonly Finding_the_best_broadband_in_my_area: InputMaybe<SortOrderEnum>;
+  readonly Finding_the_right_broadband: InputMaybe<SortOrderEnum>;
+  readonly How_does_broadband_work_: InputMaybe<SortOrderEnum>;
+  readonly How_is_broadband_speed_measured_: InputMaybe<SortOrderEnum>;
+  readonly How_long_to_set_up_in_new_house: InputMaybe<SortOrderEnum>;
+  readonly How_much_are_early_termination_fees_: InputMaybe<SortOrderEnum>;
+  readonly How_much_does_a_licence_cost_: InputMaybe<SortOrderEnum>;
+  readonly How_much_does_line_rental_cost_: InputMaybe<SortOrderEnum>;
+  readonly How_to_cancel_TV_licence: InputMaybe<SortOrderEnum>;
+  readonly How_to_cancel_my_broadband: InputMaybe<SortOrderEnum>;
+  readonly How_to_contact_your_provider_about_moving: InputMaybe<SortOrderEnum>;
+  readonly How_to_improve_broadband_speed: InputMaybe<SortOrderEnum>;
+  readonly How_to_move_your_broadband: InputMaybe<SortOrderEnum>;
+  readonly How_to_pay_TV_licence_fees: InputMaybe<SortOrderEnum>;
+  readonly How_to_pay_your_bill_: InputMaybe<SortOrderEnum>;
+  readonly How_to_reduce_your_broadband_bills: InputMaybe<SortOrderEnum>;
+  readonly How_to_renew_TV_licence: InputMaybe<SortOrderEnum>;
+  readonly I_can_t_switch: InputMaybe<SortOrderEnum>;
+  readonly I_don_t_have_a_landline: InputMaybe<SortOrderEnum>;
+  readonly I_don_t_need_a_TV_licence: InputMaybe<SortOrderEnum>;
+  readonly I_m_moving_house: InputMaybe<SortOrderEnum>;
+  readonly I_think_that_my_bill_might_be_incorrect: InputMaybe<SortOrderEnum>;
+  readonly I_ve_been_sent_a_fake_bill: InputMaybe<SortOrderEnum>;
+  readonly Is_broadband_expensive: InputMaybe<SortOrderEnum>;
+  readonly Is_it_easy_to_use_: InputMaybe<SortOrderEnum>;
+  readonly Mobile_broadband___data: InputMaybe<SortOrderEnum>;
+  readonly Ping: InputMaybe<SortOrderEnum>;
+  readonly Price_differences_between_home___business: InputMaybe<SortOrderEnum>;
+  readonly Switching_broadband: InputMaybe<SortOrderEnum>;
+  readonly Switching_process: InputMaybe<SortOrderEnum>;
+  readonly Switching_when_you_move_house: InputMaybe<SortOrderEnum>;
+  readonly Upload_speed: InputMaybe<SortOrderEnum>;
+  readonly Upload_vs_download_speeds: InputMaybe<SortOrderEnum>;
+  readonly What_affects_broadband_speed_: InputMaybe<SortOrderEnum>;
+  readonly What_are_early_termination_fees_: InputMaybe<SortOrderEnum>;
+  readonly What_is_a_TV_licence_: InputMaybe<SortOrderEnum>;
+  readonly What_is_broadband_: InputMaybe<SortOrderEnum>;
+  readonly What_is_business_broadband_: InputMaybe<SortOrderEnum>;
+  readonly What_is_dial_up_broadband: InputMaybe<SortOrderEnum>;
+  readonly What_is_line_rental_: InputMaybe<SortOrderEnum>;
+  readonly What_is_on_a_broadband_bill_: InputMaybe<SortOrderEnum>;
+  readonly What_speed_do_you_need_: InputMaybe<SortOrderEnum>;
+  readonly When_can_you_cancel_for_free_: InputMaybe<SortOrderEnum>;
+  readonly Where_you_ll_see_these_terms: InputMaybe<SortOrderEnum>;
+  readonly Why_do_you_have_to_pay_: InputMaybe<SortOrderEnum>;
+  readonly Why_do_you_pay_line_rental_: InputMaybe<SortOrderEnum>;
+  readonly Why_is_my_bill_so_high_: InputMaybe<SortOrderEnum>;
+  readonly Work_from_home_broadband: InputMaybe<SortOrderEnum>;
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly sys: InputMaybe<contentfulTvBroadbandGuideStandardPageNavigationJsonNodeSysSortInput>;
+};
+
+type contentfulTvBroadbandGuideStandardPageNavigationJsonNodeSys = {
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type contentfulTvBroadbandGuideStandardPageNavigationJsonNodeSysFieldSelector = {
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type contentfulTvBroadbandGuideStandardPageNavigationJsonNodeSysFilterInput = {
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type contentfulTvBroadbandGuideStandardPageNavigationJsonNodeSysSortInput = {
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type contentfulTvBroadbandProviderMainPageMetaDescriptionTextNode = Node & {
+  readonly children: ReadonlyArray<Node>;
+  readonly id: Scalars['ID'];
+  readonly internal: Internal;
+  readonly metaDescription: Maybe<Scalars['String']>;
+  readonly parent: Maybe<Node>;
+  readonly sys: Maybe<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeSys>;
+};
+
+type contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeEdge>;
+  readonly group: ReadonlyArray<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNode>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeConnection_distinctArgs = {
+  field: contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeConnection_groupArgs = {
+  field: contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeConnection_maxArgs = {
+  field: contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeConnection_minArgs = {
+  field: contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeConnection_sumArgs = {
+  field: contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeFieldSelector;
+};
+
+type contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeEdge = {
+  readonly next: Maybe<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNode>;
+  readonly node: contentfulTvBroadbandProviderMainPageMetaDescriptionTextNode;
+  readonly previous: Maybe<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNode>;
+};
+
+type contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeFieldSelector = {
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly metaDescription: InputMaybe<FieldSelectorEnum>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly sys: InputMaybe<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeSysFieldSelector>;
+};
+
+type contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeFilterInput = {
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly metaDescription: InputMaybe<StringQueryOperatorInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly sys: InputMaybe<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeSysFilterInput>;
+};
+
+type contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeFilterListInput = {
+  readonly elemMatch: InputMaybe<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeFilterInput>;
+};
+
+type contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNode>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeGroupConnection_distinctArgs = {
+  field: contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeGroupConnection_groupArgs = {
+  field: contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeGroupConnection_maxArgs = {
+  field: contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeGroupConnection_minArgs = {
+  field: contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeGroupConnection_sumArgs = {
+  field: contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeFieldSelector;
+};
+
+type contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeSortInput = {
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly metaDescription: InputMaybe<SortOrderEnum>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly sys: InputMaybe<contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeSysSortInput>;
+};
+
+type contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeSys = {
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeSysFieldSelector = {
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeSysFilterInput = {
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type contentfulTvBroadbandProviderMainPageMetaDescriptionTextNodeSysSortInput = {
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type contentfulTvBroadbandProviderStandardPageContentTextNode = Node & {
+  readonly children: ReadonlyArray<Node>;
+  readonly content: Maybe<Scalars['String']>;
+  readonly id: Scalars['ID'];
+  readonly internal: Internal;
+  readonly parent: Maybe<Node>;
+  readonly sys: Maybe<contentfulTvBroadbandProviderStandardPageContentTextNodeSys>;
+};
+
+type contentfulTvBroadbandProviderStandardPageContentTextNodeConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<contentfulTvBroadbandProviderStandardPageContentTextNodeEdge>;
+  readonly group: ReadonlyArray<contentfulTvBroadbandProviderStandardPageContentTextNodeGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<contentfulTvBroadbandProviderStandardPageContentTextNode>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type contentfulTvBroadbandProviderStandardPageContentTextNodeConnection_distinctArgs = {
+  field: contentfulTvBroadbandProviderStandardPageContentTextNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandProviderStandardPageContentTextNodeConnection_groupArgs = {
+  field: contentfulTvBroadbandProviderStandardPageContentTextNodeFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type contentfulTvBroadbandProviderStandardPageContentTextNodeConnection_maxArgs = {
+  field: contentfulTvBroadbandProviderStandardPageContentTextNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandProviderStandardPageContentTextNodeConnection_minArgs = {
+  field: contentfulTvBroadbandProviderStandardPageContentTextNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandProviderStandardPageContentTextNodeConnection_sumArgs = {
+  field: contentfulTvBroadbandProviderStandardPageContentTextNodeFieldSelector;
+};
+
+type contentfulTvBroadbandProviderStandardPageContentTextNodeEdge = {
+  readonly next: Maybe<contentfulTvBroadbandProviderStandardPageContentTextNode>;
+  readonly node: contentfulTvBroadbandProviderStandardPageContentTextNode;
+  readonly previous: Maybe<contentfulTvBroadbandProviderStandardPageContentTextNode>;
+};
+
+type contentfulTvBroadbandProviderStandardPageContentTextNodeFieldSelector = {
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly content: InputMaybe<FieldSelectorEnum>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly sys: InputMaybe<contentfulTvBroadbandProviderStandardPageContentTextNodeSysFieldSelector>;
+};
+
+type contentfulTvBroadbandProviderStandardPageContentTextNodeFilterInput = {
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly content: InputMaybe<StringQueryOperatorInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly sys: InputMaybe<contentfulTvBroadbandProviderStandardPageContentTextNodeSysFilterInput>;
+};
+
+type contentfulTvBroadbandProviderStandardPageContentTextNodeFilterListInput = {
+  readonly elemMatch: InputMaybe<contentfulTvBroadbandProviderStandardPageContentTextNodeFilterInput>;
+};
+
+type contentfulTvBroadbandProviderStandardPageContentTextNodeGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<contentfulTvBroadbandProviderStandardPageContentTextNodeEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<contentfulTvBroadbandProviderStandardPageContentTextNodeGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<contentfulTvBroadbandProviderStandardPageContentTextNode>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type contentfulTvBroadbandProviderStandardPageContentTextNodeGroupConnection_distinctArgs = {
+  field: contentfulTvBroadbandProviderStandardPageContentTextNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandProviderStandardPageContentTextNodeGroupConnection_groupArgs = {
+  field: contentfulTvBroadbandProviderStandardPageContentTextNodeFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type contentfulTvBroadbandProviderStandardPageContentTextNodeGroupConnection_maxArgs = {
+  field: contentfulTvBroadbandProviderStandardPageContentTextNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandProviderStandardPageContentTextNodeGroupConnection_minArgs = {
+  field: contentfulTvBroadbandProviderStandardPageContentTextNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandProviderStandardPageContentTextNodeGroupConnection_sumArgs = {
+  field: contentfulTvBroadbandProviderStandardPageContentTextNodeFieldSelector;
+};
+
+type contentfulTvBroadbandProviderStandardPageContentTextNodeSortInput = {
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly content: InputMaybe<SortOrderEnum>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly sys: InputMaybe<contentfulTvBroadbandProviderStandardPageContentTextNodeSysSortInput>;
+};
+
+type contentfulTvBroadbandProviderStandardPageContentTextNodeSys = {
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type contentfulTvBroadbandProviderStandardPageContentTextNodeSysFieldSelector = {
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type contentfulTvBroadbandProviderStandardPageContentTextNodeSysFilterInput = {
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type contentfulTvBroadbandProviderStandardPageContentTextNodeSysSortInput = {
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNode = Node & {
+  readonly children: ReadonlyArray<Node>;
+  readonly id: Scalars['ID'];
+  readonly internal: Internal;
+  readonly metaDescription: Maybe<Scalars['String']>;
+  readonly parent: Maybe<Node>;
+  readonly sys: Maybe<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeSys>;
+};
+
+type contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeEdge>;
+  readonly group: ReadonlyArray<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNode>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeConnection_distinctArgs = {
+  field: contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeConnection_groupArgs = {
+  field: contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeConnection_maxArgs = {
+  field: contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeConnection_minArgs = {
+  field: contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeConnection_sumArgs = {
+  field: contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeFieldSelector;
+};
+
+type contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeEdge = {
+  readonly next: Maybe<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNode>;
+  readonly node: contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNode;
+  readonly previous: Maybe<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNode>;
+};
+
+type contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeFieldSelector = {
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly metaDescription: InputMaybe<FieldSelectorEnum>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly sys: InputMaybe<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeSysFieldSelector>;
+};
+
+type contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeFilterInput = {
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly metaDescription: InputMaybe<StringQueryOperatorInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly sys: InputMaybe<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeSysFilterInput>;
+};
+
+type contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeFilterListInput = {
+  readonly elemMatch: InputMaybe<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeFilterInput>;
+};
+
+type contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNode>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeGroupConnection_distinctArgs = {
+  field: contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeGroupConnection_groupArgs = {
+  field: contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeGroupConnection_maxArgs = {
+  field: contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeGroupConnection_minArgs = {
+  field: contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeGroupConnection_sumArgs = {
+  field: contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeFieldSelector;
+};
+
+type contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeSortInput = {
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly metaDescription: InputMaybe<SortOrderEnum>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly sys: InputMaybe<contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeSysSortInput>;
+};
+
+type contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeSys = {
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeSysFieldSelector = {
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeSysFilterInput = {
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type contentfulTvBroadbandProviderStandardPageMetaDescriptionTextNodeSysSortInput = {
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type contentfulTvBroadbandProviderStandardPageNavigationJsonNode = Node & {
+  readonly Add_ons: Maybe<Scalars['String']>;
+  readonly Add_ons___extras: Maybe<Scalars['String']>;
+  readonly Are_you_owed_a_refund_: Maybe<Scalars['String']>;
+  readonly BT_Account_features: Maybe<Scalars['String']>;
+  readonly BT_Complete_Wifi: Maybe<Scalars['String']>;
+  readonly BT_Hybrid_Connect: Maybe<Scalars['String']>;
+  readonly BT_Sports_Monthly_Pass: Maybe<Scalars['String']>;
+  readonly BT_Sports_app: Maybe<Scalars['String']>;
+  readonly BT_Sports_with_Sky_TV: Maybe<Scalars['String']>;
+  readonly BT_TV_App_Extra: Maybe<Scalars['String']>;
+  readonly BT_TV_guide_won_t_load: Maybe<Scalars['String']>;
+  readonly BT_TV_packages: Maybe<Scalars['String']>;
+  readonly BT_TV_store: Maybe<Scalars['String']>;
+  readonly BT_troubleshooter: Maybe<Scalars['String']>;
+  readonly Broadband_Boost: Maybe<Scalars['String']>;
+  readonly Broadband_Buddy: Maybe<Scalars['String']>;
+  readonly Broadband_deals: Maybe<Scalars['String']>;
+  readonly Broadband_packages: Maybe<Scalars['String']>;
+  readonly Broadband_security: Maybe<Scalars['String']>;
+  readonly Bundles: Maybe<Scalars['String']>;
+  readonly Buy_one__give_one: Maybe<Scalars['String']>;
+  readonly Call_Protect: Maybe<Scalars['String']>;
+  readonly Call_plans: Maybe<Scalars['String']>;
+  readonly Can_I_access_TV_guide_via_app_: Maybe<Scalars['String']>;
+  readonly Can_I_transfer_my_current_plan_: Maybe<Scalars['String']>;
+  readonly Can_you_change_BT_Router_password_: Maybe<Scalars['String']>;
+  readonly Can_you_have_multiple_boxes_: Maybe<Scalars['String']>;
+  readonly Cancel_your_contract: Maybe<Scalars['String']>;
+  readonly Cancellation_fees: Maybe<Scalars['String']>;
+  readonly Check_my_broadband_speed: Maybe<Scalars['String']>;
+  readonly Cost_of_cancellation: Maybe<Scalars['String']>;
+  readonly Cost_of_moving_home_with_BT: Maybe<Scalars['String']>;
+  readonly Deals: Maybe<Scalars['String']>;
+  readonly Delete_email_account: Maybe<Scalars['String']>;
+  readonly Difference_between_Halo_3_and_3_: Maybe<Scalars['String']>;
+  readonly Do_I_need_an_account_: Maybe<Scalars['String']>;
+  readonly Do_you_need_BT_Broadband_: Maybe<Scalars['String']>;
+  readonly Do_you_need_BT_TV_: Maybe<Scalars['String']>;
+  readonly Do_you_need_a_TV_licence: Maybe<Scalars['String']>;
+  readonly Does_it_cover_all_channels_: Maybe<Scalars['String']>;
+  readonly Does_it_require_an_aerial_: Maybe<Scalars['String']>;
+  readonly Download_the_My_BT_app: Maybe<Scalars['String']>;
+  readonly Existing_customer_offers: Maybe<Scalars['String']>;
+  readonly Fibre_broadband_packages: Maybe<Scalars['String']>;
+  readonly Fixed_Price_Plus: Maybe<Scalars['String']>;
+  readonly Free_cancellation: Maybe<Scalars['String']>;
+  readonly Freeview: Maybe<Scalars['String']>;
+  readonly Gadget_rescue: Maybe<Scalars['String']>;
+  readonly Get_a_second_TV_box: Maybe<Scalars['String']>;
+  readonly Gigabit_broadband: Maybe<Scalars['String']>;
+  readonly Gigafast___Ultrafast: Maybe<Scalars['String']>;
+  readonly Help_logging_in: Maybe<Scalars['String']>;
+  readonly Homeworker_broadband: Maybe<Scalars['String']>;
+  readonly How_BT_TV_guide_works: Maybe<Scalars['String']>;
+  readonly How_BT_TV_works: Maybe<Scalars['String']>;
+  readonly How_do_I_get_NOW_Sports_: Maybe<Scalars['String']>;
+  readonly How_long_does_it_take_to_activate_: Maybe<Scalars['String']>;
+  readonly How_the_router_login_works: Maybe<Scalars['String']>;
+  readonly How_to_access_app: Maybe<Scalars['String']>;
+  readonly How_to_cancel: Maybe<Scalars['String']>;
+  readonly How_to_cancel_BT_Broadband: Maybe<Scalars['String']>;
+  readonly How_to_cancel_BT_Mobile: Maybe<Scalars['String']>;
+  readonly How_to_cancel_BT_Sport: Maybe<Scalars['String']>;
+  readonly How_to_cancel_BT_Sports: Maybe<Scalars['String']>;
+  readonly How_to_cancel_Virgin_Media: Maybe<Scalars['String']>;
+  readonly How_to_cancel_phone_line: Maybe<Scalars['String']>;
+  readonly How_to_change_call_plan: Maybe<Scalars['String']>;
+  readonly How_to_connect_to_your_router: Maybe<Scalars['String']>;
+  readonly How_to_download: Maybe<Scalars['String']>;
+  readonly How_to_find_your_Wifi_password: Maybe<Scalars['String']>;
+  readonly How_to_get_a_BT_TV_box: Maybe<Scalars['String']>;
+  readonly How_to_pick_your_BT_TV_package: Maybe<Scalars['String']>;
+  readonly How_to_reset_your_box: Maybe<Scalars['String']>;
+  readonly How_to_set_up_BT_Account: Maybe<Scalars['String']>;
+  readonly How_to_upgrade_your_router: Maybe<Scalars['String']>;
+  readonly I_only_want_one_channel: Maybe<Scalars['String']>;
+  readonly Intelligent_WiFi_Plus: Maybe<Scalars['String']>;
+  readonly Internet_security: Maybe<Scalars['String']>;
+  readonly Is_TalkTalk_TV_worth_it_: Maybe<Scalars['String']>;
+  readonly Is_it_accessible_online_: Maybe<Scalars['String']>;
+  readonly Is_it_worth_staying_with_Virgin_Media_: Maybe<Scalars['String']>;
+  readonly Issues_with_recordings: Maybe<Scalars['String']>;
+  readonly Keep_the_same_landline_number: Maybe<Scalars['String']>;
+  readonly Length_of_contract: Maybe<Scalars['String']>;
+  readonly Let_BT_know_you_re_moving: Maybe<Scalars['String']>;
+  readonly Logging_into_your_My_Sky_Account: Maybe<Scalars['String']>;
+  readonly Make_a_complaint: Maybe<Scalars['String']>;
+  readonly Meanings_of_lights_on_box: Maybe<Scalars['String']>;
+  readonly Mobile__broadband___TV_bundles: Maybe<Scalars['String']>;
+  readonly Move_into_a_new_house: Maybe<Scalars['String']>;
+  readonly Move_into_new_house: Maybe<Scalars['String']>;
+  readonly Move_to_a_new_house: Maybe<Scalars['String']>;
+  readonly My_BT_TV_box_isn_t_working: Maybe<Scalars['String']>;
+  readonly My_Sky_features: Maybe<Scalars['String']>;
+  readonly NOW_Broadband_packages: Maybe<Scalars['String']>;
+  readonly NOW_TV_Boost: Maybe<Scalars['String']>;
+  readonly NOW_TV_passes: Maybe<Scalars['String']>;
+  readonly Navigating_through_your_account: Maybe<Scalars['String']>;
+  readonly New_customer_offers: Maybe<Scalars['String']>;
+  readonly Parental_controls: Maybe<Scalars['String']>;
+  readonly Prices___plans: Maybe<Scalars['String']>;
+  readonly Report_connection_issues: Maybe<Scalars['String']>;
+  readonly Returning_your_Sky_equipment: Maybe<Scalars['String']>;
+  readonly Rolling_contracts: Maybe<Scalars['String']>;
+  readonly Router_light_definitions: Maybe<Scalars['String']>;
+  readonly Set_up_Smarthub_with_app: Maybe<Scalars['String']>;
+  readonly Set_up_your_BT_TV_box: Maybe<Scalars['String']>;
+  readonly Set_up_your_Sky_iD: Maybe<Scalars['String']>;
+  readonly Setting_up_BT_Broadband_in_your_new_home: Maybe<Scalars['String']>;
+  readonly Setting_up_your_router: Maybe<Scalars['String']>;
+  readonly Signing_up_to_NOW_TV: Maybe<Scalars['String']>;
+  readonly Sky_Go_Extra: Maybe<Scalars['String']>;
+  readonly Sky_Q: Maybe<Scalars['String']>;
+  readonly Sky_Sports_is_not_working: Maybe<Scalars['String']>;
+  readonly Sky_Store: Maybe<Scalars['String']>;
+  readonly Sky_VIP: Maybe<Scalars['String']>;
+  readonly Sky_router_login: Maybe<Scalars['String']>;
+  readonly Smart_stick___box: Maybe<Scalars['String']>;
+  readonly Subscription: Maybe<Scalars['String']>;
+  readonly Switch_provider_or_tariff: Maybe<Scalars['String']>;
+  readonly Switch_to_BT_Halo: Maybe<Scalars['String']>;
+  readonly Switching_to_NOW_Broadband: Maybe<Scalars['String']>;
+  readonly TV___Broadband_bundles: Maybe<Scalars['String']>;
+  readonly TV___broadband_deals: Maybe<Scalars['String']>;
+  readonly TV_boxes: Maybe<Scalars['String']>;
+  readonly TV_channels: Maybe<Scalars['String']>;
+  readonly TV_packages: Maybe<Scalars['String']>;
+  readonly TV_store: Maybe<Scalars['String']>;
+  readonly TalkTalk_TV: Maybe<Scalars['String']>;
+  readonly TalkTalk_TV_packages: Maybe<Scalars['String']>;
+  readonly TalkTalk_UFO: Maybe<Scalars['String']>;
+  readonly Talk_about_my_bill: Maybe<Scalars['String']>;
+  readonly Talk_about_my_bill_s_: Maybe<Scalars['String']>;
+  readonly Talk_about_something_else: Maybe<Scalars['String']>;
+  readonly Upgrading_your_router: Maybe<Scalars['String']>;
+  readonly Using_the_My_Sky_app: Maybe<Scalars['String']>;
+  readonly Virgin_Media_Connect_app: Maybe<Scalars['String']>;
+  readonly Virgin_Media_Store: Maybe<Scalars['String']>;
+  readonly Virgin_Media_TV_packages: Maybe<Scalars['String']>;
+  readonly Virgin_Media_broadband_packages: Maybe<Scalars['String']>;
+  readonly Virgin_TV_Go: Maybe<Scalars['String']>;
+  readonly Virgin_TV_control: Maybe<Scalars['String']>;
+  readonly Virus_protection: Maybe<Scalars['String']>;
+  readonly VodafoneGigaCube: Maybe<Scalars['String']>;
+  readonly Vodafone_broadband_app: Maybe<Scalars['String']>;
+  readonly Watch_TV_online: Maybe<Scalars['String']>;
+  readonly What_apps_can_be_downloaded_: Maybe<Scalars['String']>;
+  readonly What_can_I_do_with_My_BT_: Maybe<Scalars['String']>;
+  readonly What_can_you_watch_on_BT_Sports_: Maybe<Scalars['String']>;
+  readonly What_channels_does_it_have_: Maybe<Scalars['String']>;
+  readonly What_devices_is_NOW_Sports_available_on_: Maybe<Scalars['String']>;
+  readonly What_do_the_lights_mean_: Maybe<Scalars['String']>;
+  readonly What_is_BT_Halo_: Maybe<Scalars['String']>;
+  readonly What_is_BT_TV_box: Maybe<Scalars['String']>;
+  readonly What_is_NOW_Sports: Maybe<Scalars['String']>;
+  readonly What_is_Sky_Sports: Maybe<Scalars['String']>;
+  readonly What_is_Virgin_Media_s_notice_period: Maybe<Scalars['String']>;
+  readonly What_is_a_Sky_router_: Maybe<Scalars['String']>;
+  readonly What_is_included_: Maybe<Scalars['String']>;
+  readonly What_routers_are_available_: Maybe<Scalars['String']>;
+  readonly What_to_do_when_moving_house: Maybe<Scalars['String']>;
+  readonly What_to_do_with_BT_equipment: Maybe<Scalars['String']>;
+  readonly What_to_do_with_your_equipment: Maybe<Scalars['String']>;
+  readonly Where_to_find_login_details: Maybe<Scalars['String']>;
+  readonly Where_to_find_login_page_: Maybe<Scalars['String']>;
+  readonly Why_BT_Sports_: Maybe<Scalars['String']>;
+  readonly Why_is_My_BT_not_working_: Maybe<Scalars['String']>;
+  readonly Why_is_Virgin_Media_cancellation_different_: Maybe<Scalars['String']>;
+  readonly WiFi_extenders: Maybe<Scalars['String']>;
+  readonly children: ReadonlyArray<Node>;
+  readonly id: Scalars['ID'];
+  readonly internal: Internal;
+  readonly parent: Maybe<Node>;
+  readonly sys: Maybe<contentfulTvBroadbandProviderStandardPageNavigationJsonNodeSys>;
+};
+
+type contentfulTvBroadbandProviderStandardPageNavigationJsonNodeConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<contentfulTvBroadbandProviderStandardPageNavigationJsonNodeEdge>;
+  readonly group: ReadonlyArray<contentfulTvBroadbandProviderStandardPageNavigationJsonNodeGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<contentfulTvBroadbandProviderStandardPageNavigationJsonNode>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type contentfulTvBroadbandProviderStandardPageNavigationJsonNodeConnection_distinctArgs = {
+  field: contentfulTvBroadbandProviderStandardPageNavigationJsonNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandProviderStandardPageNavigationJsonNodeConnection_groupArgs = {
+  field: contentfulTvBroadbandProviderStandardPageNavigationJsonNodeFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type contentfulTvBroadbandProviderStandardPageNavigationJsonNodeConnection_maxArgs = {
+  field: contentfulTvBroadbandProviderStandardPageNavigationJsonNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandProviderStandardPageNavigationJsonNodeConnection_minArgs = {
+  field: contentfulTvBroadbandProviderStandardPageNavigationJsonNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandProviderStandardPageNavigationJsonNodeConnection_sumArgs = {
+  field: contentfulTvBroadbandProviderStandardPageNavigationJsonNodeFieldSelector;
+};
+
+type contentfulTvBroadbandProviderStandardPageNavigationJsonNodeEdge = {
+  readonly next: Maybe<contentfulTvBroadbandProviderStandardPageNavigationJsonNode>;
+  readonly node: contentfulTvBroadbandProviderStandardPageNavigationJsonNode;
+  readonly previous: Maybe<contentfulTvBroadbandProviderStandardPageNavigationJsonNode>;
+};
+
+type contentfulTvBroadbandProviderStandardPageNavigationJsonNodeFieldSelector = {
+  readonly Add_ons: InputMaybe<FieldSelectorEnum>;
+  readonly Add_ons___extras: InputMaybe<FieldSelectorEnum>;
+  readonly Are_you_owed_a_refund_: InputMaybe<FieldSelectorEnum>;
+  readonly BT_Account_features: InputMaybe<FieldSelectorEnum>;
+  readonly BT_Complete_Wifi: InputMaybe<FieldSelectorEnum>;
+  readonly BT_Hybrid_Connect: InputMaybe<FieldSelectorEnum>;
+  readonly BT_Sports_Monthly_Pass: InputMaybe<FieldSelectorEnum>;
+  readonly BT_Sports_app: InputMaybe<FieldSelectorEnum>;
+  readonly BT_Sports_with_Sky_TV: InputMaybe<FieldSelectorEnum>;
+  readonly BT_TV_App_Extra: InputMaybe<FieldSelectorEnum>;
+  readonly BT_TV_guide_won_t_load: InputMaybe<FieldSelectorEnum>;
+  readonly BT_TV_packages: InputMaybe<FieldSelectorEnum>;
+  readonly BT_TV_store: InputMaybe<FieldSelectorEnum>;
+  readonly BT_troubleshooter: InputMaybe<FieldSelectorEnum>;
+  readonly Broadband_Boost: InputMaybe<FieldSelectorEnum>;
+  readonly Broadband_Buddy: InputMaybe<FieldSelectorEnum>;
+  readonly Broadband_deals: InputMaybe<FieldSelectorEnum>;
+  readonly Broadband_packages: InputMaybe<FieldSelectorEnum>;
+  readonly Broadband_security: InputMaybe<FieldSelectorEnum>;
+  readonly Bundles: InputMaybe<FieldSelectorEnum>;
+  readonly Buy_one__give_one: InputMaybe<FieldSelectorEnum>;
+  readonly Call_Protect: InputMaybe<FieldSelectorEnum>;
+  readonly Call_plans: InputMaybe<FieldSelectorEnum>;
+  readonly Can_I_access_TV_guide_via_app_: InputMaybe<FieldSelectorEnum>;
+  readonly Can_I_transfer_my_current_plan_: InputMaybe<FieldSelectorEnum>;
+  readonly Can_you_change_BT_Router_password_: InputMaybe<FieldSelectorEnum>;
+  readonly Can_you_have_multiple_boxes_: InputMaybe<FieldSelectorEnum>;
+  readonly Cancel_your_contract: InputMaybe<FieldSelectorEnum>;
+  readonly Cancellation_fees: InputMaybe<FieldSelectorEnum>;
+  readonly Check_my_broadband_speed: InputMaybe<FieldSelectorEnum>;
+  readonly Cost_of_cancellation: InputMaybe<FieldSelectorEnum>;
+  readonly Cost_of_moving_home_with_BT: InputMaybe<FieldSelectorEnum>;
+  readonly Deals: InputMaybe<FieldSelectorEnum>;
+  readonly Delete_email_account: InputMaybe<FieldSelectorEnum>;
+  readonly Difference_between_Halo_3_and_3_: InputMaybe<FieldSelectorEnum>;
+  readonly Do_I_need_an_account_: InputMaybe<FieldSelectorEnum>;
+  readonly Do_you_need_BT_Broadband_: InputMaybe<FieldSelectorEnum>;
+  readonly Do_you_need_BT_TV_: InputMaybe<FieldSelectorEnum>;
+  readonly Do_you_need_a_TV_licence: InputMaybe<FieldSelectorEnum>;
+  readonly Does_it_cover_all_channels_: InputMaybe<FieldSelectorEnum>;
+  readonly Does_it_require_an_aerial_: InputMaybe<FieldSelectorEnum>;
+  readonly Download_the_My_BT_app: InputMaybe<FieldSelectorEnum>;
+  readonly Existing_customer_offers: InputMaybe<FieldSelectorEnum>;
+  readonly Fibre_broadband_packages: InputMaybe<FieldSelectorEnum>;
+  readonly Fixed_Price_Plus: InputMaybe<FieldSelectorEnum>;
+  readonly Free_cancellation: InputMaybe<FieldSelectorEnum>;
+  readonly Freeview: InputMaybe<FieldSelectorEnum>;
+  readonly Gadget_rescue: InputMaybe<FieldSelectorEnum>;
+  readonly Get_a_second_TV_box: InputMaybe<FieldSelectorEnum>;
+  readonly Gigabit_broadband: InputMaybe<FieldSelectorEnum>;
+  readonly Gigafast___Ultrafast: InputMaybe<FieldSelectorEnum>;
+  readonly Help_logging_in: InputMaybe<FieldSelectorEnum>;
+  readonly Homeworker_broadband: InputMaybe<FieldSelectorEnum>;
+  readonly How_BT_TV_guide_works: InputMaybe<FieldSelectorEnum>;
+  readonly How_BT_TV_works: InputMaybe<FieldSelectorEnum>;
+  readonly How_do_I_get_NOW_Sports_: InputMaybe<FieldSelectorEnum>;
+  readonly How_long_does_it_take_to_activate_: InputMaybe<FieldSelectorEnum>;
+  readonly How_the_router_login_works: InputMaybe<FieldSelectorEnum>;
+  readonly How_to_access_app: InputMaybe<FieldSelectorEnum>;
+  readonly How_to_cancel: InputMaybe<FieldSelectorEnum>;
+  readonly How_to_cancel_BT_Broadband: InputMaybe<FieldSelectorEnum>;
+  readonly How_to_cancel_BT_Mobile: InputMaybe<FieldSelectorEnum>;
+  readonly How_to_cancel_BT_Sport: InputMaybe<FieldSelectorEnum>;
+  readonly How_to_cancel_BT_Sports: InputMaybe<FieldSelectorEnum>;
+  readonly How_to_cancel_Virgin_Media: InputMaybe<FieldSelectorEnum>;
+  readonly How_to_cancel_phone_line: InputMaybe<FieldSelectorEnum>;
+  readonly How_to_change_call_plan: InputMaybe<FieldSelectorEnum>;
+  readonly How_to_connect_to_your_router: InputMaybe<FieldSelectorEnum>;
+  readonly How_to_download: InputMaybe<FieldSelectorEnum>;
+  readonly How_to_find_your_Wifi_password: InputMaybe<FieldSelectorEnum>;
+  readonly How_to_get_a_BT_TV_box: InputMaybe<FieldSelectorEnum>;
+  readonly How_to_pick_your_BT_TV_package: InputMaybe<FieldSelectorEnum>;
+  readonly How_to_reset_your_box: InputMaybe<FieldSelectorEnum>;
+  readonly How_to_set_up_BT_Account: InputMaybe<FieldSelectorEnum>;
+  readonly How_to_upgrade_your_router: InputMaybe<FieldSelectorEnum>;
+  readonly I_only_want_one_channel: InputMaybe<FieldSelectorEnum>;
+  readonly Intelligent_WiFi_Plus: InputMaybe<FieldSelectorEnum>;
+  readonly Internet_security: InputMaybe<FieldSelectorEnum>;
+  readonly Is_TalkTalk_TV_worth_it_: InputMaybe<FieldSelectorEnum>;
+  readonly Is_it_accessible_online_: InputMaybe<FieldSelectorEnum>;
+  readonly Is_it_worth_staying_with_Virgin_Media_: InputMaybe<FieldSelectorEnum>;
+  readonly Issues_with_recordings: InputMaybe<FieldSelectorEnum>;
+  readonly Keep_the_same_landline_number: InputMaybe<FieldSelectorEnum>;
+  readonly Length_of_contract: InputMaybe<FieldSelectorEnum>;
+  readonly Let_BT_know_you_re_moving: InputMaybe<FieldSelectorEnum>;
+  readonly Logging_into_your_My_Sky_Account: InputMaybe<FieldSelectorEnum>;
+  readonly Make_a_complaint: InputMaybe<FieldSelectorEnum>;
+  readonly Meanings_of_lights_on_box: InputMaybe<FieldSelectorEnum>;
+  readonly Mobile__broadband___TV_bundles: InputMaybe<FieldSelectorEnum>;
+  readonly Move_into_a_new_house: InputMaybe<FieldSelectorEnum>;
+  readonly Move_into_new_house: InputMaybe<FieldSelectorEnum>;
+  readonly Move_to_a_new_house: InputMaybe<FieldSelectorEnum>;
+  readonly My_BT_TV_box_isn_t_working: InputMaybe<FieldSelectorEnum>;
+  readonly My_Sky_features: InputMaybe<FieldSelectorEnum>;
+  readonly NOW_Broadband_packages: InputMaybe<FieldSelectorEnum>;
+  readonly NOW_TV_Boost: InputMaybe<FieldSelectorEnum>;
+  readonly NOW_TV_passes: InputMaybe<FieldSelectorEnum>;
+  readonly Navigating_through_your_account: InputMaybe<FieldSelectorEnum>;
+  readonly New_customer_offers: InputMaybe<FieldSelectorEnum>;
+  readonly Parental_controls: InputMaybe<FieldSelectorEnum>;
+  readonly Prices___plans: InputMaybe<FieldSelectorEnum>;
+  readonly Report_connection_issues: InputMaybe<FieldSelectorEnum>;
+  readonly Returning_your_Sky_equipment: InputMaybe<FieldSelectorEnum>;
+  readonly Rolling_contracts: InputMaybe<FieldSelectorEnum>;
+  readonly Router_light_definitions: InputMaybe<FieldSelectorEnum>;
+  readonly Set_up_Smarthub_with_app: InputMaybe<FieldSelectorEnum>;
+  readonly Set_up_your_BT_TV_box: InputMaybe<FieldSelectorEnum>;
+  readonly Set_up_your_Sky_iD: InputMaybe<FieldSelectorEnum>;
+  readonly Setting_up_BT_Broadband_in_your_new_home: InputMaybe<FieldSelectorEnum>;
+  readonly Setting_up_your_router: InputMaybe<FieldSelectorEnum>;
+  readonly Signing_up_to_NOW_TV: InputMaybe<FieldSelectorEnum>;
+  readonly Sky_Go_Extra: InputMaybe<FieldSelectorEnum>;
+  readonly Sky_Q: InputMaybe<FieldSelectorEnum>;
+  readonly Sky_Sports_is_not_working: InputMaybe<FieldSelectorEnum>;
+  readonly Sky_Store: InputMaybe<FieldSelectorEnum>;
+  readonly Sky_VIP: InputMaybe<FieldSelectorEnum>;
+  readonly Sky_router_login: InputMaybe<FieldSelectorEnum>;
+  readonly Smart_stick___box: InputMaybe<FieldSelectorEnum>;
+  readonly Subscription: InputMaybe<FieldSelectorEnum>;
+  readonly Switch_provider_or_tariff: InputMaybe<FieldSelectorEnum>;
+  readonly Switch_to_BT_Halo: InputMaybe<FieldSelectorEnum>;
+  readonly Switching_to_NOW_Broadband: InputMaybe<FieldSelectorEnum>;
+  readonly TV___Broadband_bundles: InputMaybe<FieldSelectorEnum>;
+  readonly TV___broadband_deals: InputMaybe<FieldSelectorEnum>;
+  readonly TV_boxes: InputMaybe<FieldSelectorEnum>;
+  readonly TV_channels: InputMaybe<FieldSelectorEnum>;
+  readonly TV_packages: InputMaybe<FieldSelectorEnum>;
+  readonly TV_store: InputMaybe<FieldSelectorEnum>;
+  readonly TalkTalk_TV: InputMaybe<FieldSelectorEnum>;
+  readonly TalkTalk_TV_packages: InputMaybe<FieldSelectorEnum>;
+  readonly TalkTalk_UFO: InputMaybe<FieldSelectorEnum>;
+  readonly Talk_about_my_bill: InputMaybe<FieldSelectorEnum>;
+  readonly Talk_about_my_bill_s_: InputMaybe<FieldSelectorEnum>;
+  readonly Talk_about_something_else: InputMaybe<FieldSelectorEnum>;
+  readonly Upgrading_your_router: InputMaybe<FieldSelectorEnum>;
+  readonly Using_the_My_Sky_app: InputMaybe<FieldSelectorEnum>;
+  readonly Virgin_Media_Connect_app: InputMaybe<FieldSelectorEnum>;
+  readonly Virgin_Media_Store: InputMaybe<FieldSelectorEnum>;
+  readonly Virgin_Media_TV_packages: InputMaybe<FieldSelectorEnum>;
+  readonly Virgin_Media_broadband_packages: InputMaybe<FieldSelectorEnum>;
+  readonly Virgin_TV_Go: InputMaybe<FieldSelectorEnum>;
+  readonly Virgin_TV_control: InputMaybe<FieldSelectorEnum>;
+  readonly Virus_protection: InputMaybe<FieldSelectorEnum>;
+  readonly VodafoneGigaCube: InputMaybe<FieldSelectorEnum>;
+  readonly Vodafone_broadband_app: InputMaybe<FieldSelectorEnum>;
+  readonly Watch_TV_online: InputMaybe<FieldSelectorEnum>;
+  readonly What_apps_can_be_downloaded_: InputMaybe<FieldSelectorEnum>;
+  readonly What_can_I_do_with_My_BT_: InputMaybe<FieldSelectorEnum>;
+  readonly What_can_you_watch_on_BT_Sports_: InputMaybe<FieldSelectorEnum>;
+  readonly What_channels_does_it_have_: InputMaybe<FieldSelectorEnum>;
+  readonly What_devices_is_NOW_Sports_available_on_: InputMaybe<FieldSelectorEnum>;
+  readonly What_do_the_lights_mean_: InputMaybe<FieldSelectorEnum>;
+  readonly What_is_BT_Halo_: InputMaybe<FieldSelectorEnum>;
+  readonly What_is_BT_TV_box: InputMaybe<FieldSelectorEnum>;
+  readonly What_is_NOW_Sports: InputMaybe<FieldSelectorEnum>;
+  readonly What_is_Sky_Sports: InputMaybe<FieldSelectorEnum>;
+  readonly What_is_Virgin_Media_s_notice_period: InputMaybe<FieldSelectorEnum>;
+  readonly What_is_a_Sky_router_: InputMaybe<FieldSelectorEnum>;
+  readonly What_is_included_: InputMaybe<FieldSelectorEnum>;
+  readonly What_routers_are_available_: InputMaybe<FieldSelectorEnum>;
+  readonly What_to_do_when_moving_house: InputMaybe<FieldSelectorEnum>;
+  readonly What_to_do_with_BT_equipment: InputMaybe<FieldSelectorEnum>;
+  readonly What_to_do_with_your_equipment: InputMaybe<FieldSelectorEnum>;
+  readonly Where_to_find_login_details: InputMaybe<FieldSelectorEnum>;
+  readonly Where_to_find_login_page_: InputMaybe<FieldSelectorEnum>;
+  readonly Why_BT_Sports_: InputMaybe<FieldSelectorEnum>;
+  readonly Why_is_My_BT_not_working_: InputMaybe<FieldSelectorEnum>;
+  readonly Why_is_Virgin_Media_cancellation_different_: InputMaybe<FieldSelectorEnum>;
+  readonly WiFi_extenders: InputMaybe<FieldSelectorEnum>;
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly sys: InputMaybe<contentfulTvBroadbandProviderStandardPageNavigationJsonNodeSysFieldSelector>;
+};
+
+type contentfulTvBroadbandProviderStandardPageNavigationJsonNodeFilterInput = {
+  readonly Add_ons: InputMaybe<StringQueryOperatorInput>;
+  readonly Add_ons___extras: InputMaybe<StringQueryOperatorInput>;
+  readonly Are_you_owed_a_refund_: InputMaybe<StringQueryOperatorInput>;
+  readonly BT_Account_features: InputMaybe<StringQueryOperatorInput>;
+  readonly BT_Complete_Wifi: InputMaybe<StringQueryOperatorInput>;
+  readonly BT_Hybrid_Connect: InputMaybe<StringQueryOperatorInput>;
+  readonly BT_Sports_Monthly_Pass: InputMaybe<StringQueryOperatorInput>;
+  readonly BT_Sports_app: InputMaybe<StringQueryOperatorInput>;
+  readonly BT_Sports_with_Sky_TV: InputMaybe<StringQueryOperatorInput>;
+  readonly BT_TV_App_Extra: InputMaybe<StringQueryOperatorInput>;
+  readonly BT_TV_guide_won_t_load: InputMaybe<StringQueryOperatorInput>;
+  readonly BT_TV_packages: InputMaybe<StringQueryOperatorInput>;
+  readonly BT_TV_store: InputMaybe<StringQueryOperatorInput>;
+  readonly BT_troubleshooter: InputMaybe<StringQueryOperatorInput>;
+  readonly Broadband_Boost: InputMaybe<StringQueryOperatorInput>;
+  readonly Broadband_Buddy: InputMaybe<StringQueryOperatorInput>;
+  readonly Broadband_deals: InputMaybe<StringQueryOperatorInput>;
+  readonly Broadband_packages: InputMaybe<StringQueryOperatorInput>;
+  readonly Broadband_security: InputMaybe<StringQueryOperatorInput>;
+  readonly Bundles: InputMaybe<StringQueryOperatorInput>;
+  readonly Buy_one__give_one: InputMaybe<StringQueryOperatorInput>;
+  readonly Call_Protect: InputMaybe<StringQueryOperatorInput>;
+  readonly Call_plans: InputMaybe<StringQueryOperatorInput>;
+  readonly Can_I_access_TV_guide_via_app_: InputMaybe<StringQueryOperatorInput>;
+  readonly Can_I_transfer_my_current_plan_: InputMaybe<StringQueryOperatorInput>;
+  readonly Can_you_change_BT_Router_password_: InputMaybe<StringQueryOperatorInput>;
+  readonly Can_you_have_multiple_boxes_: InputMaybe<StringQueryOperatorInput>;
+  readonly Cancel_your_contract: InputMaybe<StringQueryOperatorInput>;
+  readonly Cancellation_fees: InputMaybe<StringQueryOperatorInput>;
+  readonly Check_my_broadband_speed: InputMaybe<StringQueryOperatorInput>;
+  readonly Cost_of_cancellation: InputMaybe<StringQueryOperatorInput>;
+  readonly Cost_of_moving_home_with_BT: InputMaybe<StringQueryOperatorInput>;
+  readonly Deals: InputMaybe<StringQueryOperatorInput>;
+  readonly Delete_email_account: InputMaybe<StringQueryOperatorInput>;
+  readonly Difference_between_Halo_3_and_3_: InputMaybe<StringQueryOperatorInput>;
+  readonly Do_I_need_an_account_: InputMaybe<StringQueryOperatorInput>;
+  readonly Do_you_need_BT_Broadband_: InputMaybe<StringQueryOperatorInput>;
+  readonly Do_you_need_BT_TV_: InputMaybe<StringQueryOperatorInput>;
+  readonly Do_you_need_a_TV_licence: InputMaybe<StringQueryOperatorInput>;
+  readonly Does_it_cover_all_channels_: InputMaybe<StringQueryOperatorInput>;
+  readonly Does_it_require_an_aerial_: InputMaybe<StringQueryOperatorInput>;
+  readonly Download_the_My_BT_app: InputMaybe<StringQueryOperatorInput>;
+  readonly Existing_customer_offers: InputMaybe<StringQueryOperatorInput>;
+  readonly Fibre_broadband_packages: InputMaybe<StringQueryOperatorInput>;
+  readonly Fixed_Price_Plus: InputMaybe<StringQueryOperatorInput>;
+  readonly Free_cancellation: InputMaybe<StringQueryOperatorInput>;
+  readonly Freeview: InputMaybe<StringQueryOperatorInput>;
+  readonly Gadget_rescue: InputMaybe<StringQueryOperatorInput>;
+  readonly Get_a_second_TV_box: InputMaybe<StringQueryOperatorInput>;
+  readonly Gigabit_broadband: InputMaybe<StringQueryOperatorInput>;
+  readonly Gigafast___Ultrafast: InputMaybe<StringQueryOperatorInput>;
+  readonly Help_logging_in: InputMaybe<StringQueryOperatorInput>;
+  readonly Homeworker_broadband: InputMaybe<StringQueryOperatorInput>;
+  readonly How_BT_TV_guide_works: InputMaybe<StringQueryOperatorInput>;
+  readonly How_BT_TV_works: InputMaybe<StringQueryOperatorInput>;
+  readonly How_do_I_get_NOW_Sports_: InputMaybe<StringQueryOperatorInput>;
+  readonly How_long_does_it_take_to_activate_: InputMaybe<StringQueryOperatorInput>;
+  readonly How_the_router_login_works: InputMaybe<StringQueryOperatorInput>;
+  readonly How_to_access_app: InputMaybe<StringQueryOperatorInput>;
+  readonly How_to_cancel: InputMaybe<StringQueryOperatorInput>;
+  readonly How_to_cancel_BT_Broadband: InputMaybe<StringQueryOperatorInput>;
+  readonly How_to_cancel_BT_Mobile: InputMaybe<StringQueryOperatorInput>;
+  readonly How_to_cancel_BT_Sport: InputMaybe<StringQueryOperatorInput>;
+  readonly How_to_cancel_BT_Sports: InputMaybe<StringQueryOperatorInput>;
+  readonly How_to_cancel_Virgin_Media: InputMaybe<StringQueryOperatorInput>;
+  readonly How_to_cancel_phone_line: InputMaybe<StringQueryOperatorInput>;
+  readonly How_to_change_call_plan: InputMaybe<StringQueryOperatorInput>;
+  readonly How_to_connect_to_your_router: InputMaybe<StringQueryOperatorInput>;
+  readonly How_to_download: InputMaybe<StringQueryOperatorInput>;
+  readonly How_to_find_your_Wifi_password: InputMaybe<StringQueryOperatorInput>;
+  readonly How_to_get_a_BT_TV_box: InputMaybe<StringQueryOperatorInput>;
+  readonly How_to_pick_your_BT_TV_package: InputMaybe<StringQueryOperatorInput>;
+  readonly How_to_reset_your_box: InputMaybe<StringQueryOperatorInput>;
+  readonly How_to_set_up_BT_Account: InputMaybe<StringQueryOperatorInput>;
+  readonly How_to_upgrade_your_router: InputMaybe<StringQueryOperatorInput>;
+  readonly I_only_want_one_channel: InputMaybe<StringQueryOperatorInput>;
+  readonly Intelligent_WiFi_Plus: InputMaybe<StringQueryOperatorInput>;
+  readonly Internet_security: InputMaybe<StringQueryOperatorInput>;
+  readonly Is_TalkTalk_TV_worth_it_: InputMaybe<StringQueryOperatorInput>;
+  readonly Is_it_accessible_online_: InputMaybe<StringQueryOperatorInput>;
+  readonly Is_it_worth_staying_with_Virgin_Media_: InputMaybe<StringQueryOperatorInput>;
+  readonly Issues_with_recordings: InputMaybe<StringQueryOperatorInput>;
+  readonly Keep_the_same_landline_number: InputMaybe<StringQueryOperatorInput>;
+  readonly Length_of_contract: InputMaybe<StringQueryOperatorInput>;
+  readonly Let_BT_know_you_re_moving: InputMaybe<StringQueryOperatorInput>;
+  readonly Logging_into_your_My_Sky_Account: InputMaybe<StringQueryOperatorInput>;
+  readonly Make_a_complaint: InputMaybe<StringQueryOperatorInput>;
+  readonly Meanings_of_lights_on_box: InputMaybe<StringQueryOperatorInput>;
+  readonly Mobile__broadband___TV_bundles: InputMaybe<StringQueryOperatorInput>;
+  readonly Move_into_a_new_house: InputMaybe<StringQueryOperatorInput>;
+  readonly Move_into_new_house: InputMaybe<StringQueryOperatorInput>;
+  readonly Move_to_a_new_house: InputMaybe<StringQueryOperatorInput>;
+  readonly My_BT_TV_box_isn_t_working: InputMaybe<StringQueryOperatorInput>;
+  readonly My_Sky_features: InputMaybe<StringQueryOperatorInput>;
+  readonly NOW_Broadband_packages: InputMaybe<StringQueryOperatorInput>;
+  readonly NOW_TV_Boost: InputMaybe<StringQueryOperatorInput>;
+  readonly NOW_TV_passes: InputMaybe<StringQueryOperatorInput>;
+  readonly Navigating_through_your_account: InputMaybe<StringQueryOperatorInput>;
+  readonly New_customer_offers: InputMaybe<StringQueryOperatorInput>;
+  readonly Parental_controls: InputMaybe<StringQueryOperatorInput>;
+  readonly Prices___plans: InputMaybe<StringQueryOperatorInput>;
+  readonly Report_connection_issues: InputMaybe<StringQueryOperatorInput>;
+  readonly Returning_your_Sky_equipment: InputMaybe<StringQueryOperatorInput>;
+  readonly Rolling_contracts: InputMaybe<StringQueryOperatorInput>;
+  readonly Router_light_definitions: InputMaybe<StringQueryOperatorInput>;
+  readonly Set_up_Smarthub_with_app: InputMaybe<StringQueryOperatorInput>;
+  readonly Set_up_your_BT_TV_box: InputMaybe<StringQueryOperatorInput>;
+  readonly Set_up_your_Sky_iD: InputMaybe<StringQueryOperatorInput>;
+  readonly Setting_up_BT_Broadband_in_your_new_home: InputMaybe<StringQueryOperatorInput>;
+  readonly Setting_up_your_router: InputMaybe<StringQueryOperatorInput>;
+  readonly Signing_up_to_NOW_TV: InputMaybe<StringQueryOperatorInput>;
+  readonly Sky_Go_Extra: InputMaybe<StringQueryOperatorInput>;
+  readonly Sky_Q: InputMaybe<StringQueryOperatorInput>;
+  readonly Sky_Sports_is_not_working: InputMaybe<StringQueryOperatorInput>;
+  readonly Sky_Store: InputMaybe<StringQueryOperatorInput>;
+  readonly Sky_VIP: InputMaybe<StringQueryOperatorInput>;
+  readonly Sky_router_login: InputMaybe<StringQueryOperatorInput>;
+  readonly Smart_stick___box: InputMaybe<StringQueryOperatorInput>;
+  readonly Subscription: InputMaybe<StringQueryOperatorInput>;
+  readonly Switch_provider_or_tariff: InputMaybe<StringQueryOperatorInput>;
+  readonly Switch_to_BT_Halo: InputMaybe<StringQueryOperatorInput>;
+  readonly Switching_to_NOW_Broadband: InputMaybe<StringQueryOperatorInput>;
+  readonly TV___Broadband_bundles: InputMaybe<StringQueryOperatorInput>;
+  readonly TV___broadband_deals: InputMaybe<StringQueryOperatorInput>;
+  readonly TV_boxes: InputMaybe<StringQueryOperatorInput>;
+  readonly TV_channels: InputMaybe<StringQueryOperatorInput>;
+  readonly TV_packages: InputMaybe<StringQueryOperatorInput>;
+  readonly TV_store: InputMaybe<StringQueryOperatorInput>;
+  readonly TalkTalk_TV: InputMaybe<StringQueryOperatorInput>;
+  readonly TalkTalk_TV_packages: InputMaybe<StringQueryOperatorInput>;
+  readonly TalkTalk_UFO: InputMaybe<StringQueryOperatorInput>;
+  readonly Talk_about_my_bill: InputMaybe<StringQueryOperatorInput>;
+  readonly Talk_about_my_bill_s_: InputMaybe<StringQueryOperatorInput>;
+  readonly Talk_about_something_else: InputMaybe<StringQueryOperatorInput>;
+  readonly Upgrading_your_router: InputMaybe<StringQueryOperatorInput>;
+  readonly Using_the_My_Sky_app: InputMaybe<StringQueryOperatorInput>;
+  readonly Virgin_Media_Connect_app: InputMaybe<StringQueryOperatorInput>;
+  readonly Virgin_Media_Store: InputMaybe<StringQueryOperatorInput>;
+  readonly Virgin_Media_TV_packages: InputMaybe<StringQueryOperatorInput>;
+  readonly Virgin_Media_broadband_packages: InputMaybe<StringQueryOperatorInput>;
+  readonly Virgin_TV_Go: InputMaybe<StringQueryOperatorInput>;
+  readonly Virgin_TV_control: InputMaybe<StringQueryOperatorInput>;
+  readonly Virus_protection: InputMaybe<StringQueryOperatorInput>;
+  readonly VodafoneGigaCube: InputMaybe<StringQueryOperatorInput>;
+  readonly Vodafone_broadband_app: InputMaybe<StringQueryOperatorInput>;
+  readonly Watch_TV_online: InputMaybe<StringQueryOperatorInput>;
+  readonly What_apps_can_be_downloaded_: InputMaybe<StringQueryOperatorInput>;
+  readonly What_can_I_do_with_My_BT_: InputMaybe<StringQueryOperatorInput>;
+  readonly What_can_you_watch_on_BT_Sports_: InputMaybe<StringQueryOperatorInput>;
+  readonly What_channels_does_it_have_: InputMaybe<StringQueryOperatorInput>;
+  readonly What_devices_is_NOW_Sports_available_on_: InputMaybe<StringQueryOperatorInput>;
+  readonly What_do_the_lights_mean_: InputMaybe<StringQueryOperatorInput>;
+  readonly What_is_BT_Halo_: InputMaybe<StringQueryOperatorInput>;
+  readonly What_is_BT_TV_box: InputMaybe<StringQueryOperatorInput>;
+  readonly What_is_NOW_Sports: InputMaybe<StringQueryOperatorInput>;
+  readonly What_is_Sky_Sports: InputMaybe<StringQueryOperatorInput>;
+  readonly What_is_Virgin_Media_s_notice_period: InputMaybe<StringQueryOperatorInput>;
+  readonly What_is_a_Sky_router_: InputMaybe<StringQueryOperatorInput>;
+  readonly What_is_included_: InputMaybe<StringQueryOperatorInput>;
+  readonly What_routers_are_available_: InputMaybe<StringQueryOperatorInput>;
+  readonly What_to_do_when_moving_house: InputMaybe<StringQueryOperatorInput>;
+  readonly What_to_do_with_BT_equipment: InputMaybe<StringQueryOperatorInput>;
+  readonly What_to_do_with_your_equipment: InputMaybe<StringQueryOperatorInput>;
+  readonly Where_to_find_login_details: InputMaybe<StringQueryOperatorInput>;
+  readonly Where_to_find_login_page_: InputMaybe<StringQueryOperatorInput>;
+  readonly Why_BT_Sports_: InputMaybe<StringQueryOperatorInput>;
+  readonly Why_is_My_BT_not_working_: InputMaybe<StringQueryOperatorInput>;
+  readonly Why_is_Virgin_Media_cancellation_different_: InputMaybe<StringQueryOperatorInput>;
+  readonly WiFi_extenders: InputMaybe<StringQueryOperatorInput>;
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly sys: InputMaybe<contentfulTvBroadbandProviderStandardPageNavigationJsonNodeSysFilterInput>;
+};
+
+type contentfulTvBroadbandProviderStandardPageNavigationJsonNodeFilterListInput = {
+  readonly elemMatch: InputMaybe<contentfulTvBroadbandProviderStandardPageNavigationJsonNodeFilterInput>;
+};
+
+type contentfulTvBroadbandProviderStandardPageNavigationJsonNodeGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<contentfulTvBroadbandProviderStandardPageNavigationJsonNodeEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<contentfulTvBroadbandProviderStandardPageNavigationJsonNodeGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<contentfulTvBroadbandProviderStandardPageNavigationJsonNode>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type contentfulTvBroadbandProviderStandardPageNavigationJsonNodeGroupConnection_distinctArgs = {
+  field: contentfulTvBroadbandProviderStandardPageNavigationJsonNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandProviderStandardPageNavigationJsonNodeGroupConnection_groupArgs = {
+  field: contentfulTvBroadbandProviderStandardPageNavigationJsonNodeFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type contentfulTvBroadbandProviderStandardPageNavigationJsonNodeGroupConnection_maxArgs = {
+  field: contentfulTvBroadbandProviderStandardPageNavigationJsonNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandProviderStandardPageNavigationJsonNodeGroupConnection_minArgs = {
+  field: contentfulTvBroadbandProviderStandardPageNavigationJsonNodeFieldSelector;
+};
+
+
+type contentfulTvBroadbandProviderStandardPageNavigationJsonNodeGroupConnection_sumArgs = {
+  field: contentfulTvBroadbandProviderStandardPageNavigationJsonNodeFieldSelector;
+};
+
+type contentfulTvBroadbandProviderStandardPageNavigationJsonNodeSortInput = {
+  readonly Add_ons: InputMaybe<SortOrderEnum>;
+  readonly Add_ons___extras: InputMaybe<SortOrderEnum>;
+  readonly Are_you_owed_a_refund_: InputMaybe<SortOrderEnum>;
+  readonly BT_Account_features: InputMaybe<SortOrderEnum>;
+  readonly BT_Complete_Wifi: InputMaybe<SortOrderEnum>;
+  readonly BT_Hybrid_Connect: InputMaybe<SortOrderEnum>;
+  readonly BT_Sports_Monthly_Pass: InputMaybe<SortOrderEnum>;
+  readonly BT_Sports_app: InputMaybe<SortOrderEnum>;
+  readonly BT_Sports_with_Sky_TV: InputMaybe<SortOrderEnum>;
+  readonly BT_TV_App_Extra: InputMaybe<SortOrderEnum>;
+  readonly BT_TV_guide_won_t_load: InputMaybe<SortOrderEnum>;
+  readonly BT_TV_packages: InputMaybe<SortOrderEnum>;
+  readonly BT_TV_store: InputMaybe<SortOrderEnum>;
+  readonly BT_troubleshooter: InputMaybe<SortOrderEnum>;
+  readonly Broadband_Boost: InputMaybe<SortOrderEnum>;
+  readonly Broadband_Buddy: InputMaybe<SortOrderEnum>;
+  readonly Broadband_deals: InputMaybe<SortOrderEnum>;
+  readonly Broadband_packages: InputMaybe<SortOrderEnum>;
+  readonly Broadband_security: InputMaybe<SortOrderEnum>;
+  readonly Bundles: InputMaybe<SortOrderEnum>;
+  readonly Buy_one__give_one: InputMaybe<SortOrderEnum>;
+  readonly Call_Protect: InputMaybe<SortOrderEnum>;
+  readonly Call_plans: InputMaybe<SortOrderEnum>;
+  readonly Can_I_access_TV_guide_via_app_: InputMaybe<SortOrderEnum>;
+  readonly Can_I_transfer_my_current_plan_: InputMaybe<SortOrderEnum>;
+  readonly Can_you_change_BT_Router_password_: InputMaybe<SortOrderEnum>;
+  readonly Can_you_have_multiple_boxes_: InputMaybe<SortOrderEnum>;
+  readonly Cancel_your_contract: InputMaybe<SortOrderEnum>;
+  readonly Cancellation_fees: InputMaybe<SortOrderEnum>;
+  readonly Check_my_broadband_speed: InputMaybe<SortOrderEnum>;
+  readonly Cost_of_cancellation: InputMaybe<SortOrderEnum>;
+  readonly Cost_of_moving_home_with_BT: InputMaybe<SortOrderEnum>;
+  readonly Deals: InputMaybe<SortOrderEnum>;
+  readonly Delete_email_account: InputMaybe<SortOrderEnum>;
+  readonly Difference_between_Halo_3_and_3_: InputMaybe<SortOrderEnum>;
+  readonly Do_I_need_an_account_: InputMaybe<SortOrderEnum>;
+  readonly Do_you_need_BT_Broadband_: InputMaybe<SortOrderEnum>;
+  readonly Do_you_need_BT_TV_: InputMaybe<SortOrderEnum>;
+  readonly Do_you_need_a_TV_licence: InputMaybe<SortOrderEnum>;
+  readonly Does_it_cover_all_channels_: InputMaybe<SortOrderEnum>;
+  readonly Does_it_require_an_aerial_: InputMaybe<SortOrderEnum>;
+  readonly Download_the_My_BT_app: InputMaybe<SortOrderEnum>;
+  readonly Existing_customer_offers: InputMaybe<SortOrderEnum>;
+  readonly Fibre_broadband_packages: InputMaybe<SortOrderEnum>;
+  readonly Fixed_Price_Plus: InputMaybe<SortOrderEnum>;
+  readonly Free_cancellation: InputMaybe<SortOrderEnum>;
+  readonly Freeview: InputMaybe<SortOrderEnum>;
+  readonly Gadget_rescue: InputMaybe<SortOrderEnum>;
+  readonly Get_a_second_TV_box: InputMaybe<SortOrderEnum>;
+  readonly Gigabit_broadband: InputMaybe<SortOrderEnum>;
+  readonly Gigafast___Ultrafast: InputMaybe<SortOrderEnum>;
+  readonly Help_logging_in: InputMaybe<SortOrderEnum>;
+  readonly Homeworker_broadband: InputMaybe<SortOrderEnum>;
+  readonly How_BT_TV_guide_works: InputMaybe<SortOrderEnum>;
+  readonly How_BT_TV_works: InputMaybe<SortOrderEnum>;
+  readonly How_do_I_get_NOW_Sports_: InputMaybe<SortOrderEnum>;
+  readonly How_long_does_it_take_to_activate_: InputMaybe<SortOrderEnum>;
+  readonly How_the_router_login_works: InputMaybe<SortOrderEnum>;
+  readonly How_to_access_app: InputMaybe<SortOrderEnum>;
+  readonly How_to_cancel: InputMaybe<SortOrderEnum>;
+  readonly How_to_cancel_BT_Broadband: InputMaybe<SortOrderEnum>;
+  readonly How_to_cancel_BT_Mobile: InputMaybe<SortOrderEnum>;
+  readonly How_to_cancel_BT_Sport: InputMaybe<SortOrderEnum>;
+  readonly How_to_cancel_BT_Sports: InputMaybe<SortOrderEnum>;
+  readonly How_to_cancel_Virgin_Media: InputMaybe<SortOrderEnum>;
+  readonly How_to_cancel_phone_line: InputMaybe<SortOrderEnum>;
+  readonly How_to_change_call_plan: InputMaybe<SortOrderEnum>;
+  readonly How_to_connect_to_your_router: InputMaybe<SortOrderEnum>;
+  readonly How_to_download: InputMaybe<SortOrderEnum>;
+  readonly How_to_find_your_Wifi_password: InputMaybe<SortOrderEnum>;
+  readonly How_to_get_a_BT_TV_box: InputMaybe<SortOrderEnum>;
+  readonly How_to_pick_your_BT_TV_package: InputMaybe<SortOrderEnum>;
+  readonly How_to_reset_your_box: InputMaybe<SortOrderEnum>;
+  readonly How_to_set_up_BT_Account: InputMaybe<SortOrderEnum>;
+  readonly How_to_upgrade_your_router: InputMaybe<SortOrderEnum>;
+  readonly I_only_want_one_channel: InputMaybe<SortOrderEnum>;
+  readonly Intelligent_WiFi_Plus: InputMaybe<SortOrderEnum>;
+  readonly Internet_security: InputMaybe<SortOrderEnum>;
+  readonly Is_TalkTalk_TV_worth_it_: InputMaybe<SortOrderEnum>;
+  readonly Is_it_accessible_online_: InputMaybe<SortOrderEnum>;
+  readonly Is_it_worth_staying_with_Virgin_Media_: InputMaybe<SortOrderEnum>;
+  readonly Issues_with_recordings: InputMaybe<SortOrderEnum>;
+  readonly Keep_the_same_landline_number: InputMaybe<SortOrderEnum>;
+  readonly Length_of_contract: InputMaybe<SortOrderEnum>;
+  readonly Let_BT_know_you_re_moving: InputMaybe<SortOrderEnum>;
+  readonly Logging_into_your_My_Sky_Account: InputMaybe<SortOrderEnum>;
+  readonly Make_a_complaint: InputMaybe<SortOrderEnum>;
+  readonly Meanings_of_lights_on_box: InputMaybe<SortOrderEnum>;
+  readonly Mobile__broadband___TV_bundles: InputMaybe<SortOrderEnum>;
+  readonly Move_into_a_new_house: InputMaybe<SortOrderEnum>;
+  readonly Move_into_new_house: InputMaybe<SortOrderEnum>;
+  readonly Move_to_a_new_house: InputMaybe<SortOrderEnum>;
+  readonly My_BT_TV_box_isn_t_working: InputMaybe<SortOrderEnum>;
+  readonly My_Sky_features: InputMaybe<SortOrderEnum>;
+  readonly NOW_Broadband_packages: InputMaybe<SortOrderEnum>;
+  readonly NOW_TV_Boost: InputMaybe<SortOrderEnum>;
+  readonly NOW_TV_passes: InputMaybe<SortOrderEnum>;
+  readonly Navigating_through_your_account: InputMaybe<SortOrderEnum>;
+  readonly New_customer_offers: InputMaybe<SortOrderEnum>;
+  readonly Parental_controls: InputMaybe<SortOrderEnum>;
+  readonly Prices___plans: InputMaybe<SortOrderEnum>;
+  readonly Report_connection_issues: InputMaybe<SortOrderEnum>;
+  readonly Returning_your_Sky_equipment: InputMaybe<SortOrderEnum>;
+  readonly Rolling_contracts: InputMaybe<SortOrderEnum>;
+  readonly Router_light_definitions: InputMaybe<SortOrderEnum>;
+  readonly Set_up_Smarthub_with_app: InputMaybe<SortOrderEnum>;
+  readonly Set_up_your_BT_TV_box: InputMaybe<SortOrderEnum>;
+  readonly Set_up_your_Sky_iD: InputMaybe<SortOrderEnum>;
+  readonly Setting_up_BT_Broadband_in_your_new_home: InputMaybe<SortOrderEnum>;
+  readonly Setting_up_your_router: InputMaybe<SortOrderEnum>;
+  readonly Signing_up_to_NOW_TV: InputMaybe<SortOrderEnum>;
+  readonly Sky_Go_Extra: InputMaybe<SortOrderEnum>;
+  readonly Sky_Q: InputMaybe<SortOrderEnum>;
+  readonly Sky_Sports_is_not_working: InputMaybe<SortOrderEnum>;
+  readonly Sky_Store: InputMaybe<SortOrderEnum>;
+  readonly Sky_VIP: InputMaybe<SortOrderEnum>;
+  readonly Sky_router_login: InputMaybe<SortOrderEnum>;
+  readonly Smart_stick___box: InputMaybe<SortOrderEnum>;
+  readonly Subscription: InputMaybe<SortOrderEnum>;
+  readonly Switch_provider_or_tariff: InputMaybe<SortOrderEnum>;
+  readonly Switch_to_BT_Halo: InputMaybe<SortOrderEnum>;
+  readonly Switching_to_NOW_Broadband: InputMaybe<SortOrderEnum>;
+  readonly TV___Broadband_bundles: InputMaybe<SortOrderEnum>;
+  readonly TV___broadband_deals: InputMaybe<SortOrderEnum>;
+  readonly TV_boxes: InputMaybe<SortOrderEnum>;
+  readonly TV_channels: InputMaybe<SortOrderEnum>;
+  readonly TV_packages: InputMaybe<SortOrderEnum>;
+  readonly TV_store: InputMaybe<SortOrderEnum>;
+  readonly TalkTalk_TV: InputMaybe<SortOrderEnum>;
+  readonly TalkTalk_TV_packages: InputMaybe<SortOrderEnum>;
+  readonly TalkTalk_UFO: InputMaybe<SortOrderEnum>;
+  readonly Talk_about_my_bill: InputMaybe<SortOrderEnum>;
+  readonly Talk_about_my_bill_s_: InputMaybe<SortOrderEnum>;
+  readonly Talk_about_something_else: InputMaybe<SortOrderEnum>;
+  readonly Upgrading_your_router: InputMaybe<SortOrderEnum>;
+  readonly Using_the_My_Sky_app: InputMaybe<SortOrderEnum>;
+  readonly Virgin_Media_Connect_app: InputMaybe<SortOrderEnum>;
+  readonly Virgin_Media_Store: InputMaybe<SortOrderEnum>;
+  readonly Virgin_Media_TV_packages: InputMaybe<SortOrderEnum>;
+  readonly Virgin_Media_broadband_packages: InputMaybe<SortOrderEnum>;
+  readonly Virgin_TV_Go: InputMaybe<SortOrderEnum>;
+  readonly Virgin_TV_control: InputMaybe<SortOrderEnum>;
+  readonly Virus_protection: InputMaybe<SortOrderEnum>;
+  readonly VodafoneGigaCube: InputMaybe<SortOrderEnum>;
+  readonly Vodafone_broadband_app: InputMaybe<SortOrderEnum>;
+  readonly Watch_TV_online: InputMaybe<SortOrderEnum>;
+  readonly What_apps_can_be_downloaded_: InputMaybe<SortOrderEnum>;
+  readonly What_can_I_do_with_My_BT_: InputMaybe<SortOrderEnum>;
+  readonly What_can_you_watch_on_BT_Sports_: InputMaybe<SortOrderEnum>;
+  readonly What_channels_does_it_have_: InputMaybe<SortOrderEnum>;
+  readonly What_devices_is_NOW_Sports_available_on_: InputMaybe<SortOrderEnum>;
+  readonly What_do_the_lights_mean_: InputMaybe<SortOrderEnum>;
+  readonly What_is_BT_Halo_: InputMaybe<SortOrderEnum>;
+  readonly What_is_BT_TV_box: InputMaybe<SortOrderEnum>;
+  readonly What_is_NOW_Sports: InputMaybe<SortOrderEnum>;
+  readonly What_is_Sky_Sports: InputMaybe<SortOrderEnum>;
+  readonly What_is_Virgin_Media_s_notice_period: InputMaybe<SortOrderEnum>;
+  readonly What_is_a_Sky_router_: InputMaybe<SortOrderEnum>;
+  readonly What_is_included_: InputMaybe<SortOrderEnum>;
+  readonly What_routers_are_available_: InputMaybe<SortOrderEnum>;
+  readonly What_to_do_when_moving_house: InputMaybe<SortOrderEnum>;
+  readonly What_to_do_with_BT_equipment: InputMaybe<SortOrderEnum>;
+  readonly What_to_do_with_your_equipment: InputMaybe<SortOrderEnum>;
+  readonly Where_to_find_login_details: InputMaybe<SortOrderEnum>;
+  readonly Where_to_find_login_page_: InputMaybe<SortOrderEnum>;
+  readonly Why_BT_Sports_: InputMaybe<SortOrderEnum>;
+  readonly Why_is_My_BT_not_working_: InputMaybe<SortOrderEnum>;
+  readonly Why_is_Virgin_Media_cancellation_different_: InputMaybe<SortOrderEnum>;
+  readonly WiFi_extenders: InputMaybe<SortOrderEnum>;
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly sys: InputMaybe<contentfulTvBroadbandProviderStandardPageNavigationJsonNodeSysSortInput>;
+};
+
+type contentfulTvBroadbandProviderStandardPageNavigationJsonNodeSys = {
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type contentfulTvBroadbandProviderStandardPageNavigationJsonNodeSysFieldSelector = {
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type contentfulTvBroadbandProviderStandardPageNavigationJsonNodeSysFilterInput = {
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type contentfulTvBroadbandProviderStandardPageNavigationJsonNodeSysSortInput = {
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
 type pageBySlugQueryVariables = Exact<{
   slug: Scalars['String'];
   provider: Scalars['String'];
 }>;
 
 
-type pageBySlugQuery = { readonly contentfulGasElectricityProviderStandardPage: { readonly title: string | null, readonly slug: string | null, readonly category: string | null, readonly updatedAt: string | null, readonly provider: string | null, readonly metaDescription: { readonly internal: { readonly content: string | null } } | null, readonly logo: { readonly file: { readonly url: string | null } | null } | null, readonly navigation: { readonly internal: { readonly content: string | null } } | null, readonly content: { readonly internal: { readonly content: string | null } } | null } | null, readonly allContentfulGasElectricityProviderStandardPage: { readonly edges: ReadonlyArray<{ readonly node: { readonly slug: string | null, readonly category: string | null } }> } };
+type pageBySlugQuery = { readonly contentfulTvBroadbandProviderMainPage: { readonly title: string | null, readonly slug: string | null, readonly category: string | null, readonly updatedAt: string | null, readonly provider: string | null, readonly metaDescription: { readonly internal: { readonly content: string | null } } | null, readonly logo: { readonly file: { readonly url: string | null } | null } | null } | null, readonly allContentfulTvBroadbandProviderStandardPage: { readonly edges: ReadonlyArray<{ readonly node: { readonly slug: string | null, readonly category: string | null, readonly navigation: { readonly internal: { readonly content: string | null } } | null } }> } };
 
 type relatedPagesQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type relatedPagesQuery = { readonly allContentfulGasElectricityProviderMainPage: { readonly edges: ReadonlyArray<{ readonly node: { readonly slug: string | null, readonly provider: string | null, readonly logo: { readonly file: { readonly url: string | null } | null } | null } }> } };
+type relatedPagesQuery = { readonly allContentfulTvBroadbandProviderMainPage: { readonly edges: ReadonlyArray<{ readonly node: { readonly slug: string | null, readonly provider: string | null, readonly logo: { readonly file: { readonly url: string | null } | null } | null } }> } };
 
 
 }

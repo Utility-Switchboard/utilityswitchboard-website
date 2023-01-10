@@ -86,7 +86,7 @@ h3 {
 
 p {
    color: $black;
-   line-height: 1.4em;
+   line-height: 1.55em;
 
    a:not([class]) {
       color: $pink;
@@ -111,8 +111,9 @@ blockquote {
 // ** LISTS ** //
 
 ul:not([class]),
-ol:not([class]) {
-   line-height: 1.4em;
+ol:not([class]),
+.jumbo-ol {
+   line-height: 1.55em;
 
    li {
       &::marker {

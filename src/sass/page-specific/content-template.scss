@@ -138,6 +138,14 @@
    margin: 30px 0;
 }
 
+.tab {
+   margin-left: 40px
+}
+
+.double-tab {
+   margin-left: 80px
+}
+
 .col50 {
    width: 50%;
    height: 100%;
@@ -276,6 +284,7 @@
       margin: unset;
 
       img {
+         max-height: 100px;
          max-width: 240px;
       }
    }

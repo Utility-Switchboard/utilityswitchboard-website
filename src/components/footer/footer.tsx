@@ -49,23 +49,23 @@ const Footer: React.FC = () => {
             {/* Column 2 - Most visited */}
             <ul className="footer-navigation-list">
                <a className="title">Most visited</a>
-               <a>Compare gas & electricity tariffs</a>
-               <a>Compare TV & broadband plans</a>
-               <a>Best renewable energy tariffs</a>
-               <a>Average UK energy usage</a>
-               <a>Broadband speeds in the UK</a>
-               <a>Do I need a TV licence?</a>
+               <a href="/gas-electricity/guides/environment/renewable-energy/best-providers">Switching to renewable energy</a>
+               <a href="/gas-electricity/guides/meters/smart-meters">Switch to a smart meter</a>
+               <a href="/gas-electricity/guides/schemes/warm-home-discount">Warm Home Discount</a>
+               <a href="/gas-electricity/guides/tariffs/average-usage">Average UK energy usage</a>
+               <a href="/tv-broadband/guides/deals/broadband-speeds-uk">Broadband speeds in the UK</a>
+               <a href="/tv-broadband/guides/deals/tv-licence">Do I need a TV licence?</a>
             </ul>
 
             {/* Column 3 - About us */}
             <ul className="footer-navigation-list">
                <a className="title">Utility Switchboard</a>
                <a>About us</a>
-               <a>Contact us</a>
-               <a>Careers</a>
-               <a>Privacy policy</a>
-               <a>Cookies policy</a>
-               <a>Terms of use</a>
+               <a href="/contact">Contact us</a>
+               <a href="https://uk.indeed.com/cmp/Utility-Switchboard" target="_blank">Careers</a>
+               <a href="/privacy-policy">Privacy policy</a>
+               <a href="/cookies-policy">Cookies policy</a>
+               <a href="/terms-of-use">Terms of use</a>
             </ul>
          </div>
 

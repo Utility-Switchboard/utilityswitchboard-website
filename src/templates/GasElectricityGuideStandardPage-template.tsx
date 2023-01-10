@@ -109,7 +109,11 @@ const GasElectricityGuideStandardPageTemplate = ({ data }: { data: pageProps }) 
 
                      <ContentNavigationWidget navigation={navigation}/>
 
-                     <RelatedPagesSidebarWidget data={related_pages}/>
+                     {
+                        related_pages.length > 0 ? (
+                           <RelatedPagesSidebarWidget data={related_pages}/>
+                        ) : null
+                     }
                   </div>
                </div>
             </div>

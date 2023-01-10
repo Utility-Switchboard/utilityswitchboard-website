@@ -1,0 +1,213 @@
+import { graphql, HeadFC } from "gatsby";
+import React, { useEffect, useState } from "react";
+import Breadcrumbs from "../components/breadcrumbs/breadcrumbs";
+import GetHelpSidebarCTA from "../components/ctas/sidebar/get-help-sidebar/get-help-sidebar";
+import Footer from "../components/footer/footer";
+import HeroCTA from "../components/hero-cta/hero-cta";
+import Navigation from "../components/navigation/navigation";
+import SEO from "../components/SEO/seo";
+
+// CSS
+import StylesComponent from "../components/styles";
+import "../sass/page-specific/guides-index.scss";
+
+interface pageProps {
+   allContentfulAllProductsNewsStandardPage: {
+      edges: {
+         node: {
+            slug: string,
+            category: string,
+            title: string
+         }
+      }[]
+   }
+}
+
+interface filterSizes { [ key: string ]: number }
+
+const News = ({ data }: { data: pageProps }) => {
+   const [filter, setFilter] = useState<string>('gas-electricity')
+   const [filterSizes, setFilterSizes] = useState<filterSizes>({})
+   const [showMaxRecords, setShowMaxRecords] = useState<number>(1)
+
+   const pages = data.allContentfulAllProductsNewsStandardPage.edges
+
+   useEffect(() => {
+      let new_filter_sizes: filterSizes = {
+         "": 0
+      }
+
+      for (let i = 0; i < pages.length; i++) {
+         const page = pages[i].node;
+         
+         if(new_filter_sizes[page.category] === undefined) {
+            new_filter_sizes[page.category] = 1
+         } else {
+            new_filter_sizes[page.category] += 1
+         }
+
+         new_filter_sizes[""] += 1
+      }
+
+      setFilterSizes(new_filter_sizes)
+      setFilter("")
+   }, [])
+
+   useEffect(() => {
+      let new_figure = 8;
+
+      if(new_figure > filterSizes[filter]) {
+         new_figure = filterSizes[filter]
+      }
+
+      setShowMaxRecords(new_figure)
+   }, [filter])
+
+   const generateContent = () => {
+      let jsx: any = []
+
+      let filtered_array = pages
+      
+      if(filter !== '') {
+         filtered_array = pages.filter((e => e.node.category === filter))
+      }
+      
+
+      if(filtered_array.length > 0 && showMaxRecords <= filterSizes[filter]) {
+         for (let i = 0; i < showMaxRecords; i++) {
+            const element = filtered_array[i];
+            const page = element.node;
+            
+            jsx.push(
+               <a className="guide-card-container" href={`/${page.slug}`}>
+                  <div className="guide-card-image-header"/>
+                  <div className="guide-card-content">
+                     <span>
+                        <p className="guide-card-title">{page.title}</p>
+                        <span className="guide-card-category">{page.category.split("-").join(" & ")}</span>
+                     </span>
+
+                     <p className="guide-card-arrow">Read guide</p>
+                  </div>
+                  
+               </a>
+            )
+
+         }
+      }
+      return jsx;
+   }
+
+   const handleLoadMoreRecords = () => {
+      let new_figure = showMaxRecords + 8;
+
+      if(new_figure > filterSizes[filter]) {
+         new_figure = filterSizes[filter]
+      }
+
+      setShowMaxRecords(new_figure)
+   }
+
+   return (
+      <React.Fragment>
+         <StylesComponent/>
+         <Navigation/>
+
+         {/** HERO SECTION **/}
+         <div className="content-hero-outer-container">
+            <div className="content-hero-inner-container container-width">
+               <span>
+                  <h1>News stories<br/><span>Utilities</span></h1>
+
+                  <p>What's happening in the world of household bills? Read our news stories about Gas, electricity, TV & Broadband.</p>
+
+                  <br/>
+
+                  <HeroCTA/>
+               </span>
+            </div>
+         </div>
+
+         <div className="content-outer-container">
+            <div className="content-inner-container container-width">
+               <div className="content-container">
+                  <Breadcrumbs location="news"/>
+
+                  <p>Select a category to filter news</p>
+
+                  <select
+                     className="standard-select"
+                     value={filter}
+                     onChange={(e) => setFilter(e.target.value)}
+                  >
+                     <option value="">All news</option>
+                     <option value="tv-broadband">TV & Broadband</option>
+                     <option value="gas-electricity">Gas & Electricity</option>
+                  </select>
+
+                  <br/>
+                  <br/>
+
+                  <div className="separator" style={{justifyContent: "flex-start"}}/>
+
+                  <br/>
+                  <br/>
+
+                  <div className="guide-results-container">
+                     {generateContent()}
+                  </div>
+
+                  {
+                     filterSizes[filter] > showMaxRecords ? (
+                        <center>
+                           <button 
+                              className="standard-button purple"
+                              onClick={handleLoadMoreRecords}
+                              style={{marginTop: 60}}
+                           >
+                              Load more guides
+                           </button>
+                        </center>
+                     ) : null
+                  }
+                  
+               </div>
+
+               <div className="content-sidebar-container with-margin">
+                  <div className="content-sidebar-sticky-wrapper">
+                     <GetHelpSidebarCTA/>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+
+         <Footer/>
+      </React.Fragment>
+   )
+}
+
+export default News
+
+export const Head: HeadFC = () => (
+   <SEO
+      metaDescription="What's happening in the world of household bills? Read our news stories about Gas, electricity, TV & Broadband."
+      title="UK Utilities News"
+      titleTemplate="%s - Utility Switchboard"
+      slug="news"
+   />
+ )
+
+export const pageQuery = graphql`
+   query relatedPages {
+      allContentfulAllProductsNewsStandardPage {
+         edges {
+            node {
+               slug
+               title
+               category
+            }
+         }
+      }
+   }
+`

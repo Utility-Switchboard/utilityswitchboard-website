@@ -1,6 +1,7 @@
 import { HeadFC } from "gatsby";
 import React from "react";
 import Footer from "../../components/footer/footer";
+import HeroCTA from "../../components/hero-cta/hero-cta";
 import Navigation from "../../components/navigation/navigation";
 import SEO from "../../components/SEO/seo";
 
@@ -33,11 +34,7 @@ const GasElectricityLandingPage: React.FC = () => {
 
                <p>Using our provider guides, expert customer service line and full in-depth guides, become and energy expert and start saving £100s per year on your bills.</p>
 
-               <button
-                  className="standard-button green"
-               >
-                  Get started
-               </button>
+               <HeroCTA/>
             </div>
          </div>
 

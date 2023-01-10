@@ -35,6 +35,15 @@ const Breadcrumbs = ({ location }: { location: string }) => {
          if(el === 'sse') clean_name = "SSE"
          if(el === 'co-operative-energy') clean_name = "Co-operative Energy"
          if(el === 'ovo-energy') clean_name = "OVO Energy"
+
+         if(el === 'tv-broadband') clean_name = "TV & Broadband"
+         if(el === 'bt') clean_name = "BT"
+         if(el === 'tv') clean_name = "TV"
+         if(el === 'bt-sport') clean_name = "BT Sport"
+         if(el === 'talktalk') clean_name = "TalkTalk"
+
+         if(el.includes("tv")) clean_name = clean_name.replaceAll("Tv", "TV")
+         if(el.includes("uk")) clean_name = clean_name.replaceAll("Uk", "UK")
          
          let url_array = [];
          for (let ind = 0; ind < i+1; ind++) {

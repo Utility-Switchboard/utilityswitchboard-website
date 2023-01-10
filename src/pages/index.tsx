@@ -8,6 +8,7 @@ import "../sass/page-specific/homepage.scss"
 import common_queries_list from "../resources/common-queries";
 import Footer from "../components/footer/footer";
 import SEO from "../components/SEO/seo";
+import HeroCTA from "../components/hero-cta/hero-cta";
 
 const HomePage: React.FC<PageProps> = () => {
   const [queryIndex, setQueryIndex] = useState<number>(0)
@@ -40,10 +41,7 @@ const HomePage: React.FC<PageProps> = () => {
 
           <p>Between January 2021 - March 2021, we saved 10% of customers <u>at least £180</u> on their annual energy bills. Added to further by the huge savings on TV & Broadband bills.</p>
 
-          <a 
-            href="#"
-            className="standard-button green"
-          >Start saving</a>
+          <HeroCTA/>
 
           <div className="direct-debit-logos-wrapper">
             <img
@@ -85,7 +83,7 @@ const HomePage: React.FC<PageProps> = () => {
 
                 <span>or</span>
 
-                <a className="standard-text-link">Read full guide</a>
+                <a className="standard-text-link" href={common_queries_list[queryIndex].guide_url}>Read full guide</a>
               </div>
             </div>
           </div>

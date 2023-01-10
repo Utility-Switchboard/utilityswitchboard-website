@@ -98,24 +98,24 @@ const extended_navigation_lists: navigationProps[] = [
                   url: "/tv-broadband/guides/deals/line-rental/"
                },
                {
-                  text: "What speeds do I need?",
-                  url: "#"
+                  text: "Understanding your broadband bill",
+                  url: "/tv-broadband/guides/billing/example-bill"
                },
                {
-                  text: "Sky / BT Sports",
-                  url: "#"
+                  text: "Sky Sports",
+                  url: "/tv-broadband/providers/sky/tv/sky-sports"
                },
                {
                   text: "Do I need a TV licence?",
-                  url: "#"
+                  url: "/tv-broadband/guides/deals/tv-licence"
                },
                {
                   text: "Download, upload and ping?",
                   url: "/tv-broadband/guides/technical/upload-download-ping/"
                },
                {
-                  text: "How to switch plans",
-                  url: "#"
+                  text: "Early cancellation fees",
+                  url: "/tv-broadband/guides/switching/early-termination-fees"
                }
             ],
             all_url: "/tv-broadband/guides/",

@@ -5,6 +5,7 @@ import MovingHouseCTAGasElectricity from "./content/gas-electricity/moving-house
 import SmartMeterCTA from "./content/gas-electricity/smart-meter";
 import SupplyNumbersCTA from "./content/gas-electricity/supply-numbers";
 import WarmHomeDiscountCTA from "./content/gas-electricity/warm-home-discount";
+import SlowSpeedsCTA from "./content/tv-broadband/slow-speed";
 
 const insertCTAs = (content: any) => {
    let new_content = []
@@ -14,7 +15,7 @@ const insertCTAs = (content: any) => {
       
       if(typeof line === 'string') {
          // Insert CTAs
-         if(line.includes("[gas_electricity_moving_house_cta]")) {
+         if(line.includes("[gas_electricity_moving_house_cta]") || line.includes("[tv_broadband_moving_house_cta]")) {
             new_content.push(<MovingHouseCTAGasElectricity/>)
 
          } else if (line.includes("[gas_electricity_warm_home_discount_cta]")) {
@@ -25,6 +26,9 @@ const insertCTAs = (content: any) => {
          
          } else if (line.includes("[gas_electricity_supply_numbers_cta]") || line.includes("[gas_electricity_serial_numbers_cta]")) {
             new_content.push(<SupplyNumbersCTA/>)
+
+         } else if (line.includes("[tv_broadband_slow_speeds_cta]")) {
+            new_content.push(<SlowSpeedsCTA/>)
 
          } else {
             new_content.push(line)

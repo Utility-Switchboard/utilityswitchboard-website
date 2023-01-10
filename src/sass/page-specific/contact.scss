@@ -1,0 +1,57 @@
+@import "../colours.scss";
+
+.contact-content-outer-container {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+
+.contact-content-inner-container {
+   padding: 20px 0 80px 0;
+   display: flex;
+   flex-direction: column;
+}
+
+.contact-information-grid-container {
+   display: grid;
+   grid-template-columns: 47.5% 47.5%;
+   column-gap: 5%;
+
+   h3 {
+      margin: 20px 0 15px 0;
+   }
+
+   
+   .contact-link {
+      text-decoration: none;
+      color: $black;
+      display: inline-flex;
+      align-items: center;
+      column-gap: 10px;
+   }
+   
+   i {
+      width: 24px;
+      font-size: 22px;
+      color: $pink;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+   }
+}
+
+.contact-information-left-side {
+   display: flex;
+   flex-direction: column;
+   row-gap: 40px;
+}
+
+@media only screen and (max-width: 800px) {
+   .contact-information-grid-container {
+      grid-template-columns: 100%;
+   }
+
+   .contact-information-right-side {
+      margin-top: 40px;
+   }
+}

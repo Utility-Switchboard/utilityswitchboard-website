@@ -21,12 +21,12 @@ const RelatedPagesSidebarWidget = ({ data }: { data: pageProps[] }) => {
          />
 
          <label className="standard-accordion-wrapper pink-cream standard" htmlFor="related_pages">
-            <div className="standard-accordion-header"><span>Related guides</span></div>
+            <div className="standard-accordion-header"><span>More like this</span></div>
 
             <ol className="related-pages-list">
                {data.map(page => (
                   <li>
-                     <a>{page.node.title}</a>
+                     <a href={"/" + page.node.slug}>{page.node.title}</a>
                   </li>
                ))}
             </ol>
