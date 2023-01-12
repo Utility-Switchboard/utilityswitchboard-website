@@ -20,7 +20,7 @@ export const SEO = ( props: propTypes ) => {
          <title>{props.title}</title>
          <meta name="description" content={props.metaDescription}/>
          <meta name="image" content={`https:${image}`}/>
-         <meta property="og:url" content={`https://appliancesure.com/${props.slug}`}/>
+         <meta property="og:url" content={`https://utilityswitchboard.com/${props.slug}`}/>
          <meta property="og:type" content="article"/>
          <meta property="og:image" content={`https:${image}`}/>
          <meta property="twitter:image" content={`https:${image}`}/>
